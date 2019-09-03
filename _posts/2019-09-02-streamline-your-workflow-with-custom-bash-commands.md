@@ -24,9 +24,9 @@ In this article I will walk through how to create custom bash commands in Unix-b
 - Download a mp3 version of a youtube video from your terminal.
 - Whatever else you can think of!
 
-### Creating the custom commands
-
 ![custom bash command lazygit running in a terminal](/assets/img/lazygit-bash-command.jpg)
+
+### Creating the custom commands
 
 Adding custom commands can be done in just 4 easy steps:
 
