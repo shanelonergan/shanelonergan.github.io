@@ -64,11 +64,11 @@ The first line is a convention used when writing shell scripts to clarify the ap
 
 Once you have saved that file, we need to test if it works. To make this command available, enter the following:
 
-	source ~/.my_custom_commands.sh
+	$ source ~/.my_custom_commands.sh
 
 Now try out the new command:
 
-	greet Shane
+	$ greet Shane
 
 You should see `Hello Shane!` (or whatever name you give as an argument), printed out. Congrats! You have just made your first custom bash command. However, using the above would require you to run the source command every time you opened a new terminal. If we link to this file in our bash profile, our new commands will come pre-loaded in every new terminal session.
 
@@ -131,6 +131,7 @@ This guide is written primarily for MacOS users. It should work for any UNIX bas
 - [How to create your own custom terminal commands](https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e)
 - [What is a bash script?](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php)
 - [What is the difference between .bash_profile and .bashrc?](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php)
+- [ASCII Art Generator](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
 
 # Further Reading
 
