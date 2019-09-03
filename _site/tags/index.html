@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Hello, world! I'm Shane Lonergan</title>
+	<title>Tags - Hello, world! I'm Shane Lonergan</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="Hello, world! I'm Shane Lonergan" property="og:site_name">
   
-    <meta content="Hello, world! I'm Shane Lonergan" property="og:title">
+    <meta content="Tags" property="og:title">
   
   
-    <meta content="website" property="og:type">
+    <meta content="article" property="og:type">
   
   
     <meta content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 " property="og:description">
   
   
-    <meta content="http://localhost:4000/" property="og:url">
+    <meta content="http://localhost:4000/tags/" property="og:url">
   
   
   
@@ -31,10 +31,10 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@shane__lonergan">
   
-    <meta name="twitter:title" content="Hello, world! I'm Shane Lonergan">
+    <meta name="twitter:title" content="Tags">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/">
+    <meta name="twitter:url" content="http://localhost:4000/tags/">
   
   
     <meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
@@ -108,42 +108,39 @@
 </aside> <!-- End Sidebar -->
 <div class="content-box clearfix">
   
-<article class="post">
+
+
+<section class="blog-tags">
+  <h1>Tags in Blog</h1>
+  <ul class="tags">
+<!--  cycles through tag list and creates header row of all tags used in site with accompanying per-tag counts...-->
   
-    <a class="post-thumbnail" style="background-image: url(/assets/img/computer.jpg)" href="/streamline-your-workflow-with-custom-bash-commands/"></a>
+    <li ><a href="#Programming" class="tag">Programming <span>(1)</span></a></li>
   
-  <div class="post-content">
-    <h2 class="post-title"><a href="/streamline-your-workflow-with-custom-bash-commands/">Streamline your workflow with custom terminal commands</a></h2>
-    <p>As a young programmer, interacting with my computer through the terminal (or bash) can still...</p>
-    <span class="post-date">2019, Sep 02&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">5 minute read</span>
-  </div>
-</article>
-
-<article class="post">
+    <li ><a href="#Terminal" class="tag">Terminal <span>(1)</span></a></li>
   
+  </ul>
+<!--cycles through tag list and creates subheader for each tag name...-->
   
-  <div class="post-content">
-    <h2 class="post-title"><a href="/welcome-to-jekyll/">Welcome to Jekyll!</a></h2>
-    <p>You’ll find this post in your _posts directory. Go ahead and edit it and re-build...</p>
-    <span class="post-date">2017, Apr 06&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">1 minute read</span>
-  </div>
-</article>
-
-
-<div class="container">
-  <nav class="pagination" role="pagination">
-    <ul>
-      
-
-      <p><span class="page-number">Page 1 of 1</span></p>
-
-      
-    </ul>
-  </nav>
-</div>
-
+  <h2 id="Programming">Programming</h2>
+<!--  lists all posts corresponding to specific tag...-->
+    
+    <div class="tag-list">
+        <span><a href="/streamline-your-workflow-with-custom-bash-commands/">Streamline your workflow with custom terminal commands</a></span>
+        <small><span>| 02 Sep 2019</span></small>
+    </div>
+    
+  
+  <h2 id="Terminal">Terminal</h2>
+<!--  lists all posts corresponding to specific tag...-->
+    
+    <div class="tag-list">
+        <span><a href="/streamline-your-workflow-with-custom-bash-commands/">Streamline your workflow with custom terminal commands</a></span>
+        <small><span>| 02 Sep 2019</span></small>
+    </div>
+    
+  
+</section>
 
 </div>
 

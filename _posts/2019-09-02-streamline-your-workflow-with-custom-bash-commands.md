@@ -2,10 +2,12 @@
 layout: post
 title:  "Streamline your workflow with custom terminal commands"
 date:   2019-09-02
-categories: [programming, how-to]
+description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+img: computer.jpg
+tags: [Programming, Terminal] # add tag
 ---
 
-![custom bash command lazygit running in a terminal](/images/lazygit-bash-command.jpg)
+![custom bash command lazygit running in a terminal](/assets/img/lazygit-bash-command.jpg)
 
 As a young programmer, interacting with my computer through the terminal (or bash) can still sometimes feel foreign and clunky. I am in fifth week at The Flatiron School’s Access Labs Software Engineering program, and we work through a lot of labs as part of the curriculum. In order to work on each lab, I would have to follow a series of steps just to open it:
 
