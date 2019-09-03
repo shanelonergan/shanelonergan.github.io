@@ -6,10 +6,7 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: computer.jpg
 tags: [Programming, Terminal] # add tag
 ---
-
-![custom bash command lazygit running in a terminal](/assets/img/lazygit-bash-command.jpg)
-
-As a young programmer, interacting with my computer through the terminal (or bash) can still sometimes feel foreign and clunky. I am in fifth week at The Flatiron School’s Access Labs Software Engineering program, and we work through a lot of labs as part of the curriculum. In order to work on each lab, I would have to follow a series of steps just to open it:
+As a young programmer, interacting with my computer through the terminal (or bash) can still sometimes feel foreign and clunky. I am in my fifth week at Flatiron School’s Software Engineering program, and we work through a lot of labs as part of the curriculum. In order to work on each lab, I would have to follow a series of steps just to open it:
 
 1. Fork it from the Github page
 2. Clone it into a local directory
@@ -29,16 +26,18 @@ In this article I will walk through how to create custom bash commands in Unix-b
 
 ### Creating the custom commands
 
+![custom bash command lazygit running in a terminal](/assets/img/lazygit-bash-command.jpg)
+
 Adding custom commands can be done in just 4 easy steps:
 
 # 1. Open your bash profile document
 
 Each time you open a new terminal session, it loads up your preferences from a hidden document. Files related to the terminal are typically hidden, or invisible, files. These files have a `.` at the beginning of their name, don’t show up in finder searches, and are usually stored in the root directory. For our purposes we only need to know how to view, open, and create these files, but for more information see the further reading below[^1]. In order to view these files, enter the following commands in your terminal:
 
-	$ cd ..
+	$ cd ~
 	$ ls -a
 
-This will print out all of the files saved to your root directory. You should see a file named `.bash_profile`. Go ahead and open that in any text editor. Now, you could add your custom commands anywhere in this document, but in the spirit of readable code we will want to create a new document with all of our new commands, and simply link to that document in our bash profile.
+The first command navigates to the root directory (if not already there), and the second prints out all of the files saved there. You should see a file named `.bash_profile`. Go ahead and open that in any text editor. Now, you could add your custom commands anywhere in this document, but in the spirit of readable code we will want to create a new document with all of our new commands, and simply link to that document in our bash profile.
 
 # 2. Create a custom commands file
 
@@ -116,7 +115,8 @@ function boom {
 
 ---
 
-Note: this guide is written primarily for MacOS users. It should work for any UNIX based operating system (such as Linux), but if you are experiencing any issues I suggest looking into whether your computer uses a login or non-login shell[^2]. If non-login, replacing .bash_profile with .bashrc (run control) in the above instructions should work.
+# Note:
+This guide is written primarily for MacOS users. It should work for any UNIX based operating system (such as Linux), but if you are experiencing any issues I suggest looking into whether your computer uses a login or non-login shell[^2]. If non-login, replacing .bash_profile with .bashrc (run control) in the above instructions should work.
 
 ---
 
