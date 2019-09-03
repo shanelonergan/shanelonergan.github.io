@@ -1,11 +1,17 @@
 ---
 layout: post
-title:  "Streamline your workflow with custom terminal commands"
+title:  "Creating bash commands and aliases"
 date:   2019-09-02
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: computer.jpg
 tags: [Programming, Terminal] # add tag
 ---
+---
+
+**tl;dr:** Custom bash commands are keywords that you can explicitly define to either execute a new function or shorten an existing command. These commands are extremely versatile and customizable, allowing you to tailor them to increase your productivity. Once they are defined in your `.bash_profile` document, you will be able to call on them in any new terminal session.
+
+---
+
 As a young programmer, interacting with my computer through the terminal (or bash) can still sometimes feel foreign and clunky. I am in my fifth week at Flatiron School’s Software Engineering program, and we work through a lot of labs as part of the curriculum. In order to work on each lab, I would have to follow a series of steps just to open it:
 
 1. Fork it from the Github page
@@ -16,7 +22,7 @@ As a young programmer, interacting with my computer through the terminal (or bas
 
 Five steps just to get the lab open on my computer! After a while, I realized that there had to be a better way. As it turns out, this all can be streamlined into one easy step. Enter custom bash commands.
 
-In this article I will walk through how to create custom bash commands in Unix-based operating systems (Mac OS and Linux). These are custom commands you can input in your bash/terminal that either shorten an existing command or execute a pre-defined series. Some examples of what you can accomplish are:
+**In this article I will walk through creating custom bash commands in Unix-based operating systems (Mac OS and Linux).** These are custom commands you can input in your bash/terminal that either shorten an existing command or execute a pre-defined series. Some examples of what you can accomplish are:
 
 - Easily navigate into a directory with a long file path
 - Git add, commit, push, and merge with one command.
@@ -32,7 +38,7 @@ Adding custom commands can be done in just 4 easy steps:
 
 # 1. Open your bash profile document
 
-Each time you open a new terminal session, it loads up your preferences from a hidden document. Files related to the terminal are typically hidden, or invisible, files. These files have a `.` at the beginning of their name, don’t show up in finder searches, and are usually stored in the root directory. For our purposes we only need to know how to view, open, and create these files, but for more information see the further reading below[^1]. In order to view these files, enter the following commands in your terminal:
+Each time you open a new terminal session, it loads up your preferences from a hidden document. Files related to the terminal are typically hidden, or invisible. These files have a `.` at the beginning of their name, don’t show up in finder searches, and are usually stored in the root directory. For our purposes we only need to know how to view, open, and create these files, but for more information see the further reading below[^1]. In order to view these files, enter the following commands in your terminal:
 
 	$ cd ~
 	$ ls -a
@@ -64,7 +70,7 @@ Now try out the new command:
 
 	greet Shane
 
-You should see `Hello Shane!` (or whatever name you give as an argument), printed out. Congrats! You have just made your first custom bash command. However, using the above would require you to run the source command even time you opened a new terminal. If we link to this file in our bash profile, our new commands will come pre-loaded in every new terminal session.
+You should see `Hello Shane!` (or whatever name you give as an argument), printed out. Congrats! You have just made your first custom bash command. However, using the above would require you to run the source command every time you opened a new terminal. If we link to this file in our bash profile, our new commands will come pre-loaded in every new terminal session.
 
 # 3. Link to the file in your bash profile
 
@@ -130,3 +136,4 @@ This guide is written primarily for MacOS users. It should work for any UNIX bas
 
 [^1]:[Show hidden files and folders on mac](https://nektony.com/how-to/show-hidden-files-on-mac)
 [^2]:[Non-login shell and Login Shell](https://www.unixmen.com/non-login-shell-login-shell/)
+---
