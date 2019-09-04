@@ -87,7 +87,7 @@ Alias:
 Function:
 
 	function lazygit() {
-    		git add .;
+    		git add .
     		git commit -m "$1"
     		git push origin master
 	}
@@ -112,9 +112,9 @@ Have fun diving deep into the world of shell scripting. There is a lot more you 
 function boom {
     reponame=${1##*/}
     reponame=${reponame%.git}
-    git clone "$1" "$reponame";
-    cd "$reponame";
-    bundle install;
+    git clone "$1" "$reponame"
+    cd "$reponame"
+    bundle install
     atom .
 }
 ```
