@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "How to make a beautiful personal website quickly"
-date:   2019-09-03
+date:   2019-09-17
 description: Using Jekyll and Github Pages to create and host a great looking website, for free.
-img: computer.jpg
+img: jekyll.jpg
 tags: [Programming, Terminal] # add tag
 ---
 ---
