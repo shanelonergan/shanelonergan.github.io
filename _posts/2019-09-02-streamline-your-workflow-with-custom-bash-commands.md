@@ -32,11 +32,11 @@ Five steps just to get the lab open on my computer! After a while, I realized th
 
 ![custom bash command lazygit running in a terminal](/assets/img/lazygit-bash-command.jpg)
 
-### Creating the custom commands
+# Creating the custom commands
 
 Adding custom commands can be done in just 4 easy steps:
 
-# 1. Open your bash profile document
+### 1. Open your bash profile document
 
 Each time you open a new terminal session, it loads up your preferences from a hidden document. Files related to the terminal are typically hidden, or invisible. These files have a `.` at the beginning of their name, don’t show up in finder searches, and are usually stored in the root directory. For our purposes we only need to know how to view, open, and create these files, but for more information see the further reading below[^1]. In order to view these files, enter the following commands in your terminal:
 
@@ -45,7 +45,7 @@ Each time you open a new terminal session, it loads up your preferences from a h
 
 The first command navigates to the root directory (if not already there), and the second prints out all of the files saved there. You should see a file named `.bash_profile`. Go ahead and open that in any text editor. Now, you could add your custom commands anywhere in this document, but in the spirit of readable code we will want to create a new document with all of our new commands, and simply link to that document in our bash profile.
 
-# 2. Create a custom commands file
+### 2. Create a custom commands file
 
 To create a new invisible file, enter the following command in your terminal:
 
@@ -72,11 +72,11 @@ Now try out the new command:
 
 You should see `Hello Shane!` (or whatever name you give as an argument), printed out. Congrats! You have just made your first custom bash command. However, using the above would require you to run the source command every time you opened a new terminal. If we link to this file in our bash profile, our new commands will come pre-loaded in every new terminal session.
 
-# 3. Link to the file in your bash profile
+### 3. Link to the file in your bash profile
 
 Back in your .bash_profile document, add the same command we ran earlier, `source ~/.my_custom_commands.sh`, anywhere you would like. This will simply run that source command, linking to your custom commands, every time you open a new terminal. To access these commands, you can either run `source ~/.bash_profile` or close your terminal and open up a new session.
 
-# 4. Write your custom commands!
+### 4. Write your custom commands!
 
 There are two ways to create a custom command: aliases and functions. An alias usually shortens an existing command, while a function can chain multiple commands together.
 
@@ -102,7 +102,7 @@ It is up to you which method to use, but I find the function method to be more r
 
 Now go ahead and save your bash profile, and open up a new terminal to test your functions.
 
-# Congratulations! You have just created your own custom bash commands!
+### Congratulations! You have just created your own custom bash commands!
 
 Have fun diving deep into the world of shell scripting. There is a lot more you can accomplish, including using loops, and conditions to create versatile new functions. Below is the first custom function I created, and the one that led me down the path of writing this very article!
 
@@ -121,12 +121,12 @@ function boom {
 
 ---
 
-# Note:
+## Note:
 This guide is written primarily for MacOS users. It should work for any UNIX based operating system (such as Linux), but if you are experiencing any issues I suggest looking into whether your computer uses a login or non-login shell[^2]. If non-login, replacing .bash_profile with .bashrc (run control) in the above instructions should work.
 
 ---
 
-# References
+## References
 
 - [How to create your own custom terminal commands](https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e)
 - [What is a bash script?](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php)
