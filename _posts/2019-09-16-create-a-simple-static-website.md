@@ -21,9 +21,11 @@ Creating your personal website can often be a daunting task. There are a ton of 
 
 ### Set up your environment (optional)
 
+**note:** *I specify terminal commands in this article with a `$`. If you are copying these commands directly, only copy the text following the `$`.*
+
 1. Download a text editor if you don't already have one. I use Atom, but a lot of people really love Visual Studio Code as well.
-2. Create a GitHub account. Git is a version control sofware
-3. Install Homebrew
+2. Create a [GitHub](github.com) account. Git is a version control software
+3. Install [Homebrew](http://osxdaily.com/2018/03/07/how-install-homebrew-mac-os/)
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
@@ -38,22 +40,22 @@ $ gem install bundler
 
 Jekyll is a Ruby gem, which is essentially a library of code created by a group of dedicated programmers and released, for free, to us. It is open source, which means that is it maintained by more amazing programmers who volunteer their time to keep great software free and accessible.
 
-Getting started with Jekyll is super simple. Just enter the following commands in your terminal:
+Getting started with Jekyll is super simple. Before making a custom site, it can be helpful make a sample site first. To do that, enter the following commands in your terminal:
 
 ```
-~ $ cd ..
+$ cd ..
 
-~ $ mkdir jekyll-projects
+$ mkdir jekyll-projects
 
-~ $ cd jekyll-projects
+$ cd jekyll-projects
 
-~ $ gem install bundler jekyll
+$ gem install bundler jekyll
 
-~ $ jekyll new my-awesome-site
+$ jekyll new my-awesome-site
 
-~ $ cd my-awesome-site
+$ cd my-awesome-site
 
-~ $ bundle exec jekyll serve
+$ bundle exec jekyll serve
 ```
 
 Now, open up your web browser and go to http://localhost:4000. TaDa! You have a website up and running! Take a browse through this website to familiarize yourself with the basic Jekyll theme.
@@ -104,11 +106,11 @@ If you have HTML/CSS skills, you can also dive into the `_layouts` or `css` fold
 
 ### Step 3: Add your content
 
-If you are creating a personal blog, there should be a couple sample posts. To create a new post, create a new file in the `_posts` folder. You will have to write your posts in markdown, which might be new. However, don't despair! Markdown is actually a fantastic and simple way to create great looking text files. Check out the Markdown Cheat Sheet in the further reading for a quick guide to get started. Next, copy and paste the header from one of the sample posts, and update it with your post's info. Now all that is left is the the easy part: write your post!
+If you are creating a personal blog, there should be a couple sample posts. To create a new post, create a new file in the `_posts` folder. You will have to write your posts in markdown, which might be new. However, don't despair! Markdown is actually a fantastic and simple way to create great looking text files. Check out the [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) to get started. Next, copy and paste the header from one of the sample posts, and update it with your post's info. Now all that is left is the the easy part: write your post!
 
 # Host your website on GitHub Pages
 
-So, you have finished writing your posts and adding all of your content, and your website looks fantastic in your local browser. Congratulations! That is no small feat. Now it is time to get it up and running for the world to see. Normally hosting your website can be a little bit of a complicated process, but GitHub makes it super easy.  
+So, you have finished writing your posts and adding all of your content, and your website looks fantastic in your local browser. Congratulations! That is no small feat. Now it is time to get it up and running for the world to see. Hosting your website can seem like a complicated process, but GitHub makes it super easy.  
 
 ### Step 1: Rename your project
 
