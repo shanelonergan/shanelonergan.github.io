@@ -13,11 +13,11 @@ This guide assumes some basic Ruby, HTML/CSS, and git experience. It will still 
 
 ---
 
-**tl;dr:** Custom bash commands are keywords that you can explicitly define to either execute a new function or shorten an existing command. These commands are extremely versatile and customizable, allowing you to tailor them to increase your productivity. Once they are defined in your `.bash_profile` document, you will be able to call on them in any new terminal session.
+**tl;dr:** Jekyll is a Ruby gem that allows you to create custom static websites. It is simple and customizable, offering a wide variety of themes for blogs, personal websites, portfolios, and more. You can use Jekyll in conjunction with Github Pages to create and host your own website for free, fast.
 
 ---
 
-Creating your personal website can often be a daunting task. There are a ton of options for a variety of skill levels, from using Wix or Wordpress templates to coding one from scratch. Building from scratch gives you the most control over the end product, while using a template can get you up and running quickly with the lowest learning curve. If you have a little bit of coding experience, something in the middle might actually be the best option. One way to create a simple, beautiful websites quickly is to use Jekyll, and then deploy it for free on GitHub Pages. Jekyll is a ruby gem which is great for creating personal websites and blogs, and is what I used to make my own blogging site. It offers a variety of themes, is extremely customizable, and most importantly, it is fast! Creating and deploying your own personal website using Jekyll can be done in less than an hour.
+Creating your personal website can often be a daunting task. There are a ton of options for a variety of skill levels, from using Wix or Wordpress templates to coding one from scratch. Building from scratch gives you the most control over the end product, while using a template can get you up and running quickly with the lowest learning curve. If you have a little bit of coding experience, something in the middle might actually be the best option. One way to create a simple, beautiful websites quickly is to use Jekyll, and then deploy it for free on GitHub Pages. Jekyll is a ruby gem which is great for creating personal websites and blogs, and is what I used to make my own blogging site. It offers a variety of themes, is extremely customizable, and most importantly, it is fast! **In this article I will walk you through creating and deploying your own personal website using Jekyll and Github Pages.**
 
 ### Set up your environment (optional)
 
