@@ -67,10 +67,10 @@ Bulma home page      |  Bulma sample template
 Once you have decided on a framework, it is time to get started. I would recommend building a practice project to familiarize yourself with the framework's various classes, templates, and workflows. Each framework's respective website usually has a guide to installation and getting started, and once you are up and running, feel free to check out some of the tutorials below. Have fun creating beautiful, responsive websites with your newfound CSS framework skills!
 
 ### Further Resources
--[Bootsrap Beginner Crash Course - Traversy Media (not up to date for Bootsrap 4)](https://www.youtube.com/watch?v=5GcQtLDGXy8)
--[Bootsrap 4 Tutorial - Boostrap Dash](https://www.bootstrapdash.com/bootstrap-4-tutorial/introduction/)
--[Make Material design websites with the material CSS framework - Narayan Prusty](https://scotch.io/tutorials/make-material-design-websites-with-the-materialize-css-framework)
--[Learn Bulma CSS for free - Scrimba](https://scrimba.com/g/gbulma)
+- [Bootsrap Beginner Crash Course - Traversy Media (not up to date for Bootsrap 4)](https://www.youtube.com/watch?v=5GcQtLDGXy8)
+- [Bootsrap 4 Tutorial - Boostrap Dash](https://www.bootstrapdash.com/bootstrap-4-tutorial/introduction/)
+- [Make Material design websites with the material CSS framework - Narayan Prusty](https://scotch.io/tutorials/make-material-design-websites-with-the-materialize-css-framework)
+- [Learn Bulma CSS for free - Scrimba](https://scrimba.com/g/gbulma)
 
 
 ### Frameworks
