@@ -21,7 +21,7 @@ A CSS framework is a combination of design best-practices and standardized class
 
 #### 1. Bootstrap
 
-Bootstrap's home page      |  Boostrap sample template
+Bootstrap home page      |  Boostrap sample template
 ---------------------------|---------------------------
 ![screenshot of Bootstrap home page](/assets/img/bootstrap.png)   |![screenshot of Bootstrap template](/assets/img/bootstrap-template.png)
 
@@ -32,27 +32,29 @@ Originally developed at Twitter to create consistency among internal projects, [
 
 #### 2. Foundation
 
-![screenshot of Foundation home page](/assets/img/foundation.png)
+Foundation home page      |  Foundation sample template
+---------------------------|---------------------------
+![screenshot of Foundation home page](/assets/img/foundation.png) |![screenshot of Foundation template](/assets/img/foundation-template.png)
+
 
 [Foundation](https://foundation.zurb.com/) is an industrial grade CSS framework favored by large companies such as Ebay, Disney, and Mozilla. While some think it isn't as aesthetically pleasing as Bootstrap out of the box, it is one of the most powerful frameworks available. Foundation is the most complex framework on this list, and I wouldn't recommend it for beginners. However, Foundation does offer certification courses(at a cost), if you have some prior front-end experience and are looking to dive into something more sophisticated.
 
-![screenshot of Foundation template](/assets/img/foundation-template.png)
 
 #### 3. Materialize CSS
 
-![screenshot of Materialize home page](/assets/img/materialize.png)
+Materialize CSS home page      |  Materialize CSS sample template
+---------------------------|---------------------------
+![screenshot of Materialize home page](/assets/img/materialize.png)|![screenshot of Materialize CSS template](/assets/img/material-template.png)
 
 [Materialize CSS](https://materializecss.com/) is built on Google's [Material design principles](https://material.io/design/). Material is one of the most popular design languages, with most of Google's applications, including YouTube and Google Drive, being built on its principles. If you are going for the look and feel of google and android, this is likely the framework for you.
 
-![screenshot of Materialize CSS template](/assets/img/material-template.png)
-
 #### 4. Bulma 
 
-![screenshot of Bulma home page](/assets/img/bulma.png)
+Bulma home page      |  Bulma sample template
+---------------------------|---------------------------
+![screenshot of Bulma home page](/assets/img/bulma.png) |![screenshot of Bulma template](/assets/img/bulma-template.png)
 
 [Bulma](bulma.io) is an up-and-coming lightweight CSS-only framework. Bulma is extremely beginner-friendly, with intuitive class names and easy-to-follow startup tutorial. I also think Bulma is one of the most beautiful CSS frameworks straight out of the box, with a clean and colorful aesthetic. Additionally, the community is very passionate, so you can find a lot of helpful guides and code snippets to guide you along the way. Since Bulma is CSS only, you will need to provide your own JavaScript if needed. 
-
-![screenshot of Bulma template](/assets/img/bulma-template.png)
 
 #### 5. Skeleton
 
