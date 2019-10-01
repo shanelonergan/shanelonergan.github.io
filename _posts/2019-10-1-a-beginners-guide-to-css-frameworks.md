@@ -3,7 +3,7 @@ layout: post
 title:  "A Beginner's Guide to CSS Frameworks"
 date:   2019-10-1
 description: An introduction to some of the most popular ways to get your website looking good, fast.
-img: css.jpeg
+img: css-logo.jpeg
 tags: [programming, css, frameworks] # add tag
 ---
 ---
@@ -21,11 +21,11 @@ A CSS framework is a combination of design best-practices and standardized class
 
 #### 1. Bootstrap
 
-![screenshot of Bootstrap home page](/assets/img/bootstrap.png)
+![screenshot of Bootstrap home page](/assets/img/bootstrap.png)![screenshot of Bootstrap template](/assets/img/boostrap-template.png)
 
 Originally developed at Twitter to create consistency among internal projects, [Bootstrap](https://getbootstrap.com/) has grown to become one of the most popular CSS frameworks, often being the default choice for many developers. It offers a wide variety of page templates and UI components(chunks of HTML you can add to your code), and tons of styling options for everything. Bootstrap also offers templates which include JavaScript for interactivity and animations. While relatively simple to get started on, the massive amount of options can make it easy to get lost in as a beginner. Bootstrap has also become so ubiquitous that some developers worry websites styled with it won't stand out. 
 
-![screenshot of Bootstrap template](/assets/img/boostrap-template.png)
+
 
 #### 2. Foundation
 
