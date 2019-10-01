@@ -4,7 +4,7 @@ title:  "Creating bash commands and aliases"
 date:   2019-09-02
 description: Streamline your workflow with custom terminal commands # Add post description (optional)
 img: computer.jpg
-tags: [Programming, Terminal] # add tag
+tags: [programming, terminal, bash] # add tag
 ---
 ---
 
