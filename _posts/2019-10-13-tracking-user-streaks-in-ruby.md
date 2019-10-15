@@ -38,4 +38,14 @@ After a few uncessful attempts at using gems or code-snippets, we decided it wou
 
 ### The breakdown
 
-Our application is built on a ruby-on-rails back-end, with a vanilla JavaScript front end.
+Our application is built on a ruby-on-rails back-end, with a vanilla JavaScript front end. There are two models: `User` and `Session`. A `Session` *belongs to* a `User`, and a `User` *has many* `Sessions`.
+
+#### Step 1: Set up relationships
+
+![image of relationships](../_site/assets/img/relationships.png)
+
+We gave a Ruby class of User, which inherits from `ApplicationRecord`, which is a rails model which includes ActiveRecord. We can then add the ActiveRecord syntax for a has-many relationship as seen on line 2. This allows us to access all of a User's sessions by simply calling `.sessions` on in instance of a `User`.
+
+#### Step 2: Set up variables
+
+![image of variables](../_site/assets/img/variables.png)
