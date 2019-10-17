@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Creating bash commands and aliases"
-date:   2019-09-02
-description: Streamline your workflow with custom terminal commands # Add post description (optional)
+title:  "Tracking user sreaks in Ruby"
+date:   2019-10-17
+description: addict your users to your app with psychology # Add post description (optional)
 img: computer.jpg
 tags: [programming, terminal, bash] # add tag
 ---
