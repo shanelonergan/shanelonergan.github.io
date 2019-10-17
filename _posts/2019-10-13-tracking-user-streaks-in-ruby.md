@@ -46,11 +46,11 @@ Our application is built on a ruby-on-rails back-end, with a vanilla JavaScript 
 
 First we need to create a Ruby class of User, which inherits from `ApplicationRecord`, which is a rails model which includes ActiveRecord. We can then add the ActiveRecord syntax for a has-many relationship as seen on line 2. This allows us to access all of a User's sessions by simply calling `.sessions` on in instance of a `User`.
 
-#### Step 2: Set up variables
+#### Step 2: Create a class method
 
-![image of variables](../_site/assets/img/variables.png)
+![image of variables](../_site/assets/img/instance-method.png)
 
-Next, we need to establish the variables we will be using within our function, `streak`. Ruby allows is to easily find and format the current day using `Time.now.to_date`. `Time.now` will retrun a date in a long format:
+Next, we need to create an instance method, `streak`, that we can call on an instance of a `User` to get their streak. Inside this method, we will declare a a couple local variables we wil need later in the function. Ruby allows is to easily find and format the current day using `Time.now.to_date`. `Time.now` will retrun a date in a long format:
 ```ruby
 Time.now
 => 2019-10-15 16:16:16 -0400
@@ -60,14 +60,27 @@ Since we only want to keep track of days, we can get rid of all of the extraneou
 Time.now.to_date
 => 2019-10-15
 ```
+
+### Step 3: Create an array of dates
 In order to make sure that multiple sessions in the same day will not count towards the streak, we want to create an array only containing the unique dates. We will do this in two steps:
-   1. Create an array of dates converted from the `created-at` timestamp for every session.
-      - `uniq_dates = self.sessions.map { |session| session.created_at.to_date }`
+
+   1. Using the enumberable method `.map`, we can create an array of dates converted from the `created-at` timestamp for every session.
+
+```ruby
+dates_array = self.sessions.map do |session|
+   session.created_at.to_date
+end
+ ```
+
    2. Apply `.uniq` to that array to ensure it only includes unique dates.
-      - `uniq_dates.uniq`
+
+```ruby
+ unique_dates = dates_array.uniq
+ ```
 
 Finally, we need to establish a default value for the `streak_count`, `0`. We now have most of the variables we will need to calculate the streak!
 
 #### Step 3: Calculate the streak
 
 For this step, we will take advantage of the Ruby enumerable method `reduce`. If you are not familiar with reduce, I would recommend checking out [this](wwww.put-link-here.com) great article.
+
