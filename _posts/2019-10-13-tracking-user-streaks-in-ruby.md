@@ -7,20 +7,6 @@ img: computer.jpg
 tags: [programming, terminal, bash] # add tag
 ---
 ---
-### outline
-
-1. Intro
-   1. anecdote/why tracking user streaks is common/useful
-      1. maybe data about how streaks help bring users back.
-   2. explain project with Avi/struggles we went through
-   3. maybe why soving this problem in ruby is a good idea?
-2. The code
-   1. show the code first in one big block
-3. The breakdown
-   1. datetime in ruby
-   2. walk through a pseaudocode (reverse 1 and 2?)
-   3. add code step by step
-4. Wrap up/summary/conclusion
 
 From Duolingo to Headspace, many of the most popular apps today track user's "streaks". By keeping track of the number of days in a row a user has logged in and completed a task, these apps aim to create a beneficial habit for the user, while simultaneously insuring an active daily user base. Evidence seems to indicate that desire to keep a streak going will indeed motivate a person to do a task they might not otherwise.
 
@@ -85,7 +71,7 @@ Finally, we need to establish a default value for the `streak_count`, `0`. We no
 
 #### Step 3: Calculate the streak
 
-For this step, we will take advantage of the Ruby enumerable method `reduce`. If you are not familiar with reduce, I would recommend checking out [this](wwww.put-link-here.com) great article.
+For this step, we will take advantage of the Ruby enumerable method `reduce`. If you are not familiar with reduce, I would recommend checking out this [great article](https://mixandgo.com/learn/what-is-a-ruby-reducer).
 
 ![image of streak calculation](../_site/assets/img/calculate-streak.png)
 
@@ -106,11 +92,36 @@ Typically, the accumulator (conventionally called the `memo`) is the return valu
 
 However, for our method, we need to track two different variables: the current streak value, and the date of the *last consecutive session*. This is because we are counting in reverse chronological order, starting with today's date. I find it helpful to conceptualize this through a metaphor:
 
->Imagine you are walking on a giant calendar. The date you are standing on is *today*, and the day in front of you is *yesterday*. If you were to walk forward, you would be walking back in time. Make sense? Now, you will first check if there was a session completed *today*. If there wasn't, the streak count should remain at 0. If there was, increment the streak count by 1. Then, look forward and see if there was a session completed yesterday. If there was, inrement the streak count and move forward into *yesterday*. Once you step forward, *yesteray* becomes *today*.
+>Imagine you have been shrunk down in honey-I-shrunk-the-kinds style.  The date you are standing on is *today*, and the day in front of you is *yesterday*. If you were to walk forward, you would be walking back in time. Make sense? Now, you will first check if there was a session completed *today*. If there was, increment the streak count by 1. Then, look forward and see if there was a session completed yesterday. If there was, increment the streak count by 1 and move forward into *yesterday*. Once you step forward, *yesteray* becomes *today*. Congrats! You are now a time traveller. Standing on the new *today*, look forward to the new *yesterday*. If there was a session completed on that day, increment, and step forward again. Repeat this time-travelling process until you encounter a *yesterday* without a serssion completed. Once you do, you have your current streak count!
 
-In this metaphor, we can keep track of the date of the last consecutive session because we are standing on it. In our function, we will save it to our memo, because it is the value we want to
+In this metaphor, we can keep track of the date of the last consecutive session because we are standing on it. In our function, we will keep track of it by saving it to our memo. Since we also want to kep track of the streak_count, as well as have it be the return value of the entire `streak` method, we initialized it as a variable outside of our reducer. We can then increment this inside the reducer. Here is the code:
+
+```ruby
+uniq_dates.reduce(today) do | memo, date |
+
+   # set the value of yesterday as the date before "today"
+   yesterday = memo.yesterday.to_date
+
+      # check if the this interation's date is equal to either today or yesterday
+      if date == yesterday || date == today
+
+         # increment the streak count
+         streak_count += 1
+
+         # set the memo to thi round's date
+         memo = date
+
+      end
+
+   # return the memo so we have access to it in the next interation
+   memo
+
+end
+```
+
 
 #### Congrats! You can now calculate user streaks in your rails application.
 
+**important:** Don't forget to return the streak count at the end of the `streak method`, or else the return value will be the final memo from our reducer.
 
 ![image of full code with comments](../_site/assets/img/full-code-comments.png)
