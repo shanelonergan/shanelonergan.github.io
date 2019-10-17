@@ -8,24 +8,32 @@ tags: [programming, terminal, bash] # add tag
 ---
 ---
 
-From Duolingo to Headspace, many of the most popular apps today track user's "streaks". By keeping track of the number of days in a row a user has logged in and completed a task, these apps aim to create a beneficial habit for the user, while simultaneously insuring an active daily user base. Evidence seems to indicate that desire to keep a streak going will indeed motivate a person to do a task they might not otherwise.
+From Duolingo to Headspace, many of the most popular apps today track users' "streaks". By keeping track of the number of days in a row a user has logged in and completed a task, these apps aim to create a beneficial habit for the user, while simultaneously insuring an active daily user base. Evidence seems to indicate that desire to keep a streak going will indeed motivate a person to do a task they might not otherwise.
 
-With streaks being such a popular feature, a friend and I decided to try and incorperate it into a recent project we were working on. The application walked a user through the steps of a wim-hof breathing cycle, and we wanted to display the number of days in a row they had completed at least one cycle.
+With streaks being such a popular feature, a friend and I decided to try and incorporate it into a recent project we were working on. The application walked a user through the steps of a Wim Hof breathing cycle, and we wanted to display the number of days in a row they had completed at least one cycle.
 
-# Table of Contents
-1. [The goal](#the-goal)
-2. [The Solution](#the-solution)
-3. [The Breakdown](#the-breakdown)
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+  - [The goal](#the-goal)
+  - [The solution](#the-solution)
+  - [The breakdown](#the-breakdown)
+    - [Step 1: Set up relationships](#step-1-set-up-relationships)
+    - [Step 2: Define an instance method](#step-2-define-an-instance-method)
+  - [Step 3: Create an array of dates](#step-3-create-an-array-of-dates)
+    - [Step 3: Calculate the streak](#step-3-calculate-the-streak)
+    - [Congrats! You can now calculate user streaks in your rails application](#congrats-you-can-now-calculate-user-streaks-in-your-rails-application)
+  - [References](#references)
 
 ### The goal
 
-Track the number of consecutive days a logged-in user completed a breathing-cycle, and display that number on the home pahe of our application. When the user completes a new session on a consecutive day for the first time, that number should update immediatly.
+Track the number of consecutive days a logged-in user completed a breathing-cycle, and display that number on the home page of our application. When the user completes a new session on a consecutive day for the first time, that number should update immediately.
 
 ### The solution
 
-After a few uncessful attempts at using gems or code-snippets, we decided it would be easier and a better learning experience to write our own code. We also opted to track the streaks in the back end, because Ruby makes working with dates and times simpler. Here is the final version:
+After a few unsuccessful attempts at using gems or code-snippets, we decided it would be easier and a better learning experience to write our own code. We also opted to track the streaks in the back end, because Ruby makes working with dates and times simpler. Here is the final version:
 
-![image of final code](../_site/assets/img/full-code.png)
+![image of final code](../_site/assets/img/full-code.jpg)
 
 ### The breakdown
 
@@ -33,20 +41,27 @@ Our application is built on a ruby-on-rails back-end, with a vanilla JavaScript 
 
 #### Step 1: Set up relationships
 
-![image of relationships](../_site/assets/img/relationships.png)
+![image of relationships](../_site/assets/img/relationships.jpg)
 
-First we need to create a Ruby class of User, which inherits from `ApplicationRecord`, which is a rails model which includes ActiveRecord. We can then add the ActiveRecord syntax for a has-many relationship as seen on line 2. This allows us to access all of a User's sessions by simply calling `.sessions` on in instance of a `User`.
+First we need to create a Ruby class of User, which inherits from `ApplicationRecord`, which is a rails model which includes ActiveRecord. We can then add the ActiveRecord syntax for a has-many relationship as seen on line 2. This allows us to access all of a User's sessions by simply calling `.sessions` on in instance of a `User`. Additionally, Active Record relationships can take a second argument, [scope](https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-belongs-to), which allows us to customize the SQL query. Will will want to haver our array ordered from most recent date to least recent date, which can be accomplished if we query for _**descending**_ order:
 
-#### Step 2: Create a class method
+```ruby
+has_many :sessions, -> {order "created_at DESC"}
+```
 
-![image of variables](../_site/assets/img/instance-method.png)
+#### Step 2: Define an instance method
 
-Next, we need to create an instance method, `streak`, that we can call on an instance of a `User` to get their streak. Inside this method, we will declare a a couple local variables we wil need later in the function. Ruby allows is to easily find and format the current day using `Time.now.to_date`. `Time.now` will retrun a date in a long format:
+![image of variables](../_site/assets/img/instance-method.jpg)
+
+Next, we need to create an instance method, `streak`, that we can call on an instance of a `User` to get their streak. Inside this method, we will declare a a couple local variables we will need later in the function. First, lets set `streak_count` to 0. We should also define `today` for readability. Ruby allows is to easily find and format the current day using `Time.now.to_date`. `Time.now` will return a date in a long format:
+
 ```ruby
 Time.now
 => 2019-10-15 16:16:16 -0400
 ```
+
 Since we only want to keep track of days, we can get rid of all of the extraneous information using `to_date`. This will return a simple, readable date format.
+
 ```ruby
 Time.now.to_date
 => 2019-10-15
@@ -54,11 +69,11 @@ Time.now.to_date
 
 ### Step 3: Create an array of dates
 
-![image of dates array](../_site/assets/img/unique-dates.png)
+![image of dates array](../_site/assets/img/unique-dates.jpg)
 
 In order to make sure that multiple sessions in the same day will not count towards the streak, we want to create an array only containing the unique dates. We will do this in two steps:
 
-   1. Using the enumberable method `.map`, we can create an array of dates converted from the `created-at` timestamp for every session.
+   1. Using the enumerable method `.map`, we can create an array of dates converted from the `created-at` timestamp for every session.
 
 ```ruby
 dates_array = self.sessions.map do |session|
@@ -78,12 +93,12 @@ Finally, we need to establish a default value for the `streak_count`, `0`. We no
 
 For this step, we will take advantage of the Ruby enumerable method `reduce`. If you are not familiar with reduce, I would recommend checking out this [great article](https://mixandgo.com/learn/what-is-a-ruby-reducer).
 
-![image of streak calculation](../_site/assets/img/calculate-streak.png)
+![image of streak calculation](../_site/assets/img/calculate-streak.jpg)
 
-Lets walk through this method. The basic structure of a reducer in psuedocode looks like this:
+Lets walk through this method. The basic structure of a reducer in pseudocode looks like this:
 
 ```ruby
-array-variable.reduce(starting_value) do | accumulator, current_element |
+array_variable.reduce(starting_value) do | accumulator, current_element |
    action
 end
 ```
@@ -95,38 +110,45 @@ Typically, the accumulator (conventionally called the `memo`) is the return valu
 # => 6
 ```
 
-However, for our method, we need to track two different variables: the current streak value, and the date of the *last consecutive session*. This is because we are counting in reverse chronological order, starting with today's date. Lets walk through it step by step
-
->Imagine you have been shrunk down in honey-I-shrunk-the-kinds style.  The date you are standing on is *today*, and the day in front of you is *yesterday*. If you were to walk forward, you would be walking back in time. Make sense? Now, you will first check if there was a session completed *today*. If there was, increment the streak count by 1. Then, look forward and see if there was a session completed yesterday. If there was, increment the streak count by 1 and move forward into *yesterday*. Once you step forward, *yesteray* becomes *today*. Congrats! You are now a time traveller. Standing on the new *today*, look forward to the new *yesterday*. If there was a session completed on that day, increment, and step forward again. Repeat this time-travelling process until you encounter a *yesterday* without a serssion completed. Once you do, you have your current streak count!
-
-In this metaphor, we can keep track of the date of the last consecutive session because we are standing on it. In our function, we will keep track of it by saving it to our memo. Since we also want to kep track of the streak_count, as well as have it be the return value of the entire `streak` method, we initialized it as a variable outside of our reducer. We can then increment this inside the reducer. Here is the code:
+However, for our method, we need to track two different variables: the current streak value, and the date of the *last consecutive session*. This is because we are counting in reverse chronological order, starting with today's date. Lets break it down:
 
 ```ruby
-uniq_dates.reduce(today) do | memo, date |
+unique_dates.reduce(today) do | memo, date |
 
-   # set the value of yesterday as the date before "today"
    yesterday = memo.yesterday.to_date
-
-      # check if the this interation's date is equal to either today or yesterday
-      if date == yesterday || date == today
-
-         # increment the streak count
-         streak_count += 1
-
-         # set the memo to thi round's date
-         memo = date
-
-      end
-
-   # return the memo so we have access to it in the next interation
-   memo
 
 end
 ```
 
+Here we are calling reduce on the unique dates array, and passing in `today`, which we defined in step 2, as starting value for the memo. Then we are defining a local variable, `yesterday`, as the reformatted date of the day before the memo.
 
-#### Congrats! You can now calculate user streaks in your rails application.
+```ruby
+unique_dates.reduce(today) do | memo, date |
+
+      yesterday = memo.yesterday.to_date
+
+      if date == yesterday || date == today
+
+            streak_count += 1
+            memo = date
+
+      end
+end
+```
+
+Finally, we want to create an *if* statement that determines when to increment the streak count. If the user had finished a session today, then `date` will be equal to today during first iteration through the array; we would want to increment then. For each following iteration, we want to check if `date` is equal to `yesterday`. If it is, that means that the user has finished a session three days in a row, and so we should increment again. This will continue to increment as long as the next date in the array is the day prior to the current date we are iterating over. This works because we ordered the `sessions` array in descending order based on their `created_at` attributes, as mentioned above.
 
 **important:** Don't forget to return the streak count at the end of the `streak method`, or else the return value will be the final memo from our reducer.
 
-![image of full code with comments](../_site/assets/img/full-code-comments.png)
+#### Congrats! You can now calculate user streaks in your rails application
+
+This code should be modifiable to work with any Active Record model with a *has_many* relationship. Good luck tracking all those streaks!
+
+Here is the final code, with comments included:
+
+![image of full code with comments](../_site/assets/img/full-code-comments.jpg)
+
+### References
+
+- [What is a Ruby Reducer?](https://mixandgo.com/learn/what-is-a-ruby-reducer)
+- [Scopes for belongs_to](https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-Belongs-to)
