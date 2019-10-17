@@ -12,6 +12,11 @@ From Duolingo to Headspace, many of the most popular apps today track user's "st
 
 With streaks being such a popular feature, a friend and I decided to try and incorperate it into a recent project we were working on. The application walked a user through the steps of a wim-hof breathing cycle, and we wanted to display the number of days in a row they had completed at least one cycle.
 
+# Table of Contents
+1. [The goal](#the-goal)
+2. [The Solution](#the-solution)
+3. [The Breakdown](#the-breakdown)
+
 ### The goal
 
 Track the number of consecutive days a logged-in user completed a breathing-cycle, and display that number on the home pahe of our application. When the user completes a new session on a consecutive day for the first time, that number should update immediatly.
@@ -90,7 +95,7 @@ Typically, the accumulator (conventionally called the `memo`) is the return valu
 # => 6
 ```
 
-However, for our method, we need to track two different variables: the current streak value, and the date of the *last consecutive session*. This is because we are counting in reverse chronological order, starting with today's date. I find it helpful to conceptualize this through a metaphor:
+However, for our method, we need to track two different variables: the current streak value, and the date of the *last consecutive session*. This is because we are counting in reverse chronological order, starting with today's date. Lets walk through it step by step
 
 >Imagine you have been shrunk down in honey-I-shrunk-the-kinds style.  The date you are standing on is *today*, and the day in front of you is *yesterday*. If you were to walk forward, you would be walking back in time. Make sense? Now, you will first check if there was a session completed *today*. If there was, increment the streak count by 1. Then, look forward and see if there was a session completed yesterday. If there was, increment the streak count by 1 and move forward into *yesterday*. Once you step forward, *yesteray* becomes *today*. Congrats! You are now a time traveller. Standing on the new *today*, look forward to the new *yesterday*. If there was a session completed on that day, increment, and step forward again. Repeat this time-travelling process until you encounter a *yesterday* without a serssion completed. Once you do, you have your current streak count!
 
