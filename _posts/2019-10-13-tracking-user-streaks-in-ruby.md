@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Tracking user sreaks in Ruby"
+title:  "Tracking user streaks in Ruby"
 date:   2019-10-17
-description: addict your users to your app with psychology # Add post description (optional)
+description: subtitle here # Add post description (optional)
 img: computer.jpg
 tags: [programming, terminal, bash] # add tag
 ---
@@ -20,7 +20,7 @@ With streaks being such a popular feature, a friend and I decided to try and inc
   - [The breakdown](#the-breakdown)
     - [Step 1: Set up relationships](#step-1-set-up-relationships)
     - [Step 2: Define an instance method](#step-2-define-an-instance-method)
-  - [Step 3: Create an array of dates](#step-3-create-an-array-of-dates)
+    - [Step 3: Create an array of dates](#step-3-create-an-array-of-dates)
     - [Step 3: Calculate the streak](#step-3-calculate-the-streak)
     - [Congrats! You can now calculate user streaks in your rails application](#congrats-you-can-now-calculate-user-streaks-in-your-rails-application)
   - [References](#references)
@@ -67,7 +67,7 @@ Time.now.to_date
 => 2019-10-15
 ```
 
-### Step 3: Create an array of dates
+#### Step 3: Create an array of dates
 
 ![image of dates array](../_site/assets/img/unique-dates.jpg)
 
