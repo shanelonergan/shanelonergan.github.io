@@ -33,7 +33,7 @@ Track the number of consecutive days a logged-in user completed a breathing-cycl
 
 After a few unsuccessful attempts at using gems or code-snippets, we decided it would be easier and a better learning experience to write our own code. We also opted to track the streaks in the back end, because Ruby makes working with dates and times simpler. Here is the final version:
 
-![image of final code](../_site/assets/img/full-code.jpg)
+![image of final code](../assets/img/full-code.jpg)
 
 ### The breakdown
 
@@ -41,7 +41,7 @@ Our application is built on a ruby-on-rails back-end, with a vanilla JavaScript 
 
 #### Step 1: Set up relationships
 
-![image of relationships](../_site/assets/img/relationships.jpg)
+![image of relationships](../assets/img/relationships.jpg)
 
 First we need to create a Ruby class of User, which inherits from `ApplicationRecord`, which is a rails model which includes ActiveRecord. We can then add the ActiveRecord syntax for a has-many relationship as seen on line 2. This allows us to access all of a User's sessions by simply calling `.sessions` on in instance of a `User`. Additionally, Active Record relationships can take a second argument, [scope](https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-belongs-to), which allows us to customize the SQL query. Will will want to haver our array ordered from most recent date to least recent date, which can be accomplished if we query for _**descending**_ order:
 
@@ -51,7 +51,7 @@ has_many :sessions, -> {order "created_at DESC"}
 
 #### Step 2: Define an instance method
 
-![image of variables](../_site/assets/img/instance-method.jpg)
+![image of variables](../assets/img/instance-method.jpg)
 
 Next, we need to create an instance method, `streak`, that we can call on an instance of a `User` to get their streak. Inside this method, we will declare a a couple local variables we will need later in the function. First, lets set `streak_count` to 0. We should also define `today` for readability. Ruby allows is to easily find and format the current day using `Time.now.to_date`. `Time.now` will return a date in a long format:
 
@@ -69,7 +69,7 @@ Time.now.to_date
 
 #### Step 3: Create an array of dates
 
-![image of dates array](../_site/assets/img/unique-dates.jpg)
+![image of dates array](../assets/img/unique-dates.jpg)
 
 In order to make sure that multiple sessions in the same day will not count towards the streak, we want to create an array only containing the unique dates. We will do this in two steps:
 
@@ -93,7 +93,7 @@ Finally, we need to establish a default value for the `streak_count`, `0`. We no
 
 For this step, we will take advantage of the Ruby enumerable method `reduce`. If you are not familiar with reduce, I would recommend checking out this [great article](https://mixandgo.com/learn/what-is-a-ruby-reducer).
 
-![image of streak calculation](../_site/assets/img/calculate-streak.jpg)
+![image of streak calculation](../assets/img/calculate-streak.jpg)
 
 Lets walk through this method. The basic structure of a reducer in pseudocode looks like this:
 
@@ -146,7 +146,7 @@ This code should be modifiable to work with any Active Record model with a *has_
 
 Here is the final code, with comments included:
 
-![image of full code with comments](../_site/assets/img/full-code-comments.jpg)
+![image of full code with comments](../assets/img/full-code-comments.jpg)
 
 ### References
 
