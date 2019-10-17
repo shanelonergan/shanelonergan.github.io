@@ -62,6 +62,9 @@ Time.now.to_date
 ```
 
 ### Step 3: Create an array of dates
+
+![image of dates array](../_site/assets/img/unique-dates.png)
+
 In order to make sure that multiple sessions in the same day will not count towards the streak, we want to create an array only containing the unique dates. We will do this in two steps:
 
    1. Using the enumberable method `.map`, we can create an array of dates converted from the `created-at` timestamp for every session.
@@ -84,3 +87,30 @@ Finally, we need to establish a default value for the `streak_count`, `0`. We no
 
 For this step, we will take advantage of the Ruby enumerable method `reduce`. If you are not familiar with reduce, I would recommend checking out [this](wwww.put-link-here.com) great article.
 
+![image of streak calculation](../_site/assets/img/calculate-streak.png)
+
+Lets walk through this method. The basic structure of a reducer in psuedocode looks like this:
+
+```ruby
+array-variable.reduce(starting_value) do | accumulator, current_element |
+   action
+end
+```
+
+Typically, the accumulator (conventionally called the `memo`) is the return value of the method. For example, if you were calculating the sum of an array of numbers, it would look like this:
+
+```ruby
+[1, 2, 3].reduce(0) { |memo, n| memo + n }
+# => 6
+```
+
+However, for our method, we need to track two different variables: the current streak value, and the date of the *last consecutive session*. This is because we are counting in reverse chronological order, starting with today's date. I find it helpful to conceptualize this through a metaphor:
+
+>Imagine you are walking on a giant calendar. The date you are standing on is *today*, and the day in front of you is *yesterday*. If you were to walk forward, you would be walking back in time. Make sense? Now, you will first check if there was a session completed *today*. If there wasn't, the streak count should remain at 0. If there was, increment the streak count by 1. Then, look forward and see if there was a session completed yesterday. If there was, inrement the streak count and move forward into *yesterday*. Once you step forward, *yesteray* becomes *today*.
+
+In this metaphor, we can keep track of the date of the last consecutive session because we are standing on it. In our function, we will save it to our memo, because it is the value we want to
+
+#### Congrats! You can now calculate user streaks in your rails application.
+
+
+![image of full code with comments](../_site/assets/img/full-code-comments.png)
