@@ -1,0 +1,128 @@
+I"�!<hr />
+
+<h1 id="a-beginners-guide-to-css-frameworks">A Beginner’s Guide to CSS Frameworks</h1>
+
+<h4 id="an-introduction-to-some-of-the-most-popular-ways-to-get-your-website-looking-good-fast">An introduction to some of the most popular ways to get your website looking good, fast.</h4>
+
+<p>CSS frameworks are an extremely popular front-end development tool. They can allow developers without vast CSS and JavaScript experience to create beautiful, interactive websites. However, when decided to use a CSS framework for the first time, it is easy to become overwhelmed by the number of options out there. This article will provide an introduction to CSS frameworks in general, as well as a few of the most popular options available.</p>
+
+<h2 id="what-is-a-css-framework">What is a CSS Framework?</h2>
+
+<p>A CSS framework is a combination of design best-practices and standardized class systems that provide a basic structure for styling a web page. Practically, they are usually an external stylesheet that you link to, giving you a grid system to layout content and a collection of CSS classes to style elements with. Often, frameworks will also provide whole components, which are chunks of HTML that come pre-styled with CSS. These can range from simple buttons to entire forms or navigation bars. Some frameworks also come with font and icon libraries, as well as JavaScript files for animations and interactivity.</p>
+
+<h2 id="popular-frameworks">Popular Frameworks</h2>
+
+<h4 id="1-bootstrap">1. Bootstrap</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bootstrap home page</th>
+      <th>Boostrap sample template</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/bootstrap.png" alt="screenshot of Bootstrap home page" /></td>
+      <td><img src="/assets/img/bootstrap-template.png" alt="screenshot of Bootstrap template" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Originally developed at Twitter to create consistency among internal projects, <a href="https://getbootstrap.com/">Bootstrap</a> has grown to become one of the most popular CSS frameworks, often being the default choice for many developers. It offers a wide variety of page templates and UI components(chunks of HTML you can add to your code), and tons of styling options for everything. Bootstrap also offers templates which include JavaScript for interactivity and animations. While relatively simple to get started on, the massive amount of options can make it easy to get lost in as a beginner. Bootstrap has also become so ubiquitous that some developers worry websites styled with it won’t stand out.</p>
+
+<h4 id="2-foundation">2. Foundation</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Foundation home page</th>
+      <th>Foundation sample template</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/foundation.png" alt="screenshot of Foundation home page" /></td>
+      <td><img src="/assets/img/foundation-template.png" alt="screenshot of Foundation template" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://foundation.zurb.com/">Foundation</a> is an industrial grade CSS framework favored by large companies such as Ebay, Disney, and Mozilla. While some think it isn’t as aesthetically pleasing as Bootstrap out of the box, it is one of the most powerful frameworks available. This is because it takes a minimalist approach to styling pre-built components, allowing designers more room to customize the final product. Foundation is the most complex framework on this list, and I wouldn’t recommend it for beginners. However, Foundation does offer <a href="https://courses.zurb.com/">certification courses</a>(at a cost), if you have some prior front-end experience and are looking to dive into something more sophisticated.</p>
+
+<h4 id="3-materialize-css">3. Materialize CSS</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Materialize CSS home page</th>
+      <th>Materialize CSS sample template</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/materialize.png" alt="screenshot of Materialize home page" /></td>
+      <td><img src="/assets/img/material-template.png" alt="screenshot of Materialize CSS template" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://materializecss.com/">Materialize CSS</a> is built on Google’s <a href="https://material.io/design/">Material design principles</a>. Material is one of the most popular design languages, with most of Google’s applications, including YouTube and Google Drive, being built on its principles. If you are going for the look and feel of google and android, this is likely the framework for you.</p>
+
+<h4 id="4-bulma">4. Bulma</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bulma home page</th>
+      <th>Bulma sample template</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/bulma.png" alt="screenshot of Bulma home page" /></td>
+      <td><img src="/assets/img/bulma-template.png" alt="screenshot of Bulma template" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="bulma.io">Bulma</a> is an up-and-coming lightweight CSS-only framework. Bulma is extremely beginner-friendly, with intuitive class names and easy-to-follow startup tutorial. I also think Bulma is one of the most beautiful CSS frameworks straight out of the box, with a clean and colorful aesthetic. Additionally, the community is very passionate, so you can find a lot of helpful guides and code snippets to guide you along the way. Since Bulma is CSS only, you will need to provide your own JavaScript if needed.</p>
+
+<h4 id="5-skeleton">5. Skeleton</h4>
+
+<p><img src="/assets/img/skeleton.png" alt="screenshot of Skeleton home page" /></p>
+
+<p><a href="http://getskeleton.com/">Skeleton</a> is most lightweight CSS framework I know of, so much so that it doesn’t actually call itself a framework, rather a boilerplate. Skeleton’s codebase comes in at ~400 lines, and is meant to be more of a starting point than a complete UI toolkit. It is designed to be used for smaller projects that don’t require the utility of larger frameworks, and includes a basic grid layout and and a handful of HTML elements to get your project on its feet. Skeleton is great for a first css framework, or for experienced developers who are looking to maximize efficiency and want to eliminate every line of excess code.</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>Once you have decided on a framework, it is time to get started. I would recommend building a practice project to familiarize yourself with the framework’s various classes, templates, and workflows. Each framework’s respective website usually has a guide to installation and getting started, and once you are up and running, feel free to check out some of the tutorials below. Have fun creating beautiful, interactive websites with your newfound CSS framework skills!</p>
+
+<h3 id="further-resources">Further Resources</h3>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=5GcQtLDGXy8">Bootsrap Beginner Crash Course - Traversy Media (not up to date for Bootsrap 4)</a></li>
+  <li><a href="https://www.bootstrapdash.com/bootstrap-4-tutorial/introduction/">Bootsrap 4 Tutorial - Boostrap Dash</a></li>
+  <li><a href="https://scotch.io/tutorials/make-material-design-websites-with-the-materialize-css-framework">Make Material design websites with the material CSS framework - Narayan Prusty</a></li>
+  <li><a href="https://scrimba.com/g/gbulma">Learn Bulma CSS for free - Scrimba</a></li>
+</ul>
+
+<h3 id="frameworks">Frameworks</h3>
+<ul>
+  <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+  <li><a href="https://foundation.zurb.com/">Foundation</a></li>
+  <li><a href="https://materializecss.com/">Materialize CSS</a></li>
+  <li><a href="bulma.io">Bulma</a></li>
+  <li><a href="http://getskeleton.com/">Skeleton</a></li>
+</ul>
+
+<h3 id="references">References</h3>
+<ul>
+  <li><a href="https://geekflare.com/best-css-frameworks/">Best CSS Frameworks</a></li>
+  <li><a href="https://scotch.io/bar-talk/6-popular-css-frameworks-to-use-in-2019#toc-tailwind-css">6 Popular CSS frameworks to use in 2019</a></li>
+  <li><a href="https://material.io/design/">Material</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Material_Design">Material Design</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)">Bootstrap(front-end-framework)</a></li>
+  <li><a href="https://courses.zurb.com/">Zurb University</a></li>
+  <li><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/240px-CSS3_logo_and_wordmark.svg.png">CSS Logo</a></li>
+</ul>
+:ET

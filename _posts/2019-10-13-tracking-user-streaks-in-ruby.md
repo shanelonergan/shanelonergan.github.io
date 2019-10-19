@@ -3,7 +3,7 @@ layout: post
 title:  "Tracking user streaks in Ruby"
 date:   2019-10-17
 description: subtitle here # Add post description (optional)
-img: computer.jpg
+img: streak.jpg
 tags: [programming, terminal, bash] # add tag
 ---
 ---
