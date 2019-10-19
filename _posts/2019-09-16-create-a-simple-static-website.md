@@ -26,11 +26,12 @@ Creating your personal website can often be a daunting task. There are a ton of 
 1. Download a text editor if you don't already have one. I use Atom, but a lot of people really love Visual Studio Code as well.
 2. Create a [GitHub](github.com) account. Git is a version control software
 3. Install [Homebrew](http://osxdaily.com/2018/03/07/how-install-homebrew-mac-os/)
-```
+```bash
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 4. Install Ruby and Bundler
-```
+
+```bash
 $ brew install ruby
 $ gem install bundler
 ```
@@ -42,7 +43,7 @@ Jekyll is a Ruby gem, which is essentially a library of code created by a group 
 
 Getting started with Jekyll is super simple. Before making a custom site, it can be helpful make a sample site first. To do that, enter the following commands in your terminal:
 
-```
+```bash
 $ cd ..
 
 $ mkdir jekyll-projects
@@ -79,21 +80,21 @@ Now that you have created your first Jekyll site, you will want to take a look a
 - ![Screenshot of where the git clone link on a GitHub repository](/assets/img/git-clone.jpg)
 
 4. Clone the repo into your local folder:
-```
+```bash
 $ cd ..
 $ cd jekyll-projects
 $ git clone "paste-your-link-here"
 ```
 5. Navigate into the project folder:
-```
+```bash
 $ cd theme-name-here
 ```
 6. Open it in your editor (if using VS Code, this replace 'atom' with 'code'):
-```
+```bash
 $ atom .
 ```
 7. Run your server:
-```
+```bash
 $ jekyll serve
 ```
 Now you can browse your template on http://localhost:4000.
@@ -110,7 +111,7 @@ If you are creating a personal blog, there should be a couple sample posts. To c
 
 # Host your website on GitHub Pages
 
-So, you have finished writing your posts and adding all of your content, and your website looks fantastic in your local browser. Congratulations! That is no small feat. Now it is time to get it up and running for the world to see. Hosting your website can seem like a complicated process, but GitHub makes it super easy.  
+So, you have finished writing your posts and adding all of your content, and your website looks fantastic in your local browser. Congratulations! That is no small feat. Now it is time to get it up and running for the world to see. Hosting your website can seem like a complicated process, but GitHub makes it super easy.
 
 ### Step 1: Rename your project
 
@@ -120,7 +121,7 @@ In order for a project to be hosted a a personal site on GitHub pages, it needs 
 
 Follow the following steps if you are not already familiar with git to save this version of your project to your GitHub Profile:
 
-```
+```bash
 $ git add .
 $ git commit -m "updated my personal website"
 $ git push -u origin master
