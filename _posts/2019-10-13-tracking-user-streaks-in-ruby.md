@@ -10,7 +10,7 @@ tags: [programming, terminal, bash] # add tag
 
 From Duolingo to Headspace, many of the most popular apps today track users' "streaks". By keeping track of the number of days in a row a user has logged in and completed a task, these apps aim to create a beneficial habit for the user, while simultaneously insuring an active daily user base. Evidence seems to indicate that desire to keep a streak going will indeed motivate a person to do a task they might not otherwise.
 
-With streaks being such a popular feature, a friend and I decided to try and incorporate it into a recent project we were working on. The application walked a user through the steps of a Wim Hof breathing cycle, and we wanted to display the number of days in a row they had completed at least one cycle.
+With streaks being such a popular feature, a friend and I decided to try and incorporate it into a recent project we were working on. The application walked a user through the steps of a [Wim Hof](https://www.wimhofmethod.com/) breathing cycle, and we wanted to display the number of days in a row they had completed at least one cycle.
 
 ## Table of Contents
 
@@ -144,11 +144,12 @@ Finally, we want to create an *if* statement that determines when to increment t
 
 This code should be modifiable to work with any Active Record model with a *has_many* relationship. Good luck tracking all those streaks!
 
-Here is the final code, with comments included:
+Below is the final code with comments included, and you can check out the app this code was written for [here](https://shanelonergan.github.io/breathe/).
 
 ![image of full code with comments](../assets/img/full-code-comments.jpg)
 
 ### References
 
+- [Wim Hof Method](https://www.wimhofmethod.com/)
 - [What is a Ruby Reducer?](https://mixandgo.com/learn/what-is-a-ruby-reducer)
 - [Scopes for belongs_to](https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-Belongs-to)
