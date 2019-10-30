@@ -10,7 +10,7 @@ tags: [programming, terminal, bash] # add tag
 
 From Duolingo to Headspace, many of the most popular apps today track users' "streaks". By keeping track of the number of days in a row a user has logged in and completed a task, these apps aim to create a beneficial habit for the user, while simultaneously insuring an active daily user base. Evidence seems to indicate that desire to keep a streak going will indeed motivate a person to do a task they might not otherwise.
 
-With streaks being such a popular feature, a friend and I decided to try and incorporate it into a recent project we were working on. The application walked a user through the steps of a [Wim Hof](https://www.wimhofmethod.com/) breathing cycle, and we wanted to display the number of days in a row they had completed at least one cycle.
+With streaks being such a popular feature, a [friend](https://medium.com/@avijitklodh) and I decided to try and incorporate it into a recent project we were working on. The application walked a user through the steps of a [Wim Hof](https://www.wimhofmethod.com/) breathing cycle, and we wanted to display the number of days in a row they had completed at least one cycle.
 
 ## Table of Contents
 
@@ -23,11 +23,12 @@ With streaks being such a popular feature, a friend and I decided to try and inc
     - [Step 3: Create an array of dates](#step-3-create-an-array-of-dates)
     - [Step 3: Calculate the streak](#step-3-calculate-the-streak)
     - [Congrats! You can now calculate user streaks in your rails application](#congrats-you-can-now-calculate-user-streaks-in-your-rails-application)
+  - [GitHub Gist](#github-gist)
   - [References](#references)
 
 ### The goal
 
-Track the number of consecutive days a logged-in user completed a breathing-cycle, and display that number on the home page of our application. When the user completes a new session on a consecutive day for the first time, that number should update immediately.
+Track the number of consecutive days a logged-in user completed a breathing cycle, and display that number on the home page of our application. When the user completes a new session on a consecutive day for the first time, that number should update immediately.
 
 ### The solution
 
@@ -43,7 +44,7 @@ Our application is built on a ruby-on-rails back-end, with a vanilla JavaScript 
 
 ![image of relationships](../assets/img/relationships.jpg)
 
-First we need to create a Ruby class of User, which inherits from `ApplicationRecord`, which is a rails model which includes ActiveRecord. We can then add the ActiveRecord syntax for a has-many relationship as seen on line 2. This allows us to access all of a User's sessions by simply calling `.sessions` on in instance of a `User`. Additionally, Active Record relationships can take a second argument, [scope](https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-belongs-to), which allows us to customize the SQL query. Will will want to haver our array ordered from most recent date to least recent date, which can be accomplished if we query for _**descending**_ order:
+First we need to create a Ruby class of User, which inherits from `ApplicationRecord`, a rails model which includes the [Active Record](https://guides.rubyonrails.org/active_record_basics.html) ORM (more on Object-Relational-Mappers [here](https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a)). We can then add the ActiveRecord syntax for a has-many relationship as seen on line 2. This allows us to access all of a User's sessions by simply calling `.sessions` on in instance of a `User`. Additionally, Active Record relationships can take a second argument, [scope](https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-belongs-to), which allows us to customize the SQL query. We will want to haver our array ordered from most recent date to least recent date, which can be accomplished if we query for _**descending**_ order:
 
 ```ruby
 has_many :sessions, -> {order "created_at DESC"}
@@ -53,7 +54,7 @@ has_many :sessions, -> {order "created_at DESC"}
 
 ![image of variables](../assets/img/instance-method.jpg)
 
-Next, we need to create an instance method, `streak`, that we can call on an instance of a `User` to get their streak. Inside this method, we will declare a a couple local variables we will need later in the function. First, lets set `streak_count` to 0. We should also define `today` for readability. Ruby allows is to easily find and format the current day using `Time.now.to_date`. `Time.now` will return a date in a long format:
+Next, we need to create an instance method, `streak`, that we can call on an instance of a `User` to get their streak. Inside this method, we will declare a a couple local variables we will need later in the function. First, lets set `streak_count` to 0. We should also define `today` for readability. Ruby allows us to easily find and format the current day using `Time.now.to_date`. `Time.now` will return a date in a long format:
 
 ```ruby
 Time.now
@@ -148,8 +149,14 @@ Below is the final code with comments included, and you can check out the app th
 
 ![image of full code with comments](../assets/img/full-code-comments.jpg)
 
+### GitHub Gist
+
+<script src="https://gist.github.com/shanelonergan/b86a6704ca1e7d7c9a4a610c8f363ee6.js"></script>
+
 ### References
 
 - [Wim Hof Method](https://www.wimhofmethod.com/)
+- [Active Record Basics](https://guides.rubyonrails.org/active_record_basics.html)
+- [What is an ORM and Why You Should Use it](https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a)
 - [What is a Ruby Reducer?](https://mixandgo.com/learn/what-is-a-ruby-reducer)
 - [Scopes for belongs_to](https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-Belongs-to)
