@@ -36,8 +36,8 @@ section {
   display: block;
 }
 
-#project-div {
-  justify-content: left;
+#project-list a {
+  color: rgb(96, 154, 248)
 }
 
 #project-list li {
