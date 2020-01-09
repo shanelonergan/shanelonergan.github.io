@@ -37,10 +37,15 @@ section {
 }
 
 #project-list a {
-  color: rgb(96, 154, 248)
+  color: rgb(96, 154, 248);
+  text-decoration: none;
+}
+#project-list a:hover {
+  text-decoration: underline;
 }
 
 #project-list li {
+  list-style-position: inside;
   margin-top: 2vh;
 }
 
