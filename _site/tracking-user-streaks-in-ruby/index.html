@@ -14,7 +14,7 @@
     <meta content="article" property="og:type">
   
   
-    <meta content="subtitle here" property="og:description">
+    <meta content="maintain user engagement through daily streak-tracking" property="og:description">
   
   
     <meta content="http://localhost:4000/tracking-user-streaks-in-ruby/" property="og:url">
@@ -49,13 +49,13 @@
     <meta name="twitter:url" content="http://localhost:4000/tracking-user-streaks-in-ruby/">
   
   
-    <meta name="twitter:description" content="subtitle here">
+    <meta name="twitter:description" content="maintain user engagement through daily streak-tracking">
   
   
     <meta name="twitter:image:src" content="http://localhost:4000/assets/img/streak.jpg">
   
 
-	<meta name="description" content="subtitle here">
+	<meta name="description" content="maintain user engagement through daily streak-tracking">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="">
@@ -89,6 +89,13 @@
       </div>
       <div class="author-name">Shane Lonergan</div>
       <p>I am an actor and a full stack web developer. Lover of fancy keyboards and making loud noises.</p>
+      <p>Check out some of my projects:</p>
+      <ul>
+        <li>
+          <a href="shanelonergan.github.io/breathe">Breathe: Guided Wif Hof Breathing Meditation</a>
+
+        </li>
+      </ul>
     </div>
   </header> <!-- End Header -->
   <footer>
@@ -113,7 +120,7 @@
       </ul>
     </section> <!-- End Section Contact -->
     <div class="copyright">
-      <p>2019 &copy; Shane Lonergan</p>
+      <p>2020 &copy; Shane Lonergan</p>
     </div>
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
@@ -131,14 +138,14 @@
     <div class="wrap-content">
       <header class="header-page">
         <h1 class="page-title" style="font-size:50px">Tracking user streaks in Ruby</h1>
-        <h3>subtitle here</h3>
+        <h3>maintain user engagement through daily streak-tracking</h3>
         <div class="page-date"><span>2019, Oct 17&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
       <hr />
 
 <p>From Duolingo to Headspace, many of the most popular apps today track users’ “streaks”. By keeping track of the number of days in a row a user has logged in and completed a task, these apps aim to create a beneficial habit for the user, while simultaneously insuring an active daily user base. Evidence seems to indicate that desire to keep a streak going will indeed motivate a person to do a task they might not otherwise.</p>
 
-<p>With streaks being such a popular feature, a friend and I decided to try and incorporate it into a recent project we were working on. The application walked a user through the steps of a Wim Hof breathing cycle, and we wanted to display the number of days in a row they had completed at least one cycle.</p>
+<p>With streaks being such a popular feature, a <a href="https://medium.com/@avijitklodh">friend</a> and I decided to try and incorporate it into a recent project we were working on. The application walked a user through the steps of a <a href="https://www.wimhofmethod.com/">Wim Hof</a> breathing cycle, and we wanted to display the number of days in a row they had completed at least one cycle.</p>
 
 <h2 id="table-of-contents">Table of Contents</h2>
 
@@ -156,6 +163,7 @@
           <li><a href="#congrats-you-can-now-calculate-user-streaks-in-your-rails-application">Congrats! You can now calculate user streaks in your rails application</a></li>
         </ul>
       </li>
+      <li><a href="#github-gist">GitHub Gist</a></li>
       <li><a href="#references">References</a></li>
     </ul>
   </li>
@@ -163,7 +171,7 @@
 
 <h3 id="the-goal">The goal</h3>
 
-<p>Track the number of consecutive days a logged-in user completed a breathing-cycle, and display that number on the home page of our application. When the user completes a new session on a consecutive day for the first time, that number should update immediately.</p>
+<p>Track the number of consecutive days a logged-in user completed a breathing cycle, and display that number on the home page of our application. When the user completes a new session on a consecutive day for the first time, that number should update immediately.</p>
 
 <h3 id="the-solution">The solution</h3>
 
@@ -179,7 +187,7 @@
 
 <p><img src="../assets/img/relationships.jpg" alt="image of relationships" /></p>
 
-<p>First we need to create a Ruby class of User, which inherits from <code class="highlighter-rouge">ApplicationRecord</code>, which is a rails model which includes ActiveRecord. We can then add the ActiveRecord syntax for a has-many relationship as seen on line 2. This allows us to access all of a User’s sessions by simply calling <code class="highlighter-rouge">.sessions</code> on in instance of a <code class="highlighter-rouge">User</code>. Additionally, Active Record relationships can take a second argument, <a href="https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-belongs-to">scope</a>, which allows us to customize the SQL query. Will will want to haver our array ordered from most recent date to least recent date, which can be accomplished if we query for <em><strong>descending</strong></em> order:</p>
+<p>First we need to create a Ruby class of User, which inherits from <code class="highlighter-rouge">ApplicationRecord</code>, a rails model which includes the <a href="https://guides.rubyonrails.org/active_record_basics.html">Active Record</a> ORM (more on Object-Relational-Mappers <a href="https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a">here</a>). We can then add the ActiveRecord syntax for a has-many relationship as seen on line 2. This allows us to access all of a User’s sessions by simply calling <code class="highlighter-rouge">.sessions</code> on in instance of a <code class="highlighter-rouge">User</code>. Additionally, Active Record relationships can take a second argument, <a href="https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-belongs-to">scope</a>, which allows us to customize the SQL query. We will want to haver our array ordered from most recent date to least recent date, which can be accomplished if we query for <em><strong>descending</strong></em> order:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">has_many</span> <span class="ss">:sessions</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">order</span> <span class="s2">"created_at DESC"</span><span class="p">}</span>
 </code></pre></div></div>
@@ -188,7 +196,7 @@
 
 <p><img src="../assets/img/instance-method.jpg" alt="image of variables" /></p>
 
-<p>Next, we need to create an instance method, <code class="highlighter-rouge">streak</code>, that we can call on an instance of a <code class="highlighter-rouge">User</code> to get their streak. Inside this method, we will declare a a couple local variables we will need later in the function. First, lets set <code class="highlighter-rouge">streak_count</code> to 0. We should also define <code class="highlighter-rouge">today</code> for readability. Ruby allows is to easily find and format the current day using <code class="highlighter-rouge">Time.now.to_date</code>. <code class="highlighter-rouge">Time.now</code> will return a date in a long format:</p>
+<p>Next, we need to create an instance method, <code class="highlighter-rouge">streak</code>, that we can call on an instance of a <code class="highlighter-rouge">User</code> to get their streak. Inside this method, we will declare a a couple local variables we will need later in the function. First, lets set <code class="highlighter-rouge">streak_count</code> to 0. We should also define <code class="highlighter-rouge">today</code> for readability. Ruby allows us to easily find and format the current day using <code class="highlighter-rouge">Time.now.to_date</code>. <code class="highlighter-rouge">Time.now</code> will return a date in a long format:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Time</span><span class="p">.</span><span class="nf">now</span>
 <span class="o">=&gt;</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">15</span> <span class="mi">16</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">16</span> <span class="o">-</span><span class="mo">0400</span>
@@ -275,13 +283,20 @@
 
 <p>This code should be modifiable to work with any Active Record model with a <em>has_many</em> relationship. Good luck tracking all those streaks!</p>
 
-<p>Here is the final code, with comments included:</p>
+<p>Below is the final code with comments included, and you can check out the app this code was written for <a href="https://shanelonergan.github.io/breathe/">here</a>.</p>
 
 <p><img src="../assets/img/full-code-comments.jpg" alt="image of full code with comments" /></p>
+
+<h3 id="github-gist">GitHub Gist</h3>
+
+<script src="https://gist.github.com/shanelonergan/b86a6704ca1e7d7c9a4a610c8f363ee6.js"></script>
 
 <h3 id="references">References</h3>
 
 <ul>
+  <li><a href="https://www.wimhofmethod.com/">Wim Hof Method</a></li>
+  <li><a href="https://guides.rubyonrails.org/active_record_basics.html">Active Record Basics</a></li>
+  <li><a href="https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a">What is an ORM and Why You Should Use it</a></li>
   <li><a href="https://mixandgo.com/learn/what-is-a-ruby-reducer">What is a Ruby Reducer?</a></li>
   <li><a href="https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-Belongs-to">Scopes for belongs_to</a></li>
 </ul>

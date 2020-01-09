@@ -1,4 +1,4 @@
-I"�'<hr />
+I"�+<hr />
 
 <h3 id="before-you-begin">Before you begin:</h3>
 <p>This guide assumes some basic Ruby, HTML/CSS, and git experience. It will still be possible to follow without, but it may require a bit of extra research. Start by following the instructions under Set Up Your Environment. If you get stuck, I have added some articles that I found helpful in the further reading below.</p>
@@ -19,15 +19,15 @@
   <li>Download a text editor if you don’t already have one. I use Atom, but a lot of people really love Visual Studio Code as well.</li>
   <li>Create a <a href="github.com">GitHub</a> account. Git is a version control software</li>
   <li>Install <a href="http://osxdaily.com/2018/03/07/how-install-homebrew-mac-os/">Homebrew</a>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>/usr/bin/ruby <span class="nt">-e</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="si">)</span><span class="s2">"</span>
 </code></pre></div>    </div>
   </li>
-  <li>Install Ruby and Bundler
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew install ruby
-$ gem install bundler
-</code></pre></div>    </div>
-  </li>
+  <li>Install Ruby and Bundler</li>
 </ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>ruby
+<span class="nv">$ </span>gem <span class="nb">install </span>bundler
+</code></pre></div></div>
 
 <h1 id="make-a-new-jekyll-project">Make a new Jekyll project</h1>
 
@@ -35,19 +35,19 @@ $ gem install bundler
 
 <p>Getting started with Jekyll is super simple. Before making a custom site, it can be helpful make a sample site first. To do that, enter the following commands in your terminal:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ..
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ..
 
-$ mkdir jekyll-projects
+<span class="nv">$ </span><span class="nb">mkdir </span>jekyll-projects
 
-$ cd jekyll-projects
+<span class="nv">$ </span><span class="nb">cd </span>jekyll-projects
 
-$ gem install bundler jekyll
+<span class="nv">$ </span>gem <span class="nb">install </span>bundler jekyll
 
-$ jekyll new my-awesome-site
+<span class="nv">$ </span>jekyll new my-awesome-site
 
-$ cd my-awesome-site
+<span class="nv">$ </span><span class="nb">cd </span>my-awesome-site
 
-$ bundle exec jekyll serve
+<span class="nv">$ </span>bundle <span class="nb">exec </span>jekyll serve
 </code></pre></div></div>
 
 <p>Now, open up your web browser and go to http://localhost:4000. TaDa! You have a website up and running! Take a browse through this website to familiarize yourself with the basic Jekyll theme.</p>
@@ -84,21 +84,21 @@ $ bundle exec jekyll serve
 
 <ol>
   <li>Clone the repo into your local folder:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ..
-$ cd jekyll-projects
-$ git clone "paste-your-link-here"
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ..
+<span class="nv">$ </span><span class="nb">cd </span>jekyll-projects
+<span class="nv">$ </span>git clone <span class="s2">"paste-your-link-here"</span>
 </code></pre></div>    </div>
   </li>
   <li>Navigate into the project folder:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd theme-name-here
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>theme-name-here
 </code></pre></div>    </div>
   </li>
   <li>Open it in your editor (if using VS Code, this replace ‘atom’ with ‘code’):
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ atom .
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>atom <span class="nb">.</span>
 </code></pre></div>    </div>
   </li>
   <li>Run your server:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll serve
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>jekyll serve
 </code></pre></div>    </div>
     <p>Now you can browse your template on http://localhost:4000.</p>
   </li>
@@ -126,9 +126,9 @@ $ git clone "paste-your-link-here"
 
 <p>Follow the following steps if you are not already familiar with git to save this version of your project to your GitHub Profile:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add .
-$ git commit -m "updated my personal website"
-$ git push -u origin master
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add <span class="nb">.</span>
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"updated my personal website"</span>
+<span class="nv">$ </span>git push <span class="nt">-u</span> origin master
 </code></pre></div></div>
 
 <h3 id="step-3-check-out-your-live-website">Step 3: Check out your live website!</h3>
