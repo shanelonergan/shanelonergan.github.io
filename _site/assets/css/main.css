@@ -36,6 +36,11 @@ section {
   display: block;
 }
 
+#project-div {
+  display: flex;
+  flex-direction: column;
+}
+
 #project-list a {
   color: rgb(96, 154, 248);
   text-decoration: none;
@@ -49,6 +54,14 @@ section {
   list-style-type: none;
   list-style-position: outside;
   margin-top: 2vh;
+}
+
+#project-list {
+  margin-top: 0px;
+}
+
+#project-header {
+  align-self: center;
 }
 
 /**
