@@ -36,8 +36,12 @@ section {
   display: block;
 }
 
-#project-list {
+#project-div {
+  justify-content: left;
+}
 
+#project-list li {
+  margin-top: 2vh;
 }
 
 /**
