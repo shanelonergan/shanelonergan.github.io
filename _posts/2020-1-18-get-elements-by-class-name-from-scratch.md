@@ -13,17 +13,17 @@ I am currently diving into my first job search as a software engineer, and so I 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-  - [Goal](#goal)
+- [Goal](#goal)
 - [Example](#example)
-  - [Plan](#plan)
-  - [Code](#code)
-- [Step 1: Set up the main function](#step-1-set-up-the-main-function)
-- [Step 2: Write the recursive helper function](#step-2-write-the-recursive-helper-function)
+- [Plan](#plan)
+- [Code](#code)
+  - [Step 1: Set up the main function](#step-1-set-up-the-main-function)
+  - [Step 2: Write the recursive helper function](#step-2-write-the-recursive-helper-function)
   - [Step 3: Put it all together](#step-3-put-it-all-together)
-  - [GitHub Gist](#github-gist)
-  - [References](#references)
+  - [Step 4: Add to the HTML Element prototype](#step-4-add-to-the-html-element-prototype)
+- [References](#references)
 
-### Goal
+## Goal
 
 The goal is to create a functionally equivalent version of [`Document.getElementByClassName`cc](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName). In order to do this, our new method needs to have to following functions:
 
@@ -58,8 +58,7 @@ const helloWorlds = document.getElementsByClassName('hello')
 //       <p class='hello'>hello world 4</p>  ]
 ```
 
-
-### Plan
+## Plan
 
 First, we need to create a conceptual plan for our function:
 
@@ -73,12 +72,12 @@ Based on this plan, we will need to create a recursive helper function, or a fun
 
 Now that we have a solid plan, lets get coding!
 
-### Code
+## Code
 
-## Step 1: Set up the main function
+### Step 1: Set up the main function
 
 ```js
-function getElementsByClassName(className) {
+function getElementsByClassName2(className) {
 
    const elements = [] // the array we will add matching elements to
    const firstChildren = this.children // all the children of the element the function is called on
@@ -87,10 +86,10 @@ function getElementsByClassName(className) {
 }
 ```
 
-## Step 2: Write the recursive helper function
+### Step 2: Write the recursive helper function
 
 ```js
-function getElementsByClassName(className) {
+function getElementsByClassName2(className) {
 
    function checkChildren(child) {
 
@@ -112,7 +111,7 @@ function getElementsByClassName(className) {
 ### Step 3: Put it all together
 
 ```js
-function getElementsByClassName(className) {
+function getElementsByClassName2(className) {
 
    const elements = [] // the array we will add matching elements to
    const firstChildren = this.children // all the children of the element the function is called on
@@ -129,15 +128,20 @@ function getElementsByClassName(className) {
      }
    }
 
+   // call teh checkChildren method on the firstChildren
+   firstChildren.forEach(child => {
+      checkChildren(child)
+   })
+
     return elements
 }
 ```
 
-### GitHub Gist
+### Step 4: Add to the HTML Element prototype
 
-<script src="https://gist.github.com/shanelonergan/b86a6704ca1e7d7c9a4a610c8f363ee6.js"></script>
+In order for us to be able to call this function on any HTML Element, we need to add it to the HTML element prototype.
 
-### References
+## References
 
 - [MDN Docs: Document.getElementsByClassName()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
 - [Active Record Basics](https://guides.rubyonrails.org/active_record_basics.html)
