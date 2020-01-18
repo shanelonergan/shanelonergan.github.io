@@ -14,6 +14,7 @@ I am currently diving into my first job search as a software engineer, and so I 
 
 - [Table of Contents](#table-of-contents)
   - [Goal](#goal)
+- [Example](#example)
   - [GitHub Gist](#github-gist)
   - [References](#references)
 
@@ -25,6 +26,34 @@ The goal is to create a functionally equivalent version of [`Document.getElement
 2. Takes an argument, a string, containing any number of class names.
 3. Returns all elements that match all the class names passed in.
 4. Returns only elements that are children of the element the function was called on
+
+## Example
+
+```html
+<html>
+<body>
+    <div class='parent'>
+        <p class='hello'>hello world 1</p>
+        <p class='hello'>hello world 2</p>
+        <p class='hello'>hello world 3</p>
+        <p class='hello'>hello world 4</p>
+    </div>
+</body>
+</html>
+```
+
+```javascript
+const parent = document.getElementsByClassName('parent')
+// => <div class='parent'></div>
+
+const helloWorlds = document.getElementsByClassName('hello')
+// => [  <p class='hello'>hello world 1</p>,
+//       <p class='hello'>hello world 2</p>,
+//       <p class='hello'>hello world 3</p>,
+//       <p class='hello'>hello world 4</p>  ]
+```
+
+###
 
 ### GitHub Gist
 
