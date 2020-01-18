@@ -15,6 +15,11 @@ I am currently diving into my first job search as a software engineer, and so I 
 - [Table of Contents](#table-of-contents)
   - [Goal](#goal)
 - [Example](#example)
+  - [Plan](#plan)
+  - [Code](#code)
+- [Step 1: Set up the main function](#step-1-set-up-the-main-function)
+- [Step 2: Write the recursive helper function](#step-2-write-the-recursive-helper-function)
+  - [Step 3: Put it all together](#step-3-put-it-all-together)
   - [GitHub Gist](#github-gist)
   - [References](#references)
 
@@ -53,7 +58,80 @@ const helloWorlds = document.getElementsByClassName('hello')
 //       <p class='hello'>hello world 4</p>  ]
 ```
 
-###
+
+### Plan
+
+First, we need to create a conceptual plan for our function:
+
+1. Create an array to store all the elements that are a match.
+2. Check all direct descendants of the main element for the class name
+   1. if any do, add them to the array
+3. Check all of those children's children the same way
+4. repeat until there are no more children
+
+Based on this plan, we will need to create a recursive helper function, or a function that calls itself within its own definition, to check all elements beneath the primary. We will call this helper function within the main function. The return value of the main function should be an array of elements, which we will declare as an empty array at the top, and add elements to as we move along.
+
+Now that we have a solid plan, lets get coding!
+
+### Code
+
+## Step 1: Set up the main function
+
+```js
+function getElementsByClassName(className) {
+
+   const elements = [] // the array we will add matching elements to
+   const firstChildren = this.children // all the children of the element the function is called on
+
+   return elements
+}
+```
+
+## Step 2: Write the recursive helper function
+
+```js
+function getElementsByClassName(className) {
+
+   function checkChildren(child) {
+
+      // check if the child has a matching class. If so, oush the the elements array
+      if (child.classList.contains(className)) {
+         elements.push(child)
+      }
+
+      // check if that child has children of its own. If so, call checkChildren one each child
+      if (child.children) {
+         const children = child.children
+         children.forEach(child => checkChildren(child))
+     }
+   }
+
+}
+```
+
+### Step 3: Put it all together
+
+```js
+function getElementsByClassName(className) {
+
+   const elements = [] // the array we will add matching elements to
+   const firstChildren = this.children // all the children of the element the function is called on
+
+   function checkChildren(child) {
+
+      if (child.classList.contains(className)) {
+         elements.push(child)
+      }
+
+      if (child.children) {
+         const children = child.children
+         children.forEach(child => checkChildren(child))
+     }
+   }
+
+    return elements
+}
+```
 
 ### GitHub Gist
 
