@@ -13,10 +13,18 @@ I am currently diving into my first job search as a software engineer, and so I 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+  - [Goal](#goal)
   - [GitHub Gist](#github-gist)
   - [References](#references)
 
+### Goal
 
+The goal is to create a functionally equivalent version of [`Document.getElementByClassName`cc](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName). In order to do this, our new method needs to have to following functions:
+
+1. Can be called on and HTML element
+2. Takes an argument, a string, containing any number of class names.
+3. Returns all elements that match all the class names passed in.
+4. Returns only elements that are children of the element the function was called on
 
 ### GitHub Gist
 
@@ -24,7 +32,7 @@ I am currently diving into my first job search as a software engineer, and so I 
 
 ### References
 
-- [Wim Hof Method](https://www.wimhofmethod.com/)
+- [MDN Docs: Document.getElementsByClassName()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
 - [Active Record Basics](https://guides.rubyonrails.org/active_record_basics.html)
 - [What is an ORM and Why You Should Use it](https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a)
 - [What is a Ruby Reducer?](https://mixandgo.com/learn/what-is-a-ruby-reducer)
