@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Build document.getElementsByClassName From Scratch"
-date:   2019-10-17
+date:   2020-1-19
 description: tbd # Add post description (optional)
 img: streak.jpg
 tags: [programming, terminal, bash] # add tag
