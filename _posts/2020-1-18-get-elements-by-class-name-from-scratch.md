@@ -76,6 +76,8 @@ Now that we have a solid plan, lets get coding!
 
 ### Step 1: Set up the main function
 
+Here we will define our main function. In the body, we will define two variables: `elements`, an array into which all elements with matching class names will be added; `firstChildren`, all the children of the element the function is called on. For the latter, we can take advantage of JavaScript's [`.children()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children) method, which returns an [HTMLCollection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection) containing all child elements of the node upon which it is called. This HTMLCollection can be treated like an array.
+
 ```js
 function getElementsByClassName2(className) {
 
@@ -95,7 +97,7 @@ function getElementsByClassName2(className) {
 
    function checkChildren(child) {
 
-      // check if the child has a matching class. If so, oush the the elements array
+      // check if the child has a matching class. If so, push the the elements array
       if (child.classList.contains(className)) {
          elements.push(child)
       }
@@ -115,8 +117,8 @@ function getElementsByClassName2(className) {
 ```js
 function getElementsByClassName2(className) {
 
-   const elements = [] // the array we will add matching elements to
-   const firstChildren = this.children // all the children of the element the function is called on
+   const elements = []
+   const firstChildren = this.children
 
    function checkChildren(child) {
 
@@ -153,3 +155,5 @@ And just like that, we are done! Our new method `getElementsByClassName2` now ha
 
 - [MDN Docs: Document.getElementsByClassName()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
 - [JavaScript.info: Recursion and Stack](https://javascript.info/recursion)
+- [MDN Docs: ParentNode.children()](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children)
+- [MDN Docs: HTMLCollection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection)
