@@ -114,6 +114,8 @@ function getElementsByClassName2(className) {
 
 ### Step 3: Put it all together
 
+Now we want to call the `checkCHildren` method on each of the `firstChildren`. After this function runs, our elements array should contain all of the matching elements!
+
 ```js
 function getElementsByClassName2(className) {
 
@@ -143,13 +145,15 @@ function getElementsByClassName2(className) {
 
 ### Step 4: Add to the HTML Element prototype
 
-In order for us to be able to call this function on any HTML Element, we need to add it to the HTML element prototype.
+Finally, in order for us to be able to call this function on any HTML Element, we need to add it to the HTML element [prototype](https://medium.com/better-programming/prototypes-in-javascript-5bba2990e04b).
 
 ```js
 HTMLElement.prototype.getElementsByClassname2 = getElementsByClassName2
 ```
 
-And just like that, we are done! Our new method `getElementsByClassName2` now has the same functionality as the original `getElementsByClassName`.
+And just like that, we are done! Our new method `getElementsByClassName2` now has the same functionality as the original `getElementsByClassName`. I hope you found this process as interesting and informative as I did!
+
+If you enjoyed the article, feel free to follow me on medium [@sptlonergan](https://medium.com/@sptlonergan) and twitter [@shane__lonergan](https://twitter.com/shane__lonergan)
 
 ## References
 
@@ -157,3 +161,4 @@ And just like that, we are done! Our new method `getElementsByClassName2` now ha
 - [JavaScript.info: Recursion and Stack](https://javascript.info/recursion)
 - [MDN Docs: ParentNode.children()](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children)
 - [MDN Docs: HTMLCollection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection)
+- [Medium: Prototypes in Javascript - Rupesh Mishra](https://medium.com/better-programming/prototypes-in-javascript-5bba2990e04b)
