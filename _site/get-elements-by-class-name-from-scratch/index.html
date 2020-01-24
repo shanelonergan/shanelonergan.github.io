@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Build document.getElementsByClassName From Scratch - The acting developer</title>
+	<title>Building JavaScript From Scratch - The acting developer</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="The acting developer" property="og:site_name">
   
-    <meta content="Build document.getElementsByClassName From Scratch" property="og:title">
+    <meta content="Building JavaScript From Scratch" property="og:title">
   
   
     <meta content="article" property="og:type">
   
   
-    <meta content="tbd" property="og:description">
+    <meta content="Part 1: document.getElementsByClassName" property="og:description">
   
   
     <meta content="http://localhost:4000/get-elements-by-class-name-from-scratch/" property="og:url">
@@ -43,19 +43,19 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@shane__lonergan">
   
-    <meta name="twitter:title" content="Build document.getElementsByClassName From Scratch">
+    <meta name="twitter:title" content="Building JavaScript From Scratch">
   
   
     <meta name="twitter:url" content="http://localhost:4000/get-elements-by-class-name-from-scratch/">
   
   
-    <meta name="twitter:description" content="tbd">
+    <meta name="twitter:description" content="Part 1: document.getElementsByClassName">
   
   
     <meta name="twitter:image:src" content="http://localhost:4000/assets/img/getElementsByClassName.png">
   
 
-	<meta name="description" content="tbd">
+	<meta name="description" content="Part 1: document.getElementsByClassName">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="">
@@ -135,20 +135,20 @@
     
     <div class="page-cover-image">
       <figure>
-        <img class="page-image" src=/assets/img/getElementsByClassName.png alt="Build document.getElementsByClassName From Scratch">
+        <img class="page-image" src=/assets/img/getElementsByClassName.png alt="Building JavaScript From Scratch">
         
       </figure>
     </div> <!-- End Page Cover Image -->
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title" style="font-size:50px">Build document.getElementsByClassName From Scratch</h1>
-        <h3>tbd</h3>
+        <h1 class="page-title" style="font-size:50px">Building JavaScript From Scratch</h1>
+        <h3>Part 1: document.getElementsByClassName</h3>
         <div class="page-date"><span>2020, Jan 19&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
       <hr />
 
-<p>I am currently diving into my first job search as a software engineer, and so I recently had a mock technical interview. The interview was done in Javascript, and consisted of two questions. The first was a fairly standard algorithm question, but the second was quite interesting. I was asked to build the <code class="highlighter-rouge">document.getElementByClassName</code> method from scratch, as if it didn’t exist. I found it enlightening to build out a method that I had used so many times before, and improved my understanding of both DOM manipulation and Javascript as a whole. In this article I will walk you through the solution I came up with.</p>
+<p>I am currently diving into my first job search as a software engineer, and recently had a mock technical interview. The interview was done in Javascript, and consisted of two questions. The first was a fairly standard algorithm question, but the second was quite interesting: I was asked to build the <code class="highlighter-rouge">document.getElementByClassName</code> method from scratch, as if it didn’t exist. I found it enlightening to build out a method that I had used so many times before, and improved my understanding of both DOM manipulation and Javascript as a whole. In this article I will walk you through the solution I came up with.;</p>
 
 <h2 id="table-of-contents">Table of Contents</h2>
 
@@ -173,8 +173,8 @@
 <p>The goal is to create a functionally equivalent version of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName"><code class="highlighter-rouge">document.getElementByClassName</code></a>. In order to do this, our new method needs to have to following functions:</p>
 
 <ol>
-  <li>Can be called on and HTML element</li>
-  <li>Takes an argument, a string, containing any number of class names.</li>
+  <li>Can be called on any HTML element</li>
+  <li>Takes one argument, a string, containing any number of class names.</li>
   <li>Returns all elements that match all the class names passed in.</li>
   <li>Returns only elements that are children of the element the function was called on</li>
 </ol>
@@ -226,6 +226,8 @@
 
 <h3 id="step-1-set-up-the-main-function">Step 1: Set up the main function</h3>
 
+<p>Here we will define our main function. In the body, we will define two variables: <code class="highlighter-rouge">elements</code>, an array into which all elements with matching class names will be added; <code class="highlighter-rouge">firstChildren</code>, all the children of the element the function is called on. For the latter, we can take advantage of JavaScript’s <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children"><code class="highlighter-rouge">.children()</code></a> method, which returns an <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection">HTMLCollection</a> containing all child elements of the node upon which it is called. This HTMLCollection can be treated like an array.</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getElementsByClassName2</span><span class="p">(</span><span class="nx">className</span><span class="p">)</span> <span class="p">{</span>
 
    <span class="kd">const</span> <span class="nx">elements</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">// the array we will add matching elements to</span>
@@ -237,11 +239,13 @@
 
 <h3 id="step-2-write-the-recursive-helper-function">Step 2: Write the recursive helper function</h3>
 
+<p>A <a href="https://javascript.info/recursion">recursive function</a> is a function which calls itself within the definition, while a helper function is a function which abstracts away some code to make it both re-usable and more readable.</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getElementsByClassName2</span><span class="p">(</span><span class="nx">className</span><span class="p">)</span> <span class="p">{</span>
 
    <span class="kd">function</span> <span class="nx">checkChildren</span><span class="p">(</span><span class="nx">child</span><span class="p">)</span> <span class="p">{</span>
 
-      <span class="c1">// check if the child has a matching class. If so, oush the the elements array</span>
+      <span class="c1">// check if the child has a matching class. If so, push the the elements array</span>
       <span class="k">if</span> <span class="p">(</span><span class="nx">child</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">className</span><span class="p">))</span> <span class="p">{</span>
          <span class="nx">elements</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">child</span><span class="p">)</span>
       <span class="p">}</span>
@@ -258,10 +262,12 @@
 
 <h3 id="step-3-put-it-all-together">Step 3: Put it all together</h3>
 
+<p>Now we want to call the <code class="highlighter-rouge">checkCHildren</code> method on each of the <code class="highlighter-rouge">firstChildren</code>. After this function runs, our elements array should contain all of the matching elements!</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getElementsByClassName2</span><span class="p">(</span><span class="nx">className</span><span class="p">)</span> <span class="p">{</span>
 
-   <span class="kd">const</span> <span class="nx">elements</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">// the array we will add matching elements to</span>
-   <span class="kd">const</span> <span class="nx">firstChildren</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">children</span> <span class="c1">// all the children of the element the function is called on</span>
+   <span class="kd">const</span> <span class="nx">elements</span> <span class="o">=</span> <span class="p">[]</span>
+   <span class="kd">const</span> <span class="nx">firstChildren</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">children</span>
 
    <span class="kd">function</span> <span class="nx">checkChildren</span><span class="p">(</span><span class="nx">child</span><span class="p">)</span> <span class="p">{</span>
 
@@ -286,28 +292,29 @@
 
 <h3 id="step-4-add-to-the-html-element-prototype">Step 4: Add to the HTML Element prototype</h3>
 
-<p>In order for us to be able to call this function on any HTML Element, we need to add it to the HTML element prototype.</p>
+<p>Finally, in order for us to be able to call this function on any HTML Element, we need to add it to the HTML element <a href="https://medium.com/better-programming/prototypes-in-javascript-5bba2990e04b">prototype</a>.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">HTMLElement</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getElementsByClassname2</span> <span class="o">=</span> <span class="nx">getElementsByClassName2</span>
 </code></pre></div></div>
 
-<p>And just like that, we are done! Our new method <code class="highlighter-rouge">getElementsByClassName2</code> now has the same functionality as the original <code class="highlighter-rouge">getElementsByClassName</code>.</p>
+<p>And just like that, we are done! Our new method <code class="highlighter-rouge">getElementsByClassName2</code> now has the same functionality as the original <code class="highlighter-rouge">getElementsByClassName</code>. I hope you found this process as interesting and informative as I did!</p>
+
+<p>If you enjoyed the article, feel free to follow me on medium <a href="https://medium.com/@sptlonergan">@sptlonergan</a> and twitter <a href="https://twitter.com/shane__lonergan">@shane__lonergan</a></p>
 
 <h2 id="references">References</h2>
 
 <ul>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName">MDN Docs: Document.getElementsByClassName()</a></li>
-  <li><a href="https://guides.rubyonrails.org/active_record_basics.html">Active Record Basics</a></li>
-  <li><a href="https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a">What is an ORM and Why You Should Use it</a></li>
-  <li><a href="https://mixandgo.com/learn/what-is-a-ruby-reducer">What is a Ruby Reducer?</a></li>
-  <li><a href="https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-Belongs-to">Scopes for belongs_to</a></li>
+  <li><a href="https://javascript.info/recursion">JavaScript.info: Recursion and Stack</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children">MDN Docs: ParentNode.children()</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection">MDN Docs: HTMLCollection</a></li>
+  <li><a href="https://medium.com/better-programming/prototypes-in-javascript-5bba2990e04b">Medium: Prototypes in Javascript - Rupesh Mishra</a></li>
 </ul>
 
       <div class="page-footer">
         <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text=Build document.getElementsByClassName From Scratch&url=http://localhost:4000/get-elements-by-class-name-from-scratch/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=Building JavaScript From Scratch&url=http://localhost:4000/get-elements-by-class-name-from-scratch/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
           <a href="https://facebook.com/sharer.php?u=http://localhost:4000/get-elements-by-class-name-from-scratch/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url=http://localhost:4000/get-elements-by-class-name-from-scratch/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>
         <div class="page-tag">
           
@@ -319,7 +326,7 @@
           
         </div>
       </div>
-      <section class="comment-area">
+      <!-- <section class="comment-area">
   <div class="comment-wrapper">
     
     <div id="disqus_thread" class="article-comments"></div>
@@ -343,7 +350,7 @@
 </div>
 
   </div>
-  
+
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
