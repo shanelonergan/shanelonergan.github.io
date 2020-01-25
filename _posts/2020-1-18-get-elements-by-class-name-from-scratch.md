@@ -105,7 +105,7 @@ function getElementsByClassName2(classNameStr) {
       // check if that child has children of its own. If so, call checkChildren one each child
       if (child.children) {
          const children = child.children
-         children.forEach(child => checkChildren(child))
+         children.forEach(checkChildren)
      }
    }
 
