@@ -25,7 +25,7 @@ I am currently diving into my first job search as a software engineer, and recen
 
 ## Goal
 
-The goal is to create a functionally equivalent version of [`document.getElementByClassName`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName). In order to do this, our new method needs to have to following functions:
+The goal is to create a functionally equivalent version of [`document.getElementByClassName`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName). In order to do this, our new function needs to have to following features:
 
 1. Can be called on any HTML element
 2. Takes one argument, a string, containing any number of class names.
