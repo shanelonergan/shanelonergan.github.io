@@ -66,11 +66,11 @@ First, we need to create a conceptual plan for our function:
 2. Check all direct descendants of the main element for the class name
    1. if any do, add them to the array
 3. Check all of those children's children the same way
-4. repeat until there are no more children
+4. Repeat until there are no more children
 
 Based on this plan, we will need to create a recursive helper function, or a function that calls itself within its own definition, to check all elements beneath the primary. We will call this helper function within the main function. The return value of the main function should be an array of elements, which we will declare as an empty array at the top, and add elements to as we move along.
 
-Now that we have a solid plan, lets get coding!
+Now that we have a solid plan, let's get coding!
 
 ## Code
 
@@ -79,7 +79,7 @@ Now that we have a solid plan, lets get coding!
 Here we will define our main function. In the body, we will define two variables: `elements`, an array into which all elements with matching class names will be added; `firstChildren`, all the children of the element the function is called on. For the latter, we can take advantage of JavaScript's [`.children()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children) method, which returns an [HTMLCollection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection) containing all child elements of the node upon which it is called. This HTMLCollection can be treated like an array.
 
 ```js
-function getElementsByClassName2(className) {
+function getElementsByClassName2(classNameStr) {
 
    const elements = [] // the array we will add matching elements to
    const firstChildren = this.children // all the children of the element the function is called on
@@ -93,7 +93,7 @@ function getElementsByClassName2(className) {
 A [recursive function](https://javascript.info/recursion) is a function which calls itself within the definition, while a helper function is a function which abstracts away some code to make it both re-usable and more readable.
 
 ```js
-function getElementsByClassName2(className) {
+function getElementsByClassName2(classNameStr) {
 
    function checkChildren(child) {
 
@@ -117,7 +117,7 @@ function getElementsByClassName2(className) {
 Now we want to call the `checkCHildren` method on each of the `firstChildren`. After this function runs, our elements array should contain all of the matching elements!
 
 ```js
-function getElementsByClassName2(className) {
+function getElementsByClassName2(classNameStr) {
 
    const elements = []
    const firstChildren = this.children
