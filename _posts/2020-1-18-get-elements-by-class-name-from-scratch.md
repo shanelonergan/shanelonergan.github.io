@@ -114,7 +114,7 @@ function getElementsByClassName2(classNameStr) {
 
 ### Step 3: Put it all together
 
-Now we want to call the `checkCHildren` method on each of the `firstChildren`. After this function runs, our elements array should contain all of the matching elements!
+Now we want to call the `checkChildren` method on each of the `firstChildren`. After this function runs, our elements array should contain all of the matching elements!
 
 ```js
 function getElementsByClassName2(classNameStr) {
