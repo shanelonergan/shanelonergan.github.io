@@ -1,0 +1,127 @@
+I".,<hr />
+
+<p>Loops. We all use them. Often one of the first things you learn in a programming language, loops can be used to solve for many purposes, from repeating something a specific number of times to enumerating through an array. In this article we will walk through the many different ways you can loop in JavaScript.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+  <li><a href="#table-of-contents">Table of Contents</a></li>
+  <li><a href="#for-loops"><code class="highlighter-rouge">for</code> loops</a>
+    <ul>
+      <li><a href="#example">Example</a></li>
+      <li><a href="#forof"><code class="highlighter-rouge">for...of</code></a></li>
+      <li><a href="#forin"><code class="highlighter-rouge">for..in</code></a></li>
+    </ul>
+  </li>
+  <li><a href="#while-loops">While loops</a>
+    <ul>
+      <li><a href="#dowhile"><code class="highlighter-rouge">do..while</code></a></li>
+      <li><a href="#while"><code class="highlighter-rouge">while</code></a></li>
+    </ul>
+  </li>
+  <li><a href="#references">References</a></li>
+</ul>
+
+<h2 id="for-loops"><code class="highlighter-rouge">for</code> loops</h2>
+
+<p>A <code class="highlighter-rouge">for</code> loop continues until a given condition is false. The standard format of a <code class="highlighter-rouge">for</code> loop looks like this:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="nx">inititalExpression</span><span class="p">;</span> <span class="nx">condition</span><span class="p">;</span> <span class="nx">incrementExpression</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">statement</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The initial expression evaluates before the first loop, and is usually used to set the value of a counter(a variable that will increment with each loop). The condition will be checked before each loop: if it evaluates as true, the loop will continue; if false, it will end. The increment expression is evaluated at the end of each loop, and is usually used to increment the counter. It is important to note the semicolons in the expression: they are not optional, and it is easy to mistakenly use commas instead, so beware.</p>
+
+<h3 id="example">Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">for</code> loops can also be used for array manipulation. We just have to set the initial counter to 0(since array indexes start at 0), and set the condition to check the length of the array.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">current</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">current</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">current</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This loop will iterate though the array and print out only the even numbers. However, ES6 provides a more intuitive syntax for working with arrays, know as the <code class="highlighter-rouge">for..of</code> loop:</p>
+
+<h3 id="forof"><code class="highlighter-rouge">for...of</code></h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">number</span> <span class="k">in</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">current</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This provides us with cleaner and more readable code compared to the traditional for loop. <code class="highlighter-rouge">for..of</code> works with both strings and arrays, but is not with key/value Objects. For those, we can utilize the <code class="highlighter-rouge">for..in</code> loop. This works similarly to the previous:</p>
+
+<h3 id="forin"><code class="highlighter-rouge">for..in</code></h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="na">eggs</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">milk</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">apples</span><span class="p">:</span> <span class="mi">6</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`I need to get </span><span class="p">${</span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]}</span><span class="s2"> </span><span class="p">${</span><span class="nx">key</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This will print out the strings ‘I need to get 2 eggs’, ‘I need to get 1 milk’, etc. It is important to note that <code class="highlighter-rouge">for..in</code> runs in an arbitrary order, so if you need a defined sequence you should not use it. <code class="highlighter-rouge">for..in</code> can also be used with arrays, and the keys will be the index of each item.</p>
+
+<h2 id="while-loops">While loops</h2>
+
+<p><code class="highlighter-rouge">while</code> loops are blocks of code that execute while a condition is true. These can take two forms, the <code class="highlighter-rouge">do..while</code> and <code class="highlighter-rouge">while</code> loops, but share the same basic structure. Each consists of a statement and a condition. The statement is executed for as long as the condition is true.</p>
+
+<h3 id="dowhile"><code class="highlighter-rouge">do..while</code></h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">do</span>
+  <span class="nx">statement</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">condition</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="nx">i</span><span class="o">++</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="while"><code class="highlighter-rouge">while</code></h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span>
+    <span class="nx">statement</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="nx">i</span><span class="o">++</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If you enjoyed the article, feel free to follow me on medium <a href="https://medium.com/@sptlonergan">@sptlonergan</a> and twitter <a href="https://twitter.com/shane__lonergan">@shane__lonergan</a></p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">MDN Docs: Loops and Iteration()</a></li>
+  <li><a href="https://javascript.info/recursion">JavaScript.info: Recursion and Stack</a></li>
+  <li>Photo by Virginia Johnson on Unsplash</li>
+</ul>
+:ET

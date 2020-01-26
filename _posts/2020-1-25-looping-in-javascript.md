@@ -20,6 +20,9 @@ Loops. We all use them. Often one of the first things you learn in a programming
 - [While loops](#while-loops)
   - [`do..while`](#dowhile)
   - [`while`](#while)
+- [`break` and `continue`](#break-and-continue)
+  - [`break`](#break)
+- [`continue`](#continue)
 - [References](#references)
 
 ## `for` loops
@@ -125,12 +128,63 @@ while (i <= 5) {
 }
 ```
 
+## `break` and `continue`
+
+### `break`
+
+`break` is a statement used to terminate a loop early. It exits the current iteration immediately and also breaks out of the entire loop.
+
+```js
+arr = [1, 2, 3, 4, 5]
+const magicNum = 3
+
+for (let num in arr) {
+
+    if (num === magicNum) break
+
+    console.log(num)
+}
+```
+
+The above code will print each number in the array until it hits the magic number. Once it does, it will exit the loop.
+
+## `continue`
+
+`continue` is used to break out of the current iteration of a loop, and move on to the next. It will skip any code below the `continue`, but not break out of the loop entirely.
+
+```js
+arr = [1, 2, 3, 4, 5]
+const magicNum = 3
+
+for (let num in arr) {
+
+    if (num === magicNum) continue
+
+    console.log(num)
+}
+```
+
+This will print out the letters 1, 2, 4, 5, skipping 3.
+
+--
+
+That is all of the standard ways of looping in JavaScript! Here are some of the pitfalls I have fallen into while using these loops:
+
+1. You must include the parenthesis around the condition, just like an `if` statement.
+2. You need the curly braces, {}, if your statement is more than 1 line.
+3. You must use semicolons when separating the parameters of a `for` loop.
+4. `for..of` is only for Arrays and Strings, not key/value Objects.
+5. `break` exits the entire loop, while `continue` exits only the current iteration.
+
+I hope you found this helpful, and good luck looping!
+
+--
+
 If you enjoyed the article, feel free to follow me on medium [@sptlonergan](https://medium.com/@sptlonergan) and twitter [@shane__lonergan](https://twitter.com/shane__lonergan)
+
+---
 
 ## References
 
-- [MDN Docs: Document.getElementsByClassName()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
-- [JavaScript.info: Recursion and Stack](https://javascript.info/recursion)
-- [MDN Docs: ParentNode.children()](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children)
-- [MDN Docs: HTMLCollection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection)
-- [Medium: Prototypes in Javascript - Rupesh Mishra](https://medium.com/better-programming/prototypes-in-javascript-5bba2990e04b)
+- [MDN Docs: Loops and Iteration()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- Photo by Virginia Johnson on Unsplash
