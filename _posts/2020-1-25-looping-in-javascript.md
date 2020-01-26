@@ -37,6 +37,22 @@ for (i = 1; i <= 100; i++) {
 }
 ```
 
+`for` loops can also be used for array manipulation. We just have to set the initial counter to 0(since array indexes start at 0), and set the condition to check the length of the array.
+
+```js
+arr = [1, 2, 3, 4, 5, 6]
+
+for (i = 0; i <= arr.length; i++) {
+    const current = arr[i]
+
+    if (current % 2 === 0) {
+        console.log(current)
+    }
+
+}
+```
+
+
 If you enjoyed the article, feel free to follow me on medium [@sptlonergan](https://medium.com/@sptlonergan) and twitter [@shane__lonergan](https://twitter.com/shane__lonergan)
 
 ## References
