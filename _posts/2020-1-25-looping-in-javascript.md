@@ -52,7 +52,7 @@ for (let i = 0; i <= arr.length; i++) {
 }
 ```
 
-This loop will iterate though the array and print out only the even numbers. However, ES6 provides a more intuitive syntax for working with arrays, know as the `for of` loop:
+This loop will iterate though the array and print out only the even numbers. However, ES6 provides a more intuitive syntax for working with arrays, know as the `for..of` loop:
 
 ```js
 arr = [1, 2, 3, 4, 5, 6]
@@ -65,6 +65,20 @@ for (let number in arr) {
 
 }
 ```
+
+This provides us with cleaner and more readable code compared to the traditional for loop. `for..of` works with both strings and arrays, but is not with key/value Objects. For those, we can utilize the `for..in` loop. This works similarly to the previous:
+
+```js
+obj = {eggs: 2, milk: 1, apples: 6}
+
+for (const key in obj) {
+
+    console.log(`I need to get ${obj[key]} ${key}`)
+
+}
+```
+
+This will print out the strings 'I need to get 2 eggs', 'I need to get 1 milk', etc. It is important to note that `for..in` runs in an arbitrary order, so if you need a defined sequence you should not use it. `for..in` can also be used with arrays, and the keys will be the index of each item.
 
 If you enjoyed the article, feel free to follow me on medium [@sptlonergan](https://medium.com/@sptlonergan) and twitter [@shane__lonergan](https://twitter.com/shane__lonergan)
 
