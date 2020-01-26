@@ -8,7 +8,7 @@ tags: [programming, terminal, bash] # add tag
 ---
 ---
 
-Loops. We all use them. Often one of the first things you learn in a programming language, loops can be used to solve for many purposes, from repeating something a specific number of times to enumerating through an array. In this article we will walk through the many different ways you can loop in JavaScript.
+Loops. We all use them! Often one of the first things you learn in a programming language, loops can be used to solve for many purposes, from repeating something a specific number of times to enumerating through an array. In this article we will walk through the many different ways you can loop in JavaScript.
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ Loops. We all use them. Often one of the first things you learn in a programming
   - [Example](#example)
   - [`for...of`](#forof)
   - [`for..in`](#forin)
-- [While loops](#while-loops)
+- [`while` loops](#while-loops)
   - [`do..while`](#dowhile)
   - [`while`](#while)
 - [`break` and `continue`](#break-and-continue)
@@ -92,7 +92,7 @@ for (const key in obj) {
 
 This will print out the strings 'I need to get 2 eggs', 'I need to get 1 milk', etc. It is important to note that `for..in` runs in an arbitrary order, so if you need a defined sequence you should not use it. `for..in` can also be used with arrays, and the keys will be the index of each item.
 
-## While loops
+## `while` loops
 
 `while` loops are blocks of code that execute while a condition is true. These can take two forms, the `do..while` and `while` loops, but share the same basic structure. Each consists of a statement and a condition. The statement is executed for as long as the condition is true.
 
@@ -166,7 +166,7 @@ for (let num in arr) {
 
 This will print out the letters 1, 2, 4, 5, skipping 3.
 
---
+---
 
 That is all of the standard ways of looping in JavaScript! Here are some of the pitfalls I have fallen into while using these loops:
 
@@ -178,9 +178,9 @@ That is all of the standard ways of looping in JavaScript! Here are some of the 
 
 I hope you found this helpful, and good luck looping!
 
---
+---
 
-If you enjoyed the article, feel free to follow me on medium [@sptlonergan](https://medium.com/@sptlonergan) and twitter [@shane__lonergan](https://twitter.com/shane__lonergan)
+If you enjoyed the article, feel free to follow me on medium [@sptlonergan](https://medium.com/@sptlonergan), DEV [@shane__lonergan](https://dev.to/shane__lonergan), and twitter [@shane__lonergan](https://twitter.com/shane__lonergan)
 
 ---
 
