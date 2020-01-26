@@ -27,12 +27,12 @@ for (inititalExpression; condition; incrementExpression) {
 }
 ```
 
-The initial expression evaluates before the first loop, and is usually used to set the value of a counter(a variable that will increment with each loop). The condition will be checked before each loop: if it evaluates as true, the loop will continue; if false, it will end. The increment expression is evaluated at the end of each loop, and is usually used to increment the counter
+The initial expression evaluates before the first loop, and is usually used to set the value of a counter(a variable that will increment with each loop). The condition will be checked before each loop: if it evaluates as true, the loop will continue; if false, it will end. The increment expression is evaluated at the end of each loop, and is usually used to increment the counter. It is important to note the semicolons in the expression: they are not optional, and it is easy to mistakenly use commas instead, so beware.
 
 ### Example
 
 ```js
-for (i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
     console.log(i)
 }
 ```
@@ -42,7 +42,7 @@ for (i = 1; i <= 100; i++) {
 ```js
 arr = [1, 2, 3, 4, 5, 6]
 
-for (i = 0; i <= arr.length; i++) {
+for (let i = 0; i <= arr.length; i++) {
     const current = arr[i]
 
     if (current % 2 === 0) {
@@ -52,6 +52,19 @@ for (i = 0; i <= arr.length; i++) {
 }
 ```
 
+This loop will iterate though the array and print out only the even numbers. However, ES6 provides a more intuitive syntax for working with arrays, know as the `for of` loop:
+
+```js
+arr = [1, 2, 3, 4, 5, 6]
+
+for (let number in arr) {
+
+    if (number % 2 === 0) {
+        console.log(current)
+    }
+
+}
+```
 
 If you enjoyed the article, feel free to follow me on medium [@sptlonergan](https://medium.com/@sptlonergan) and twitter [@shane__lonergan](https://twitter.com/shane__lonergan)
 
