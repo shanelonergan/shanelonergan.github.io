@@ -19,6 +19,7 @@ Loops. We all use them. Often one of the first things you learn in a programming
   - [`for..in`](#forin)
 - [While loops](#while-loops)
   - [`do..while`](#dowhile)
+  - [`while`](#while)
 - [References](#references)
 
 ## `for` loops
@@ -90,9 +91,16 @@ This will print out the strings 'I need to get 2 eggs', 'I need to get 1 milk', 
 
 ## While loops
 
-`while` loops are blocks of code that execute while a condition is true. These can take two forms, the `do..while` and `while` loops:
+`while` loops are blocks of code that execute while a condition is true. These can take two forms, the `do..while` and `while` loops, but share the same basic structure. Each consists of a statement and a condition. The statement is executed for as long as the condition is true.
 
 ### `do..while`
+
+
+```js
+do
+  statement
+while (condition);
+```
 
 ```js
 let i = 1
@@ -100,6 +108,21 @@ do {
     console.log(i)
     i++
 } while (i <= 5)
+```
+
+### `while`
+
+```js
+while (condition)
+    statement
+```
+
+```js
+let i = 1
+while (i <= 5) {
+    console.log(i)
+    i++
+}
 ```
 
 If you enjoyed the article, feel free to follow me on medium [@sptlonergan](https://medium.com/@sptlonergan) and twitter [@shane__lonergan](https://twitter.com/shane__lonergan)
