@@ -8,12 +8,12 @@ tags: [programming, terminal, bash] # add tag
 ---
 ---
 
-I am currently diving into my first job search as a software engineer, and recently had a mock technical interview. The interview was done in JavaScript, and consisted of two questions. The first was a fairly standard algorithm question, but the second was quite interesting: I was asked to build the `document.getElementByClassName` method from scratch, as if it didn't exist. I found it enlightening to build out a method that I had used so many times before, and improved my understanding of both DOM manipulation and Javascript as a whole. In this article I will walk you through the solution I came up with.;
+Loops. We all use them. Often one of the first things you learn in a programming language, loops can be used to solve for many purposes, from repeating something a specific number of times to enumerating through an array. In this article we will walk through the many different ways you can loop in JavaScript.
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Goal](#goal)
+- [`for` loops](#for-loops)
 - [Example](#example)
 - [Plan](#plan)
 - [Code](#code)
@@ -23,14 +23,15 @@ I am currently diving into my first job search as a software engineer, and recen
   - [Step 4: Add to the HTML Element prototype](#step-4-add-to-the-html-element-prototype)
 - [References](#references)
 
-## Goal
+## `for` loops
 
-The goal is to create a functionally equivalent version of [`document.getElementByClassName`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName). In order to do this, our new function needs to have to following features:
+A `for` loop continues until a given condition is false. The standard format of a `for` loop looks like this:
 
-1. Can be called on any HTML element
-2. Takes one argument, a string, containing any number of class names.
-3. Returns all elements that match all the class names passed in.
-4. Returns only elements that are children of the element the function was called on
+```js
+for (inititalExpression; condition; incrementExpression) {
+    statement
+}
+```
 
 ## Example
 

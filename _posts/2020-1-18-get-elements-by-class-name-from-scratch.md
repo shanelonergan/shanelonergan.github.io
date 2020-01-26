@@ -8,7 +8,7 @@ tags: [programming, terminal, bash] # add tag
 ---
 ---
 
-I am currently diving into my first job search as a software engineer, and recently had a mock technical interview. The interview was done in JavaScript, and consisted of two questions. The first was a fairly standard algorithm question, but the second was quite interesting: I was asked to build the `document.getElementByClassName` method from scratch, as if it didn't exist. I found it enlightening to build out a method that I had used so many times before, and improved my understanding of both DOM manipulation and Javascript as a whole. In this article I will walk you through the solution I came up with.
+I am currently diving into my first job search as a software engineer, and recently had a mock technical interview. The interview was done in JavaScript, and consisted of two questions. The first was a fairly standard algorithm question, but the second was quite interesting: I was asked to build the `document.getElementByClassName` method from scratch, as if it didn't exist. I found it enlightening to build out a method that I had used so many times before, and improved my understanding of both DOM manipulation and JavaScript as a whole. In this article I will walk you through the solution I came up with.
 
 ## Table of Contents
 
