@@ -3,7 +3,7 @@ layout: post
 title:  "Loop the Loop"
 date:   2020-1-19
 description: 'Different ways to loop in JavaScript'
-img: getElementsByClassName.png
+img: loop.jpg
 tags: [programming, terminal, bash] # add tag
 ---
 ---
