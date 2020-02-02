@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Tracking user streaks in Ruby"
-date:   2019-10-17
+date:   2020-2-1
 description: maintain user engagement through daily streak-tracking # Add post description (optional)
 img: streak.jpg
 tags: [programming, terminal, bash] # add tag
 ---
 ---
 
-From Duolingo to Headspace, many of the most popular apps today track users' "streaks". By keeping track of the number of days in a row a user has logged in and completed a task, these apps aim to create a beneficial habit for the user, while simultaneously insuring an active daily user base. Evidence seems to indicate that desire to keep a streak going will indeed motivate a person to do a task they might not otherwise.
+From Duolingo to Headspace, many of the most popular apps today track users' "streaks". By keeping track of the number of days in a row a user has logged in and completed a task, these apps aim to create a beneficial habit for the user, while simultaneously insuring an active daily user base. With habit-tracking apps [exploding](https://www.vox.com/the-goods/2019/1/2/18158989/habit-tracking-apps-new-years-resolutions) in popularity, evidence seems to indicate that desire to keep a streak going will indeed motivate a person to do a task they might not otherwise.
 
 With streaks being such a popular feature, a [friend](https://medium.com/@avijitklodh) and I decided to try and incorporate it into a recent project we were working on. The application walked a user through the steps of a [Wim Hof](https://www.wimhofmethod.com/) breathing cycle, and we wanted to display the number of days in a row they had completed at least one cycle.
 
@@ -44,7 +44,7 @@ Our application is built on a ruby-on-rails back-end, with a vanilla JavaScript 
 
 ![image of relationships](../assets/img/relationships.jpg)
 
-First we need to create a Ruby class of User, which inherits from `ApplicationRecord`, a rails model which includes the [Active Record](https://guides.rubyonrails.org/active_record_basics.html) ORM (more on Object-Relational-Mappers [here](https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a)). We can then add the ActiveRecord syntax for a has-many relationship as seen on line 2. This allows us to access all of a User's sessions by simply calling `.sessions` on in instance of a `User`. Additionally, Active Record relationships can take a second argument, [scope](https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-belongs-to), which allows us to customize the SQL query. We will want to haver our array ordered from most recent date to least recent date, which can be accomplished if we query for _**descending**_ order:
+First we need to create a Ruby class of User, which inherits from `ApplicationRecord`, a rails model that includes the [Active Record](https://guides.rubyonrails.org/active_record_basics.html) ORM (more on Object-Relational-Mappers [here](https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a)). We can then add the ActiveRecord syntax for a has-many relationship as seen on line 2. This allows us to access all of a User's sessions by simply calling `.sessions` on in instance of a `User`. Additionally, Active Record relationships can take a second argument, [scope](https://edgeguides.rubyonrails.org/association_basics.html#scopes-for-belongs-to), which allows us to customize the SQL query. We will want to haver our array ordered from most recent date to least recent date, which can be accomplished if we query for _**descending**_ order:
 
 ```ruby
 has_many :sessions, -> {order "created_at DESC"}
@@ -155,6 +155,7 @@ Below is the final code with comments included, and you can check out the app th
 
 ### References
 
+- [Habit-tracking apps are the latest self-improvement trend. But do they work?](https://www.vox.com/the-goods/2019/1/2/18158989/habit-tracking-apps-new-years-resolutions)
 - [Wim Hof Method](https://www.wimhofmethod.com/)
 - [Active Record Basics](https://guides.rubyonrails.org/active_record_basics.html)
 - [What is an ORM and Why You Should Use it](https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a)
