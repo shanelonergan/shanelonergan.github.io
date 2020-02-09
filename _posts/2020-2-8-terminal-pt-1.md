@@ -46,10 +46,14 @@ iTerm2 seems to be the most popular third-party emulator. It is extremely featur
 - instant replay
   - Allows you to rewind and view your terminal history in real-time
 
+One of the main drawbacks of iTerm2 used to be speed, but recently they added GPU rendering which provides a significant performance increase. If you are looking for the most well rounded emulator, iTerm2 is likely it.
+
 ### Hyper
 
 Hyper is a popular terminal among those looking for the most beautiful emulator experience possible, and for good reason. Built using web technologies (html/css/javascript), Hyper is the most A E S T H E T I C emulator on this list. If you are familiar with web development, your customization of Hyper is limited only by your JS skills! However, this beauty does come at a cost. In my experience, Hyper is by far the slowest of all the emulators. While it does have a rich plugin ecosystem, I have encountered many bugs in even some of the most popular plugins. If you want the most beautiful terminal possible, and don't mind sacrificing some performance, then Hyper may be the right choice.
 
 ### Alacritty
+
+Alacritty is often
 
 ### kitty
