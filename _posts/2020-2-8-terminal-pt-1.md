@@ -54,6 +54,6 @@ Hyper is a popular terminal among those looking for the most beautiful emulator 
 
 ### Alacritty
 
-Alacritty is often
+Alacritty is the self-proclaimed fastest terminal emulator in existence. While the exact performance benchmarks are subject to some controversy, Alacritty certainly feels fast. In my personal experience it feels the fastest of all on this list, both in startup and command execution times. On the other hand, Alacrity is quite minimalist when it comes to features. It doesn't support tabs or split planes, and doesn't have any menu items on MacOS. Additionally, I found Alacritty to be the least intuitive to install and customize. If speed is your #1 factor, Alacritty is likely your best bet.
 
 ### kitty
