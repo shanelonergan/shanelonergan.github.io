@@ -18,6 +18,38 @@ If you are anything like me, it didn't take a long time before you started custo
 
 - [Table of Contents](#table-of-contents)
 - [Emulators](#emulators)
+  - [Terminal.app](#terminalapp)
+  - [iTerm 2](#iterm-2)
+  - [Hyper](#hyper)
+  - [Alacritty](#alacritty)
+  - [kitty](#kitty)
 
 ## Emulators
 
+When it comes to deciding on an emulator, there are three major factors to consider: speed, features, and aesthetics. How you prioritize these will likely determine which is best for you. There are many options to choose from for emulators, so I will cover the five I have experience with.
+
+### Terminal.app
+
+The standard terminal that ships with MacOS it quite good. It can likely handle anything you would need to use it for, and it is easy to use. However, it is not as customizable or performant as some other options, which is why many people like to download a third-party emulator.
+
+### iTerm 2
+
+iTerm2 seems to be the most popular third-party emulator. It is extremely feature rich and easy to customize. Some of its major features include:
+
+- split panes
+  - divide the window into multiple panes, each with a different session. can be split vertically or horizontally
+- hotkey window
+  - assign a hotkey that bring iTerm2 to the foreground when using another application.
+- robust search
+- autocomplete
+- paste history
+- instant replay
+  - Allows you to rewind and view your terminal history in real-time
+
+### Hyper
+
+Hyper is a popular terminal among those looking for the most beautiful emulator experience possible, and for good reason. Built using web technologies (html/css/javascript), Hyper is the most A E S T H E T I C emulator on this list. If you are familiar with web development, your customization of Hyper is limited only by your JS skills! However, this beauty does come at a cost. In my experience, Hyper is by far the slowest of all the emulators. While it does have a rich plugin ecosystem, I have encountered many bugs in even some of the most popular plugins. If you want the most beautiful terminal possible, and don't mind sacrificing some performance, then Hyper may be the right choice.
+
+### Alacritty
+
+### kitty
