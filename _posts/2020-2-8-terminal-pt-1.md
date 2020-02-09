@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Finding the Perfect Terminal, Part 1"
-date:   2020-1-19
+date:   2020-2-8
 description: 'Emulators and Shells'
-img: loop.jpg
+img: hyper-term.png
 tags: [programming, terminal, bash] # add tag
 ---
 ---
@@ -23,6 +23,11 @@ If you are anything like me, it didn't take a long time before you started custo
   - [Hyper](#hyper)
   - [Alacritty](#alacritty)
   - [kitty](#kitty)
+  - [Summary](#summary)
+- [Shell](#shell)
+  - [Bash](#bash)
+  - [Zsh](#zsh)
+  - [Fish](#fish)
 
 ## Emulators
 
@@ -67,3 +72,18 @@ kitty is an emulator that I believe fills the gap between iTerm2 and Alacritty. 
 - key-binding centric
 
 If you are looking for a blazing fast terminal but still want access to a good amount of features, kitty is a great option.
+
+### Summary
+
+Most feature-rich: iTerm2
+Best looking: Hyper
+Fastest: Alactrity
+Fast + features: kitty
+
+## Shell
+
+### Bash
+
+### Zsh
+
+### Fish
