@@ -54,6 +54,16 @@ Hyper is a popular terminal among those looking for the most beautiful emulator 
 
 ### Alacritty
 
-Alacritty is the self-proclaimed fastest terminal emulator in existence. While the exact performance benchmarks are subject to some controversy, Alacritty certainly feels fast. In my personal experience it feels the fastest of all on this list, both in startup and command execution times. On the other hand, Alacrity is quite minimalist when it comes to features. It doesn't support tabs or split planes, and doesn't have any menu items on MacOS. Additionally, I found Alacritty to be the least intuitive to install and customize. If speed is your #1 factor, Alacritty is likely your best bet.
+Alacritty is the self-proclaimed fastest terminal emulator in existence,  utilizing GPU rendering and minimal features for performance optimization. While the exact performance benchmarks are subject to some controversy, Alacritty certainly feels fast. In my personal experience it feels the fastest of all on this list, both in startup and command execution times. On the other hand, Alacrity is quite minimalist when it comes to features. It doesn't support tabs or split planes, and doesn't have any menu items on MacOS. Additionally, I found Alacritty to be the least intuitive to install and customize. If speed is your #1 factor, Alacritty is likely your best bet.
 
 ### kitty
+
+kitty is an emulator that I believe fills the gap between iTerm2 and Alacritty. It is also a GPU based emulator, but it provides a great set of features and is designed with keyboard centric use in mind. Some of kitty's best features are:
+
+- supports tabs and windows, with multiple layouts
+- has a good ecosystem of plugins called kittens
+- multiple copy/paste buffers
+- highly configurable
+- key-binding centric
+
+If you are looking for a blazing fast terminal but still want access to a good amount of features, kitty is a great option.
