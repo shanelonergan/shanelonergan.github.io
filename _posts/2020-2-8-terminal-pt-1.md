@@ -96,6 +96,8 @@ Zsh, in my experience, seems to be the most common shell people switch to from b
 - path expansion (type /u/lo/b and hit tab and it automatically expands to /usr/local/bin)
 - plugins and frameworks
 
-The last feature is often one of the largest draws of Zsh, as it gives you access to the community-driven framework Oh-My-Zsh.
+The last feature is often one of the largest draws of Zsh, as it gives you access to the community-driven framework Oh-My-Zsh. OMZ includes over 100 useful plugins and themes which allow you to configure your terminal to maximum beauty and functionality.
 
 ### Fish
+
+The last shell I have experience with is Fish, the Friendly Interactive Shell. True to its name, Fish is made to be the most user friendly shell possible. It offers autosuggestions, tab complete, and syntax highlighting out of the box, and it utilizes a web-based configuration system. This allows you to set colors, functions, themes, view your history, and more, all from the browser! Fish also has a version of Oh-My-Zsh, fitting called Oh-My-Fish, so you still can access all those plugins and themes. However, I have found fish to operate faster than Zsh, so I use it in in my Hyper setup to counteract the slower emulator. One major tradeoff with Fish is that it's scripting language is quite different that Bash/Zsh, so you will have to rewrite any scripts/custom command files you have written in the past.
