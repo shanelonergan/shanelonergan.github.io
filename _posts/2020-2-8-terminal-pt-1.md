@@ -82,8 +82,20 @@ Fast + features: kitty
 
 ## Shell
 
+Alright, you have decided on an emulator. Congrats! Now it is time for the next step: deciding which shell to use.
+
 ### Bash
 
+Bash, which stands for Bourne Again Shell, is the shell that, until recently, came as the default on MacOS. It is one of the most common shells out there. It works well, and there is nothing wrong with it. However, if you are looking for more features from your shell, it may be time to consider alternatives.
+
 ### Zsh
+
+Zsh, in my experience, seems to be the most common shell people switch to from bash. It feels pretty much the same to use, but provides some nice features:
+
+- automatic CD (just type the name of the directory and hit enter)
+- path expansion (type /u/lo/b and hit tab and it automatically expands to /usr/local/bin)
+- plugins and frameworks
+
+The last feature is often one of the largest draws of Zsh, as it gives you access to the community-driven framework Oh-My-Zsh.
 
 ### Fish
