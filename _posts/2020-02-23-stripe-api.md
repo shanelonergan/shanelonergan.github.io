@@ -13,11 +13,16 @@ If you have ever created, or wanted to create, and e-commerce site, deciding on 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Frameworks](#frameworks)
-  - [Oh My Zsh](#oh-my-zsh)
-  - [Others](#others)
-  - [Summary](#summary)
-- [Themes and Plugins](#themes-and-plugins)
-  - [Spaceship Prompt](#spaceship-prompt)
-  - [Powerlevel 9K](#powerlevel-9k)
-  - [Typewritten](#typewritten)
+- [Set Up](#set-up)
+- [Front-End](#front-end)
+- [Back End](#back-end)
+
+## Set Up
+
+First things first: we need to create a Stripe account to manage our API calls. Once you do, you can retrieve your Text API keys, which will be found on the home page under the 'Get your test APY keys' header. They can also be found on the Developer page.Once you have access to your keys, we can get started on integrating them.
+
+## Front-End
+
+I have found that the quickest way to get Stripe up and running on the front end is by using a great package called `react-stripe-checkout`. This is a React implementation of Stripe's [Checkout](https://stripe.com/docs/payments/checkout) feature. A Checkout creates a secure, Stripe-hosted payment page which collects all the essential information and handles it for you in one quick step. One downside of going this route is that you don't have full control of the checkout flow or style. If those are thinks that you value highly, you can use [Stripe Elements](https://stripe.com/docs/payments/accept-a-payment) to build a bespoke checkout.
+
+## Back End
