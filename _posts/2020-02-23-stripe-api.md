@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lighting-Fast Payment Processing"
-date:   2020-2-16
+date:   2020-2-23
 description: 'Adding the Stripe API to your React-Rails application'
 img: stripe.png
 tags: [programming, terminal, bash] # add tag
@@ -23,6 +23,6 @@ First things first: we need to create a Stripe account to manage our API calls. 
 
 ## Front-End
 
-I have found that the quickest way to get Stripe up and running on the front end is by using a great package called `react-stripe-checkout`. This is a React implementation of Stripe's [Checkout](https://stripe.com/docs/payments/checkout) feature. A Checkout creates a secure, Stripe-hosted payment page which collects all the essential information and handles it for you in one quick step. One downside of going this route is that you don't have full control of the checkout flow or style. If those are thinks that you value highly, you can use [Stripe Elements](https://stripe.com/docs/payments/accept-a-payment) to build a bespoke checkout.
+I have found that the quickest way to get Stripe up and running on the front end is by using a great package called `react-stripe-checkout`. This is a React implementation of Stripe's [Checkout](https://stripe.com/docs/payments/checkout) feature. A Checkout creates a secure, Stripe-hosted payment page which collects all the essential information and handles it for you in one quick step. One downside of going this route is that you don't have full control of the checkout flow or style. If those are things that you value highly, you can use [Stripe Elements](https://stripe.com/docs/payments/accept-a-payment) to build a bespoke checkout experience. To get started, we need to install react-stripe-checkout: `npm install react-stripe-checkout`.
 
 ## Back End
