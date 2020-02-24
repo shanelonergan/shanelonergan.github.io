@@ -37,6 +37,19 @@ Next, we want to add a Stripe Checkout component to our app. To do this, we firs
 import StripeCheckout from 'react-stripe-checkout';
 ```
 
+This gives us access to the `<StripeCheckout/>` component. This will render a styled button which, when clicked, will open up a checkout window. It can take a wide variety of props, but the only two are required: `token`, and `stripeKey`. The token prop is where we pass our callback function to handle the token we will receive, and  `stripeKey` is of course our stripe api key, which we will pull from the .env file. Once we add this component to our application, it should look something like this:
+
+```js
+export default function App() {
+return (
+    <StripeCheckout
+        token={onToken}
+        stripeKey={process.env.REACT_APP_STRIPE_KEY}
+    />
+)
+
+```
+
 - dotenv (React specific)
 - react-stripe-checkout
 - add different props
