@@ -41,13 +41,13 @@ This gives us access to the `<StripeCheckout/>` component. This will render a st
 
 ```js
 export default function App() {
-return (
-    <StripeCheckout
-        token={onToken}
-        stripeKey={process.env.REACT_APP_STRIPE_KEY}
-    />
-)
-
+    return (
+        <StripeCheckout
+            token={onToken}
+            stripeKey={process.env.REACT_APP_STRIPE_KEY}
+        />
+    )
+}
 ```
 
 - dotenv (React specific)
