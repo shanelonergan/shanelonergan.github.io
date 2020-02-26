@@ -50,7 +50,7 @@ export default function App() {
 }
 ```
 
-Now the last thing we need to do is create our `onToken` function. This function will automatically be passed the `token` prop. This token is created when the customer fills out the secure stripe payment form. It represents this sensitive information, but is safe to be sent back to us to handle, ensuring that no payment information ever touches our server. We can then send this token to our server to finish the process. For our purposes, we are going to create a Stripe `charge` using this token, which will charge the customer's credit card. A charge can be created with many different [properties](https://stripe.com/docs/api/charges), but we will only use a few of them. From our front end, we will want to pass an object containing a charge object and a price. The price should come from wherever you are storing the price of your item locally, likely in your state. It is important to note that Stripe will interpret payment amounts as the *lowest unit of the currency you are using*. We are using USD, so the lowest unit would be a cent. Thus, we need to multiply our price in dollars by 100 to get the number of cents. As for the charge, we will want to make an object containing a key of token, pointing to the ID of the token returned from our Checkout. We then want to make a fetch request to our API (which we havn't created yet)
+Now the last thing we need to do is create our `onToken` function. This function will automatically be passed the `token` prop. This token is created when the customer fills out the secure stripe payment form. It represents this sensitive information, but is safe to be sent back to us to handle, ensuring that no payment information ever touches our server. We can then send this token to our server to finish the process. For our purposes, we are going to create a Stripe `charge` using this token, which will charge the customer's credit card. A charge can be created with many different [properties](https://stripe.com/docs/api/charges), but we will only use a few of them. From our front end, we will want to pass an config object containing a charge object and a price. The price should come from wherever you are storing the price of your item locally, likely in your state. It is important to note that Stripe will interpret payment amounts as the *lowest unit of the currency you are using*. We are using USD, so the lowest unit would be a cent. Thus, we need to multiply our price in dollars by 100 to get the number of cents. As for the charge, we will want to make an object containing a key of token, pointing to the ID of the token returned from our Checkout. We then want to make a fetch request to our API (which we havn't created yet), passing in our config object. Our final code for this onToken method should like something like this:
 
 ```js
 const onToken = (token) => {
@@ -72,14 +72,6 @@ const onToken = (token) => {
     .then(console.log)
 }
 ```
-
-
-
-- dotenv (React specific)
-- react-stripe-checkout
-- add different props
-- make a token handler
-- controlled form
 
 ## Back End
 
