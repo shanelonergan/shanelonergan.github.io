@@ -72,4 +72,4 @@ const onToken = (token) => {
 }
 ```
 
-The next step is to build out our Rails back-end so that our onToken function has a location to fetch to. Check it out in
+The next step is to build out our Rails back-end so that our onToken function has a location to fetch to. Check it out in [part 2](https://shanelonergan.github.io/stripe-pt-2/)!
