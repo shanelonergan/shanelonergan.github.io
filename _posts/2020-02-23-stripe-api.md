@@ -15,7 +15,6 @@ If you have ever created, or wanted to create, and e-commerce site, deciding on 
 - [Table of Contents](#table-of-contents)
 - [Set Up](#set-up)
 - [Front-End](#front-end)
-- [Back End](#back-end)
 
 ## Set Up
 
@@ -73,10 +72,4 @@ const onToken = (token) => {
 }
 ```
 
-## Back End
-
-- dotenv
-- cors
-- charge controller
-- route
-- params
+The next step is to build out our Rails back-end so that our onToken function has a location to fetch to. Check it out in
