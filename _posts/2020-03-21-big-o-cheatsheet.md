@@ -18,7 +18,9 @@ In order for an algorithm to be constant time, it must take the same amount of t
 
 If doubling the number of elements you pass your algo doesn't double the amount of work it has to do, it is likely logarithmic time. Searching operations can usually be assumed to be Logarithmic if the data collection is *sorted*.
 
-## Linear Time
+## Linear Time: O(n) = n
+
+Linear time is one of the most common runtimes. If you are iterating through every element in a data collection, it is probably going to be linear runtime. This is because for each *n* number of elements we add to the data collection, be have to do exactly *n* more work.
 
 ## Quasilinear Time
 
