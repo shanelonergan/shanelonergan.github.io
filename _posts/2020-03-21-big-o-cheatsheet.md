@@ -3,12 +3,22 @@ layout: post
 title:  "Big O Cheatsheet"
 date:   2020-3-21
 description: 'A quick guide to identifying runtime complexity'
-img: big-o.jpg
+img: big-o.jpeg
 tags: [programming, terminal, bash] # add tag
 ---
 ---
 
 ## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Constant Time: O(n) = 1](#constant-time-on--1)
+- [Logarithmic Time: O(n) = log(n)](#logarithmic-time-on--logn)
+- [Linear Time: O(n) = n](#linear-time-on--n)
+  - [Example](#example)
+- [Quasilinear Time: O(n) = n*log(n)](#quasilinear-time-on--nlogn)
+- [Quadratic Time: O(n) = n^2](#quadratic-time-on--n2)
+  - [Example](#example-1)
+- [Exponential Time: O(n) = 2^n](#exponential-time-on--2n)
 
 Welcome to the Big O cheatsheet! This is meant to be a reference point fo quickly identifying some of the most common runtime complexities. It is generalized, so it is not meant to perfectly classify all complex algorithms, but hopefully it can provide a starting point to jump off from. Without further ado, lets dive in!
 
