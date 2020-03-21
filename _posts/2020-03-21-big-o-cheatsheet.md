@@ -10,7 +10,9 @@ tags: [programming, terminal, bash] # add tag
 
 Welcome to the Big O cheatsheet! This is meant to be a reference point fo quickly identifying some of the most common runtime complexities. It is generalized, so it is not meant to perfectly classify all complex algorithms, but hopefully it can provide a starting point to jump off from. Without further ado, lets dive in!
 
-## Constant Time
+## Constant Time: O(n) = 1
+
+In order for an algorithm to be constant time, it must take the same amount of time to run no matter what variables are passed in. Whether the algo is passed an array with 1 item or 100 items, it will take the same time to execute.
 
 ## Logarithmic Time
 
