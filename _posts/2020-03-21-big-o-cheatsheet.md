@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Big O Cheatsheet?"
-date:   2020-3-15
+title:  "Big O Cheatsheet"
+date:   2020-3-21
 description: 'A quick guide to identifying runtime complexity'
-img: rest.jpg
+img: big-o.jpg
 tags: [programming, terminal, bash] # add tag
 ---
 ---
