@@ -22,8 +22,14 @@ If doubling the number of elements you pass your algo doesn't double the amount 
 
 Linear time is one of the most common runtimes. If you are iterating through every element in a data collection, it is probably going to be linear runtime. This is because for each *n* number of elements we add to the data collection, be have to do exactly *n* more work.
 
-## Quasilinear Time
+## Quasilinear Time: O(n) = n*log(n)
+
+This is usually the case if each element you add adds an extra unit of work *plus a little bit extra*. For example, doubling the number of elements would take a little bit more than double the work. A handy rule of thumb is that Sorting algorithms are usually quasilinear.
 
 ## Quadratic Time
 
+Quadratic time is an option if adding an element greatly increases the amount of work you have to do.
+
 ## Exponential Time
+
+If you add a single element to your data collection, the amount of work doubles.
