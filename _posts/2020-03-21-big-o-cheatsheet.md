@@ -43,3 +43,7 @@ Two nested loops both iterating over the same collection.
 ## Exponential Time: O(n) = 2^n
 
 If you add a single element to your data collection, the amount of work doubles. This is usually considered to be a very bad runtime, and should probably be avoided in final solutions.
+
+---
+
+Thank you so much for reading! I hope you found this cheatsheet helpful, and good luck on your algorithms!
