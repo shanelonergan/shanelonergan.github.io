@@ -11,7 +11,7 @@ tags: [programming, terminal, bash] # add tag
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Phase 1: Dream Big](#phase-1-dream-big)
+- [Phase 1: Dream big](#phase-1-dream-big)
 - [Phase 2: Decide on MVP](#phase-2-decide-on-mvp)
 - [Phase 3: Begin goals and wishes](#phase-3-begin-goals-and-wishes)
 - [Phase 4: Create model trees and wireframes for MVP](#phase-4-create-model-trees-and-wireframes-for-mvp)
@@ -19,9 +19,11 @@ tags: [programming, terminal, bash] # add tag
 - [Phase 6: Code MVP](#phase-6-code-mvp)
 - [Phase 7+: Add features](#phase-7-add-features)
 
-I have found that dedicating a reasonable amount of time to planning the project before writing any code allows me remain as focused and productive as possible. I typically approach a full stack web application in several phases:
+Welcome to my guide in planning web development projects! In this article I will walk you through the way that I plan and build my personal projects. These are the techniques I have tested and found work well for me; workflow and productivity techniques are of course very personal, but I hope that through reading about my process, you will be able to learn something and apply it to your own.
 
-## Phase 1: Dream Big
+Throughout this guide I will be using an project I built, indigo, as an example. You can check out this project on [GitHub](https://github.com/shanelonergan/indigo), or you can see the live demo [here](indigo-resale.store)
+
+## Phase 1: Dream big
 
 In this phase, I let my imagination run wild with all the possibilities. Nothing is impossible, and this is when ideas are narrowed down into a final idea. This is the least structured phase, and I let myself have a lot of fun coming up with ideas. Once I have decided on the final idea for the project, I move on to the next phase.
 
