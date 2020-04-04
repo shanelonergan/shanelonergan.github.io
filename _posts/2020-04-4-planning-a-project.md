@@ -39,6 +39,8 @@ The goal list contains ideas and features that didn’t make it into the MVP, bu
 
 I will map out my domain models for my database relationships, and make sure they are airtight before writing any code. I will also create some wireframes for the landing page and any other essential pages for the application.
 
+![indigo domain models](./../assets/img/indigo-domain-model.jpeg "indigo domain models")
+
 ## Phase 5: Brainstorm external technologies
 
 If I haven’t already, I will brainstorm any external APIs or libraries I want to try and integrate into this project. If I haven’t used them before, I will try and familiarize myself a little bit before jumping in. Usually this will take the form or reading some of the documentation, watching a few YouTube tutorials, and doing a quick test integration if necessary.
