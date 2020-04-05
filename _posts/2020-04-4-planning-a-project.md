@@ -68,4 +68,4 @@ From here on out, I add features from the goal/wish lists on a development branc
 
 ---
 
-Thank you so much for reading! I hope you found this guide helpful.
+Thank you so much for reading! I hope you found this guide helpful, and good luck planning your projects!
