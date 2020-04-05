@@ -60,7 +60,7 @@ For indigo, I knew ahead of time that I was going to be using Ruby on Rails with
 
 ## Phase 6: Code MVP
 
-I usually start with the back end, so I will build out my models and make sure the relationships are working properly, testing with a REST client, such as Insomnia or Postman, as I go. I commit to GitHub often, making sure to keep them small with specific commit messages. Once the back-end is set up, I move on to the front end. I like to work feature-by-feature, making sure to mark them as completed on Trello when finished. Once my MVP is complete, I will deploy, usually on Netlify and Heroku.
+I usually start with the back end, so I will build out my models and make sure the relationships are working properly, testing with a REST client, such as Insomnia or Postman, as I go. I commit to GitHub often, making sure to keep them small with specific commit messages. Once the back-end is set up, I move on to the front end. I like to work feature-by-feature, making sure to mark them as completed on Trello when finished. Once my MVP is complete, I will deploy, usually on [Netlify](https://www.netlify.com/) and [Heroku]([)](https://www.heroku.com/).
 
 ## Phase 7+: Add features
 
