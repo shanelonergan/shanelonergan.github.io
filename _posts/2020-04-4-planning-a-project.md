@@ -31,7 +31,7 @@ In this phase, I let my imagination run wild with all the possibilities. Nothing
 
 ## Phase 2: Decide on MVP
 
-Next I trim back the idea into a minimum viable product. What is the smallest possible form the project could take, and what are the essential core functions? I want to be as aggressive and realistic as possible during this phase so that I end up with a clean, simple MVP.  At this point I will also begin a Trello board, or something similar, to begin tracking the project.
+Next I trim back the idea into a minimum viable product. What is the smallest possible form the project could take, and what are the essential core functions? I want to be as aggressive and realistic as possible during this phase so that I end up with a clean, simple MVP.  At this point I will also begin a [Trello](https://trello.com/) board, or something similar, to begin tracking the project.
 
 **Example**: For indigo, it took a few tries to land on an MVP. I had a lot of features, such as favorites and ratings, that I really wanted to include. Ultimately, I decided I needed to be more aggressive in pairing back my goals. My final version of my MVP would be: A user can create an account, log in, list an item for sale, and purchase another user's listing. Additionally, they should be able to filter he listings by mill, brand, category(pants/jacket/etc), weight, wash, and condition.
 
@@ -65,3 +65,7 @@ I usually start with the back end, so I will build out my models and make sure t
 ## Phase 7+: Add features
 
 From here on out, I add features from the goal/wish lists on a development branch and merge them to deployment when they are ready. This is also when I take the time to improve the user experience and visual design of the application. My background is in the arts, so I really enjoy taking the time to create a visually appealing and intuitive user interface.
+
+---
+
+Thank you so much for reading! I hope you found this guide helpful.
