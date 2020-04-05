@@ -33,7 +33,7 @@ In this phase, I let my imagination run wild with all the possibilities. Nothing
 
 Next I trim back the idea into a minimum viable product. What is the smallest possible form the project could take, and what are the essential core functions? I want to be as aggressive and realistic as possible during this phase so that I end up with a clean, simple MVP.  At this point I will also begin a Trello board, or something similar, to begin tracking the project.
 
-**Example**: For
+**Example**: For indigo, it took a few tries to land on an MVP. I had a lot of features, such as favorites and ratings, that I really wanted to include. Ultimately, I decided I needed to be more aggressive in pairing back my goals. My final version of my MVP would be: A user can create an account, log in, list an item for sale, and purchase another user's listing. Additionally, they should be able to filter he listings by mill, brand, category(pants/jacket/etc), weight, wash, and condition.
 
 ## Phase 3: Begin goals and wishes
 
