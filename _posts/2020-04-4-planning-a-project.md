@@ -39,6 +39,8 @@ Next I trim back the idea into a minimum viable product. What is the smallest po
 
 The goal list contains ideas and features that didn’t make it into the MVP, but I feel would greatly enhance the final product. The wish list contains any other ideas that might be nice to include down the line.
 
+**Example**: I decided to move the ability to favorite a listing, rate a transaction, and a robust search function to the goals list. Fleshing out the UI and making everything beautiful also falls under the goals section. The wish list contains fleshing out the user's profile page and adding the media/blogpost section.
+
 ## Phase 4: Create model trees and wireframes for MVP
 
 I will map out my domain models for my database relationships, and make sure they are airtight before writing any code. I will also create some wireframes for the landing page and any other essential pages for the application.
