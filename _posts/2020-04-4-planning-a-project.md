@@ -3,7 +3,7 @@ layout: post
 title:  "How I Plan a New Project"
 date:   2020-3-28
 description: 'A step-by-step guide to approaching a new web application'
-img: indigo-domain-model.png
+img: indigo-domain-model.jpeg
 tags: [programming, terminal, bash] # add tag
 ---
 ---
