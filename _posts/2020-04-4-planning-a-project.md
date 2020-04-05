@@ -56,6 +56,8 @@ Here are some of the wireframes I made for indigo as well:
 
 If I haven’t already, I will brainstorm any external APIs or libraries I want to try and integrate into this project. If I haven’t used them before, I will try and familiarize myself a little bit before jumping in. Usually this will take the form or reading some of the documentation, watching a few YouTube tutorials, and doing a quick test integration if necessary.
 
+For indigo, I knew ahead of time that I was going to be using Ruby on Rails with PostgreSQL for my back end and React + Redux for my front end. I wanted to try incorporating a UI library as well, so I decided to give [Grommet](https://v2.grommet.io/) a shot. Finally, to handle payment processing, I wanted to try out the [Stripe API](https://stripe.com/docs/api).
+
 ## Phase 6: Code MVP
 
 I usually start with the back end, so I will build out my models and make sure the relationships are working properly, testing with a REST client, such as Insomnia or Postman, as I go. I commit to GitHub often, making sure to keep them small with specific commit messages. Once the back-end is set up, I move on to the front end. I like to work feature-by-feature, making sure to mark them as completed on Trello when finished. Once my MVP is complete, I will deploy, usually on Netlify and Heroku.
