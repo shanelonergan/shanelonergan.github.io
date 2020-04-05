@@ -14,7 +14,7 @@ tags: [programming, terminal, bash] # add tag
 - [Phase 1: Dream big](#phase-1-dream-big)
 - [Phase 2: Decide on MVP](#phase-2-decide-on-mvp)
 - [Phase 3: Begin goals and wishes](#phase-3-begin-goals-and-wishes)
-- [Phase 4: Create model trees and wireframes for MVP](#phase-4-create-model-trees-and-wireframes-for-mvp)
+- [Phase 4: Create domain model and wireframes for MVP](#phase-4-create-domain-model-and-wireframes-for-mvp)
 - [Phase 5: Brainstorm external technologies](#phase-5-brainstorm-external-technologies)
 - [Phase 6: Code MVP](#phase-6-code-mvp)
 - [Phase 7+: Add features](#phase-7-add-features)
@@ -41,11 +41,16 @@ The goal list contains ideas and features that didn’t make it into the MVP, bu
 
 **Example**: I decided to move the ability to favorite a listing, rate a transaction, and a robust search function to the goals list. Fleshing out the UI and making everything beautiful also falls under the goals section. The wish list contains fleshing out the user's profile page and adding the media/blogpost section.
 
-## Phase 4: Create model trees and wireframes for MVP
+## Phase 4: Create domain model and wireframes for MVP
 
 I will map out my domain models for my database relationships, and make sure they are airtight before writing any code. I will also create some wireframes for the landing page and any other essential pages for the application.
 
+**Example** For indigo, I wad a relatively complex number of models for my back end. Mapping out a domain model always helps me visualize the database, and especially helps me map out the relationships between models. Below is an example of what that looks like:
+
 ![indigo domain models](./../assets/img/indigo-domain-model.jpeg "indigo domain models")
+Key: Each node represents a model, and the text beside each lists the attributes. A line with a three-pronged ending indicates a *has-many* relationship, while the inverse represents a *belongs-to*.
+
+Here are some of the wireframes I made for indigo as well:
 
 ## Phase 5: Brainstorm external technologies
 
