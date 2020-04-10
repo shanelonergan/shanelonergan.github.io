@@ -8,6 +8,10 @@ tags: [programming, terminal, bash] # add tag
 ---
 ---
 
+Welcome to my guide in planning web development projects! In this article I will walk you through the way that I plan and build my personal projects. These are the techniques I have tested and found work well for me; workflow and productivity techniques are of course very personal, but I hope that through reading about my process, you will be able to learn something and apply it to your own.
+
+Throughout this guide I will be using an project I built, indigo, as an example. You can check out this project on [GitHub](https://github.com/shanelonergan/indigo), or you can see the live demo [here](indigo-resale.store)
+
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -18,10 +22,6 @@ tags: [programming, terminal, bash] # add tag
 - [Phase 5: Brainstorm external technologies](#phase-5-brainstorm-external-technologies)
 - [Phase 6: Code MVP](#phase-6-code-mvp)
 - [Phase 7+: Add features](#phase-7-add-features)
-
-Welcome to my guide in planning web development projects! In this article I will walk you through the way that I plan and build my personal projects. These are the techniques I have tested and found work well for me; workflow and productivity techniques are of course very personal, but I hope that through reading about my process, you will be able to learn something and apply it to your own.
-
-Throughout this guide I will be using an project I built, indigo, as an example. You can check out this project on [GitHub](https://github.com/shanelonergan/indigo), or you can see the live demo [here](indigo-resale.store)
 
 ## Phase 1: Dream big
 
