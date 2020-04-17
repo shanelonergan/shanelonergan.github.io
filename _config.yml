@@ -11,12 +11,12 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Shane Lonergan # add your name
 author-img: shane-lonergan.jpg # add your photo
-about-author: I am an actor and a full stack web developer. Lover of fancy keyboards and making loud noises.
+about-author: I am an actor and a full stack web developer. Lover of fancy keyboards and making loud noises. Please not that some posts here may still be in the editing process! For final posts, please check out my Medium account.
 social-twitter: shane__lonergan
 social-facebook: # add your Facebook handle
 social-github: shanelonergan
 social-linkedin: shane-lonergan-6a25aa188
-social-email: shanepatricklonergan@gmail.com
+social-email: sptlonergan@gmail.com
 
 # Disqus
 discus-identifier: mr-brown # add your discus identifier
