@@ -20,7 +20,7 @@ If you have ever created, or wanted to create, and e-commerce site, deciding on 
 
 First things first: we need to create a Stripe account to manage our API calls. Once you do, you can retrieve your test API keys, which will be found on the home page under the 'Get your test API keys' header. They can also be found on the Developer page. Once you have access to your keys, we can get started on integrating them.
 
-[Locate Your Test API Keys](https://imgur.com/mWuSZRj)
+![Locate Your Test API Keys](https://i.imgur.com/mWuSZRj.png)
 
 ## Front End
 
@@ -32,7 +32,7 @@ npm install react-stripe-checkout dotenv
 
 Next we need to set up our environmental variables, if you haven't done so yet. This is so we can hide our API Keys, preventing malicious bots and web-scrapers from stealing them and racking up unwanted bills. I like to use [dotenv](https://www.npmjs.com/package/dotenv), but you can use any method that suits you. To do this, create a `.env` file in the root of your directory. Be sure to immediately add this file to your `.gitignore`, so that it isn't committed to your GitHub. Now you can add your Stripe API key to this env file. For the front end, you will want to use the *publishable key*:
 
-[Stripe front end key](https://imgur.com/tNxzSYP)
+![Stripe front end key](https://i.imgur.com/tNxzSYP.png)
 
 In order for this key to be readable by react, you need to follow a specific naming convention by adding REACT_APP to the beginning of your key name:
 
@@ -68,7 +68,7 @@ Now the last thing we need to do is create our `onToken` function. This function
 
 > It is important to note that Stripe will interpret payment amounts as the *lowest unit of the currency you are using*. We are using USD, so the lowest unit would be a cent. Thus, we need to multiply our price in dollars by 100 to get the number of cents.
 
-As for the charge, we will want to make an object containing a key of token, pointing to the ID of the token returned from our Checkout. We then want to make a fetch request to our API (which we havn't created yet), passing in our config object. Our final code for this onToken method should like something like this:
+As for the charge, we will want to make an object containing a key of token, pointing to the ID of the token returned from our Checkout. We then want to make a fetch request to our API (which we haven't created yet), passing in our config object. Our final code for this onToken method should like something like this:
 
 ```js
 const onToken = (token) => {
