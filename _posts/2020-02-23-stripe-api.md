@@ -34,20 +34,22 @@ Next we need to set up our environmental variables, if you haven't done so yet. 
 
 [Stripe front end key](https://imgur.com/tNxzSYP)
 
-In order for this key to be readable by react, you need to follow a specific naming convention by adding REACT_APP to the begging of your key name:
+In order for this key to be readable by react, you need to follow a specific naming convention by adding REACT_APP to the beginning of your key name:
 
 ```.env
 REACT_APP_NAME_OF_YOUR_KEY=stripe_api_keyxxxxxx     <- This will work
 NAME_OF_YOUR_KEY=stripe_api_keyxxxxxx               <- This will not
 ```
 
-Next, we want to add a Stripe Checkout component to our app. To do this, we first need to import the package like so:
+Now that our API keys are nice and safe, it is time to add a Stripe Checkout component to our app! To do this, we first need to import the package like so:
 
 ```js
 import StripeCheckout from 'react-stripe-checkout';
 ```
 
-This gives us access to the `<StripeCheckout/>` component. This will render a styled button which, when clicked, will open up a checkout window. It can take a wide variety of props, but the only two are required: `token`, and `stripeKey`. The token prop is where we pass our callback function to handle the token we will receive, and  `stripeKey` is of course our stripe api key, which we will pull from the .env file. Once we add this component to our application, it should look something like this:
+> **NOTE** In this guide we will be working from an empty React app generated using [Create React App](https://create-react-app.dev/). All of the code will be written in `src/App.js`. If you are integrating into your own app, this code should be transferable to any competent or file.
+
+This gives us access to the `<StripeCheckout/>` component. This will render a styled button which, when clicked, will open up a checkout window.The user will enter their payment information is this window, and Stripe will process it for us. Then they will send back a token representing that users information, which we can use to complete the transaction in our back-end. This checkout component can take a wide variety of props, but the only two are required: `token`, and `stripeKey`. The token prop is where we pass our callback function to handle the token we will receive, and  `stripeKey` is of course our stripe api key, which we will pull from the .env file. Once we add this component to our application, it should look something like this:
 
 ```js
 export default function App() {
