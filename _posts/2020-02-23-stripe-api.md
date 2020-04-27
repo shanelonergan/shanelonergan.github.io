@@ -30,7 +30,16 @@ I have found that one of the quickest ways to get Stripe up and running on the f
 npm install react-stripe-checkout dotenv
 ```
 
-Next we need to set up our environmental variables, if you haven't done so yet. This is so we can hide our API Keys, preventing maliction web-scrapers from stealing them and racking up unwanted bills.  I like to use dotenv, but you can use any method that suits you. To do this, create a `.env` file in the root of your directory. Be sure to immediately add this file to your `.gitignore`, so that it isn't committed to your GitHub. Now you can add your Stripe api key to this env file. For the front-end, you will want to use the `publishable key`.
+Next we need to set up our environmental variables, if you haven't done so yet. This is so we can hide our API Keys, preventing malicious bots and web-scrapers from stealing them and racking up unwanted bills. I like to use [dotenv](https://www.npmjs.com/package/dotenv), but you can use any method that suits you. To do this, create a `.env` file in the root of your directory. Be sure to immediately add this file to your `.gitignore`, so that it isn't committed to your GitHub. Now you can add your Stripe API key to this env file. For the front end, you will want to use the *publishable key*:
+
+[Stripe front end key](https://imgur.com/tNxzSYP)
+
+In order for this key to be readable by react, you need to follow a specific naming convention by adding REACT_APP to the begging of your key name:
+
+```.env
+REACT_APP_NAME_OF_YOUR_KEY=stripe_api_keyxxxxxx     <- This will work
+NAME_OF_YOUR_KEY=stripe_api_keyxxxxxx               <- This will not
+```
 
 Next, we want to add a Stripe Checkout component to our app. To do this, we first need to import the package like so:
 
