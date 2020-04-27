@@ -14,7 +14,7 @@ If you have ever created, or wanted to create, and e-commerce site, deciding on 
 
 - [Table of Contents](#table-of-contents)
 - [Set Up](#set-up)
-- [Front-End](#front-end)
+- [Front End](#front-end)
 
 ## Set Up
 
@@ -22,15 +22,15 @@ First things first: we need to create a Stripe account to manage our API calls. 
 
 [Locate Your Test API Keys](https://imgur.com/mWuSZRj)
 
-## Front-End
+## Front End
 
-I have found that the quickest way to get Stripe up and running on the front end is by using a great package called `react-stripe-checkout`. This is a React implementation of Stripe's [Checkout](https://stripe.com/docs/payments/checkout) feature. A Checkout creates a secure, Stripe-hosted payment page which collects all the essential information and handles it for you in one quick step. One downside of going this route is that you don't have full control of the checkout flow or style. If those are things that you value highly, you can use [Stripe Elements](https://stripe.com/docs/payments/accept-a-payment) to build a bespoke checkout experience. To get started, we need to install a few dependancies, react-stripe-checkout and dotenv:
+I have found that one of the quickest ways to get Stripe up and running on the front end is by using a great package called `react-stripe-checkout`. This is a React implementation of Stripe's [Checkout](https://stripe.com/docs/payments/checkout) feature. A Checkout creates a secure, Stripe-hosted payment page which collects all the essential information and handles it for you in one quick step. One downside of going this route is that you don't have full control of the checkout flow or style; if those are things that you value highly, you can use [Stripe Elements](https://stripe.com/docs/payments/accept-a-payment) to build a bespoke checkout experience. To get started, we need to install a few dependancies, react-stripe-checkout and dotenv:
 
 ```zsh
 npm install react-stripe-checkout dotenv
 ```
 
-Next we need to set up our environmental variables, if you haven't done so yet. I like to use dotenv, but you can use any method that suits you. To do this, create a `.env` file in the root of your directory. Be sure to add this file to your `.gitignore`, so that it isn't committed to your Github(link). Now you can add your Stripe api key to this env file. For the front-end, you will want to use the `publishable key`
+Next we need to set up our environmental variables, if you haven't done so yet. This is so we can hide our API Keys, preventing maliction web-scrapers from stealing them and racking up unwanted bills.  I like to use dotenv, but you can use any method that suits you. To do this, create a `.env` file in the root of your directory. Be sure to immediately add this file to your `.gitignore`, so that it isn't committed to your GitHub. Now you can add your Stripe api key to this env file. For the front-end, you will want to use the `publishable key`.
 
 Next, we want to add a Stripe Checkout component to our app. To do this, we first need to import the package like so:
 
