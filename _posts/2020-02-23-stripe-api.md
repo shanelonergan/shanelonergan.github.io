@@ -8,7 +8,7 @@ tags: [programming, terminal, bash] # add tag
 ---
 ---
 
-If you have ever created, or wanted to create, and e-commerce site, deciding on how to handle payments was likely one of your major decision points. Handling payments online comes with large security risks, and has to be done according to strict specifications (source). Luckily for use, there are companies whose sole purpose to to handle of of these details for us. Stripe is one such company, and they offer a fantastic API. In this article I will walk through integrating the Stripe API into a web application build with React and Ruby on Rails. If you are working with a different stack, the concepts detailed here should still be applicable, and Stripe offers great language-specific documentation(link).
+If you have ever created, or wanted to create, and e-commerce site, deciding on how to handle payments was likely one of your major decision points. Handling payments online comes with large security risks, and has to be done according to strict [specifications](https://www.alacriti.com/the-rules-and-regulations-of-online-payments/) . Luckily for us, there are companies whose sole purpose is to handle all of these details for us. [Stripe](https://stripe.com/) is one such company, and they offer a fantastic API. In this article I will walk through integrating the Stripe API into a web application build with React and Ruby on Rails. If you are working with a different stack, the concepts detailed here should still be applicable, and Stripe offers great language-specific [documentation](https://stripe.com/docs/api).
 
 ## Table of Contents
 
@@ -18,7 +18,9 @@ If you have ever created, or wanted to create, and e-commerce site, deciding on 
 
 ## Set Up
 
-First things first: we need to create a Stripe account to manage our API calls. Once you do, you can retrieve your Text API keys, which will be found on the home page under the 'Get your test APY keys' header. They can also be found on the Developer page. Once you have access to your keys, we can get started on integrating them.
+First things first: we need to create a Stripe account to manage our API calls. Once you do, you can retrieve your test API keys, which will be found on the home page under the 'Get your test API keys' header. They can also be found on the Developer page. Once you have access to your keys, we can get started on integrating them.
+
+[Locate Your Test API Keys](https://imgur.com/mWuSZRj)
 
 ## Front-End
 
@@ -38,7 +40,7 @@ import StripeCheckout from 'react-stripe-checkout';
 
 This gives us access to the `<StripeCheckout/>` component. This will render a styled button which, when clicked, will open up a checkout window. It can take a wide variety of props, but the only two are required: `token`, and `stripeKey`. The token prop is where we pass our callback function to handle the token we will receive, and  `stripeKey` is of course our stripe api key, which we will pull from the .env file. Once we add this component to our application, it should look something like this:
 
-```javascript react
+```js
 export default function App() {
     return (
         <StripeCheckout
