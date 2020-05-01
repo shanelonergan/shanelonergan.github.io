@@ -85,6 +85,34 @@ const fetchToxicAPI = async (msg, username) => {
 }
 ```
 
+Feel free to test this function out by sending a few messages through the api and looking through the results! The result object we get back from IBM is huge, and contains a lot of information we don't need. To narrow it down to just the results of the language processing, traverse the data like so: `res.data.results[0].predictions`. Once we have the results, we want to send them to be processed by our final helper function, `analyzeMessage`. The final code for our function should look something like this:
+
+```js
+const fetchToxicAPI = async (message, username) => {
+    let responseMessage
+
+    await axios.post('http://max-toxic-comment-classifier.max.us-south.containers.appdomain.cloud/model/predict', {
+        text: [message]
+    })
+    .then((res) => {
+        const results = res.data.results[0].predictions
+        response = analyzeMessage(results, username)
+    })
+    .catch((error) => {
+        console.error(error.config)
+    })
+
+    return responseMessage
+}
+```
+
+
+Lets move and and build out that `analyzeMessage` function before looping back and finishing up with `handleMessage`.
+
+## analyzeMessage
+
+
+
 ## handleMessage Function
 
 ```js
@@ -103,6 +131,3 @@ const handleMessage = async (msg, user) => {
 }
 ```
 
-
-
-## analyzeMessage
