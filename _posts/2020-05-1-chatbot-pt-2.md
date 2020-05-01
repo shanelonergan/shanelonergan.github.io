@@ -45,7 +45,7 @@ bot.on('message', (data) => {
 })
 ```
 
-For our purposes, we will want to pull out the text of the message to analyze, as well as the user who sent it. Then, we will send this information to a helper function, which will analyze it for us. Before we call the helper function, we will want to wrap it in a conditional that checks for two things: First, that a message has been posted (the `bot.on('message)` handler is also called when a user begins typing), and that is was not sent by another bot.
+For our purposes, we will want to pull out the text of the message to analyze, as well as the user who sent it. Then, we will send this information to a helper function, which will analyze it for us (we will define this function later). Before we call the helper function, we will want to wrap it in a conditional that checks for two things: First, that a message has been posted (the `bot.on('message)` handler is also called when a user begins typing), and that is was not sent by another bot.
 
 ```js
 bot.on('message', (data) => {
@@ -55,6 +55,14 @@ bot.on('message', (data) => {
     if(data.type === 'message' && data.subtype !== 'bot_message') {
         handleMessage(msg, user);
     }
+})
+```
+
+Next, we should set up an error handler that logs an errors our bot encounters. We can do this the same way we logged the message data, but instead call it on errors.
+
+```js
+bot.on('error', (err) => {
+    console.log(err);
 })
 ```
 
