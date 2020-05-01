@@ -58,7 +58,7 @@ bot.on('message', (data) => {
 })
 ```
 
-Next, we should set up an error handler that logs an errors our bot encounters. We can do this the same way we logged the message data, but instead call it on errors.
+Next, we should set up an error handler that logs any errors our bot encounters. We can do this the same way we logged the message data, but instead call it on errors.
 
 ```js
 bot.on('error', (err) => {
@@ -66,8 +66,43 @@ bot.on('error', (err) => {
 })
 ```
 
+## fetchToxicAPI
+
+Before we define `handleMessage`, lets create a separate function, `fetchToxicAPI`, to fetch from the IBW Watson API. We will utilize this function with `handleMessage`, so I think it makes more sense to define it first. We are going to be utilizing an async axios request here, so lets make sure to define it as an async function.
+
+```js
+const fetchToxicAPI = async (msg, username) => {
+
+    await axios.post('http://max-toxic-comment-classifier.max.us-south.containers.appdomain.cloud/model/predict', {
+        text: [msg]
+    })
+    .then((res) => {
+        console.log(res)
+    })
+    .catch((error) => {
+        console.error(error.config)
+    })
+}
+```
+
 ## handleMessage Function
 
-## fetchToxicAPI
+```js
+const handleMessage = async (msg, user) => {
+    const response = await fetchToxicAPI(msg)
+    const users = await bot.getUsers()
+
+    if (users && response) {
+        const userData = users['members'].filter(member => member.id === user)
+        const username = userData[0].profile.display_name, 89
+
+        const output = `${username}, ${response}`
+
+        bot.postMessageToChannel('bot-testing', output, params)
+    }
+}
+```
+
+
 
 ## analyzeMessage
