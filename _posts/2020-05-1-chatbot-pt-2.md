@@ -106,7 +106,7 @@ const fetchToxicAPI = async (message, username) => {
 }
 ```
 
-Lets move and and build out that `analyzeMessage` function before looping back and finishing up with `handleMessage`.
+Lets move on and build out that `analyzeMessage` function before looping back and finishing up with `handleMessage`.
 
 ## analyzeMessage
 
@@ -134,7 +134,36 @@ const analyzeMessage = (results, username) => {
 
 ### Build the message
 
-If the message is indeed toxic, then we want to let the user which flags they hit. To do this, we will build two strings which make up every message, and then insert into the middle the flags. To do this, we
+If the message is indeed toxic, then we want to let the user which flags they hit. To do this, we will build two strings which make up the skeleton of every message, and then insert the flags into the middle. To do this, we can create an array of strings based on which flags were hit, and then concatenate them together to build the final message. How exactly you format this string is totally up to you, but you can see I I did it below.
+
+```js
+if (resultValues.some(checkValues)) {
+        let responsePart1 = `it looks like your message contains toxic speech. It has been flagged as: \n\n     🛑 `
+        let responsePart2 = '\n\n Please refrain from using this kind of speech. Our slack community is one of love and inclusion, and we would like to keep it that way.'
+
+        let flagsArr = []
+
+        if (predictions.toxic > 0.75) {
+            flags.push('toxic')
+        } if (predictions.severe_toxic > 0.75) {
+            flags.push('severely toxic')
+        } if (predictions.obscene > 0.75) {
+            flags.push('obscene')
+        } if (predictions.threat > 0.75) {
+            flags.push('threatening')
+        } if (predictions.insult > 0.75) {
+            flags.push('insulting')
+        } if (predictions.identity_hate > 0.75) {
+            flags.push('identity hate')
+        }
+
+        const flagsStr = flagsArr.join('\n     🛑 ')
+
+        return responsePart1 + flagsStr + responsePart2
+    }
+```
+
+Okay! Now that we have determined whether or not the message is toxic and generated an response, we can finally loop back and build our `handleMessage` function!
 
 ## handleMessage Function
 
