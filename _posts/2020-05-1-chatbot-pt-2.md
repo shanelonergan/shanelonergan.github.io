@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Building a Slackbot with IBM Watson, Part 2"
-date:   2020-2-30
+date:   2020-5-1
 description: 'Eliminate toxic language in your slack channel with Toxic Comment Bot'
 img: slackbot.jpeg
 tags: [programming, terminal, bash] # add tag
@@ -171,7 +171,7 @@ This is the function that is called in response to every message. It, in turn, c
 
 ![Diagram]()
 
-Now, if the return value of `fetchToxicAPI` is a response string, then we will send that string to the channel as a message! Now,, I haven't figured out exactly how to tag another user in the message, so for the time being I am just appending their username to the message. If anyone knows how I could improve this, please let me know! SInce the original message data only contains the user ID and not the username, I have to currently get all the users and filter them by user ID for the right user. Then I can pull out their username, and append it the the message.
+Now, if the return value of `fetchToxicAPI` is a response string, then we will send that string to the channel as a message! Now,, I haven't figured out exactly how to tag another user in the message, so for the time being I am just appending their username to the message. If anyone knows how I could improve this, please let me know! Since the original message data only contains the user ID and not the username, I have to currently get all the users and filter them by user ID for the right user. Then I can pull out their username, and append it the the message.
 
 ```js
 const handleMessage = async (msg, user) => {
@@ -188,4 +188,9 @@ const handleMessage = async (msg, user) => {
     }
 }
 ```
+---
+
+## Congrats!
+
+You have now built a Slackbot which can identify and respond to toxic speech! Thanks you very much for reading, and I hope you found this guide helpful.
 
