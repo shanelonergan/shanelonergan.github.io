@@ -167,6 +167,12 @@ Okay! Now that we have determined whether or not the message is toxic and genera
 
 ## handleMessage Function
 
+This is the function that is called in response to every message. It, in turn, calls our `fetchToxicAPI` function, which then calls the `analyzeMessage` function. The return value of `analyzeMessage ` is then passed back all the way to handleMessage. I know this is a little confusing, so a diagram of the data flow can be seen below:
+
+![Diagram]()
+
+Now, if the return value of `fetchToxicAPI` is a response string, then we will send that string to the channel as a message! Now,, I haven't figured out exactly how to tag another user in the message, so for the time being I am just appending their username to the message. If anyone knows how I could improve this, please let me know! SInce the original message data only contains the user ID and not the username, I have to currently get all the users and filter them by user ID for the right user. Then I can pull out their username, and append it the the message.
+
 ```js
 const handleMessage = async (msg, user) => {
     const response = await fetchToxicAPI(msg)
