@@ -112,9 +112,9 @@ Lets move on and build out that `analyzeMessage` function before looping back an
 
 In this function, we are going to be breaking down the results of IBM's classification of the user's message, and building an output string letting them know if their message was indeed toxic. The API returns an object, which we are calling `results`, which contains 6 metrics on which the message was graded: toxic, severely toxic, obscene, threatening, insulting, and identity hate. Each category receives a score between 0 and 1, 0 being unlikely to contain that category of speech, and 1 being extremely likely. For our purposes, we will check to see if any of the categories received over a 0.75. If not, then we will assume the message does not contain any toxic speech, and our function will return null. However, if it is found that any of them are above 0.75, then we will check each individually, and create a string notifying our user of each flag they hit.
 
-Lets break this down into steps
+Lets break this down into two steps:
 
-### Determine if any of the results are above 0.75
+### Part 1: Determine if any of the results are above 0.75
 
 First, lets pull out all the values from the results object we received from the API using `Object.values`. Then we can use JavaScript's handy `Array.some()` method to check if those values contain any that are greater than or equal to 0.75. If so, then we will build our message to send back. If, not, we return null!
 
@@ -132,7 +132,7 @@ const analyzeMessage = (results, username) => {
 }
 ```
 
-### Build the message
+### Part 2: Build the message
 
 If the message is indeed toxic, then we want to let the user which flags they hit. To do this, we will build two strings which make up the skeleton of every message, and then insert the flags into the middle. To do this, we can create an array of strings based on which flags were hit, and then concatenate them together to build the final message. How exactly you format this string is totally up to you, but you can see I I did it below.
 
