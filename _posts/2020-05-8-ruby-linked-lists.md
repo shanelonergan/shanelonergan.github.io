@@ -92,7 +92,7 @@ class LinkedList
         @head = @head.next_node
     end
 
-    def size
+    def length
         counter = 0
         current = @head
 
@@ -136,3 +136,27 @@ This one is a bit more complex, but it will lay the foundation for many of the m
 ### remove
 
 `remove` will remove the last node from the list. In this method we will use some guard clauses to avoid running the entire method if we don't need to. If the list has no head, then there is nothing to remove, and we should return out of the function. If the head had no next value, then we will remove the head. Besides those two cases this method also works similarly to the `last` method. However, this time, we want to set `current` to `@head.next_node` and `previous` to the head. This is because in order to remove the last node, we need to set the *second_to_last* node's `next_node` value to nil. SO then we can loop through out list again, and once we have reached the end, set the value of `previous.next_node` to nil.
+
+### add_first
+
+For this method, we want to add a ned head to our list, and set its `next_node` value to the original head.
+
+### remove_first
+
+Here we are using another guard clause to return out of our method early if there is no head, just like in `remove`. Otherwise, we can set the value of head to the current head's next node.
+
+### length
+
+We want this method to return the number of nodes in our list. Once again, we are going to loop through our list, but we will also increment a counter with each loop. Once we have reached the end of the list, we return that counter, giving us the total length.
+
+### clear
+
+This one is nice and short. We can just set the value of the head to nil. With no head, there is no list!
+
+### print
+
+This method will print out the data of each node in our list. One more time, we will loop through the list. In each loop, before setting the value of `current` to the next node, we want to `puts` the data of `current`.
+
+## Congrats!
+
+You have now implemented a linked list in Ruby! Thank you so much for reading, and good luck with your job search if thats what brought you here!
