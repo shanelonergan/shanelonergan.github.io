@@ -16,6 +16,22 @@ Linked Lists have benefits that cause them to be preferable over arrays in come 
 
 Alright, lets dive right on in!
 
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Part 1: The Node](#part-1-the-node)
+- [Part 2: The Linked List](#part-2-the-linked-list)
+  - [first](#first)
+  - [last](#last)
+  - [add](#add)
+  - [remove](#remove)
+  - [add_first](#addfirst)
+  - [remove_first](#removefirst)
+  - [length](#length)
+  - [clear](#clear)
+  - [print](#print)
+- [Congrats!](#congrats)
+
 ## Part 1: The Node
 
 A linked list is typically implemented with two classes: a `Node` and a `LinkedList`. Lets start off by building our `Node` class, which we will use for each individual item within the list.
