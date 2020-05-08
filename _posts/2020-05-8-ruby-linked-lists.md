@@ -31,4 +31,104 @@ class Node
 end
 ```
 
-Each new `Node` will be initialized with `data` and a `next_node`. We want to be sure to give the class an attribute accessor for both values, so we can both read and write them.
+Each new `Node` will be initialized with `data` and a `next_node`. We want to be sure to give the class an attribute accessor for both values, so we can both read and write them. Note that when we create a new Node, next will be automatically initialized as nill if we don't pass a value.
+
+## Part 2: The Linked List
+
+```ruby
+class LinkedList
+    def initialize(data)
+        @head = Node.new(data, nil)
+    end
+
+    def first
+        @head
+    end
+
+    def last
+        current = @head
+
+        while current.next_node != nil
+            current = current.next_node
+        end
+
+        current
+    end
+
+    def add(data)
+        current = @head
+
+        while current.next_node != nil
+            current = current.next_node
+        end
+
+        current.next_node = Node.new(data, nil)
+    end
+
+    def remove
+        return if @head == nil
+
+        if @head.next_node == nil
+            @head = nil
+        end
+
+        previous = @head
+        current = @head.next_node
+
+        while current.next_node != nil
+            previous = current
+            current = current.next_node
+        end
+
+        previous.next_node = null
+    end
+
+    def add_first(data)
+        @head = Node.new(data, @head)
+    end
+
+    def remove_first
+        return if @head == nil
+        @head = @head.next_node
+    end
+
+    def size
+        counter = 0
+        current = @head
+
+        while current != nil
+            counter += 1
+            current = current.next_node
+        end
+
+        counter
+    end
+
+    def clear
+        @head = nil
+    end
+
+    def print
+        current = @head
+
+        while current != nil
+            puts current.data
+            current = current.next_node
+        end
+    end
+end
+```
+
+Here I have included a few of the standard methods you will see in linked lists. Lets walk through them one by one!
+
+### first
+
+This one just returns the head of the list!
+
+### last
+
+This one is a bit more complex, but it will lay the foundation for many of the methods to come. In order to reach the last node, we need to loop through the list. To do that, we set a variable `current` to the head of the list. Then, as long as `current` has a next node, we set the value of `current` to that next node. Once we reach a node that doesn't have a `next_node`, we must have reached the end of our list! Then we can simply return the value of `current`, which is our last node.
+
+### add
+
+`add` will accept an argument of `data` and add a new node with that data the to the end of the list. To do this, we need to loop through the list in the same way we did in out `last` method, but instead of returning the last node, we set its `next_node` value to a new `Node`, passing in `data`.
