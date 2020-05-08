@@ -3,14 +3,14 @@ layout: post
 title:  "Building a Linked List in Ruby"
 date:   2020-5-8
 description: 'An introduction to a common data structure'
-img: slackbot.jpeg
+img: linked-list-2.png
 tags: [programming, terminal, bash] # add tag
 ---
 ---
 
 Hello there! Welcome to building a Linked List in Ruby. Linked Lists are one of the most common data structures in programming, and if you are preparing for Software Engineering interviews, you will likely come across them frequently. Linked Lists are essentially a list of items where each item points to the next one, forming a chain. Each item contains some information, and a pointer to the next item. From now on, we will call these items *Nodes*. A visualization of a linked list can be seen below:
 
-![]()
+![Diagram of a linked list](../assets/img/linked-list-2.png)
 
 Linked Lists have benefits that cause them to be preferable over arrays in come cases, but also some drawbacks. It is faster to add and remove items from a linked list than an array, but is is slower to look up items.
 
