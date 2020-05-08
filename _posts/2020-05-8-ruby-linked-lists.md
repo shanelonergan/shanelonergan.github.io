@@ -132,3 +132,7 @@ This one is a bit more complex, but it will lay the foundation for many of the m
 ### add
 
 `add` will accept an argument of `data` and add a new node with that data the to the end of the list. To do this, we need to loop through the list in the same way we did in out `last` method, but instead of returning the last node, we set its `next_node` value to a new `Node`, passing in `data`.
+
+### remove
+
+`remove` will remove the last node from the list. In this method we will use some guard clauses to avoid running the entire method if we don't need to. If the list has no head, then there is nothing to remove, and we should return out of the function. If the head had no next value, then we will remove the head. Besides those two cases this method also works similarly to the `last` method. However, this time, we want to set `current` to `@head.next_node` and `previous` to the head. This is because in order to remove the last node, we need to set the *second_to_last* node's `next_node` value to nil. SO then we can loop through out list again, and once we have reached the end, set the value of `previous.next_node` to nil.
