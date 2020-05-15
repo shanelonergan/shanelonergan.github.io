@@ -18,6 +18,16 @@ I am in the midst of searching for my first job as a developer. Recently, I had 
 - [Why TypeScript](#why-typescript)
 - [Getting Started](#getting-started)
 - [Core Types](#core-types)
+  - [Number](#number)
+  - [String](#string)
+  - [Boolean](#boolean)
+  - [Array](#array)
+  - [Tuple](#tuple)
+  - [Object](#object)
+  - [Enum](#enum)
+  - [Any](#any)
+  - [Null and Undefined](#null-and-undefined)
+  - [Never](#never)
 - [References](#references)
 
 ## What is TypeScript
@@ -56,12 +66,64 @@ function printNameAndAge(person: string, age: number): void {
 printNameAndAge(shane)
 ```
 
- As you can see, you can add type annotations after variable declarations or within function parameters using a colon `:` followed by the type. The `void` following the function parameters is the type annotation for the return value of the function. In this case, the function doesn't return anything, so the type will be `void`. If it returned a string, then we would set it to `string` instead. This allows us to ensure our function is always returning exactly what we want it to.
+As you can see, you can add type annotations after variable declarations or within function parameters using a colon `:` followed by the type. The `void` following the function parameters is the type annotation for the return value of the function. In this case, the function doesn't return anything, so the type will be `void`. If it returned a string, then we would set it to `string` instead. This allows us to ensure our function is always returning exactly what we want it to.
 
- Now that we know how to annotate a type, lets dive into the core types offered by TypeScript.
+Now that we know how to annotate a type, lets dive into the core types offered by TypeScript.
 
+## Core Types
 
- ## Core Types
+### Number
+
+Just like JS, there isn't a difference between integers and floats (decimals), as all numbers are treated as floats.
+
+```ts
+let luckyNum: number = 13
+```
+
+### String
+
+Strings, a series of characters, can be represented using '' or "". You can also use template literals with ``.
+
+```ts
+let name: string = 'Shane'
+```
+
+### Boolean
+
+A simple true or false value.
+
+```ts
+let isDone: boolean = false
+```
+
+### Array
+
+When you create an array, you want to annotate the type as an array, as well as the type of the values inside the array. This can be done in two ways:
+
+```ts
+let listOfEvens: number[] = [2, 4, 6, 8]
+let listOfOdds: Array<number> = [1, 3, 5, 6]
+```
+
+### Tuple
+
+A tuple lets you create an fixed-length array of mixed types.
+
+```ts
+let nameAgeArr: [string, number]
+nameAgeArr = ['Shane', 24] // ✅
+nameAgeArr = [24, 'Shane'] // ❌
+```
+
+### Object
+
+### Enum
+
+### Any
+
+### Null and Undefined
+
+### Never
 
 ## References
 
