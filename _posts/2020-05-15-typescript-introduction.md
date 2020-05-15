@@ -17,6 +17,7 @@ I am in the midst of searching for my first job as a developer. Recently, I had 
 - [What is TypeScript](#what-is-typescript)
 - [Why TypeScript](#why-typescript)
 - [Getting Started](#getting-started)
+- [Core Types](#core-types)
 - [References](#references)
 
 ## What is TypeScript
@@ -29,6 +30,8 @@ TypeScript helps you avoid unwanted runtime errors by type-checking during devel
 
 ## Getting Started
 
+Lets go ahead and dive right in by analyzing our first piece of TypeScript code:
+
 ```TypeScript
 const name = 'Shane'
 let age = 24
@@ -40,7 +43,7 @@ function printNameAndAge(person: string, age: number): void {
 printNameAndAge(shane)
 ```
 
-Below is some of the first code I wrote in TypeScript. As you can see, you can add type annotations after variable declarations or within function parameters using a colon `:` followed by the type. The void
+Now, you might be thinking to yourself, "That looks a lot like JavaScript...". Well, thats because it is! Vanilla JavaScript is totally valid in TS. All of the features are optional to use, and exactly how they are utilized is up the the developer. Of course, you aren't getting any of the benefits of TS by doing this, so lets add a little bit to it:
 
 ```TypeScript
 const name: string = 'Shane'
@@ -52,6 +55,13 @@ function printNameAndAge(person: string, age: number): void {
 
 printNameAndAge(shane)
 ```
+
+ As you can see, you can add type annotations after variable declarations or within function parameters using a colon `:` followed by the type. The `void` following the function parameters is the type annotation for the return value of the function. In this case, the function doesn't return anything, so the type will be `void`. If it returned a string, then we would set it to `string` instead. This allows us to ensure our function is always returning exactly what we want it to.
+
+ Now that we know how to annotate a type, lets dive into the core types offered by TypeScript.
+
+
+ ## Core Types
 
 ## References
 
