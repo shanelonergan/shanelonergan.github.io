@@ -121,9 +121,26 @@ nameAgeArr = [24, 'Shane'] // ❌
 
 ### Any
 
+The type of any can be used for variables whose values we do not yet know, or if we want to opt out of type-checking. This allows TS to be very flexible, but use sparingly, as it eliminates the value added by TS.
+
 ### Null and Undefined
 
+Just as in JS, null and undefined are types in TS. By default, null and undefined are subtypes of all other types, meaning you can assign null or undefined to a variable with the number type.
+
+```ts
+let luckyNumber = 13
+luckyNumber = undefined // ✅
+```
+
 ### Never
+
+Never type represent the type of values that never occur. For example, a function that always throws an error when called will never return, so we can set the return type to `never`. An infinite loop could also have the return type `never`.
+
+```js
+function throwError(msg: string): never {
+    throw new Error(msg)
+}
+```
 
 ## References
 
