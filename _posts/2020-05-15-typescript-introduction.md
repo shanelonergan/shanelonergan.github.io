@@ -15,13 +15,43 @@ I am in the midst of searching for my first job as a developer. Recently, I had 
 
 - [Table of Contents](#table-of-contents)
 - [What is TypeScript](#what-is-typescript)
-- [Why TypeScript?](#why-typescript)
+- [Why TypeScript](#why-typescript)
+- [Getting Started](#getting-started)
 - [References](#references)
 
 ## What is TypeScript
 
-## Why TypeScript?
+TypeScript is a superset of JavaScript that horizontally compiles back to JavaScript. It provides the ability, among other things, to strongly type your JS code, but it can't actually be run in the browser or Node. So, why is this useful?
 
+## Why TypeScript
+
+TypeScript helps you avoid unwanted runtime errors by type-checking during development. TypeScript files are compiled into JavaScript files which can then be run in the browser or node, and the compiler catches bugs in advance, saving time and frustration during debugging down the line. TypeScript improved code clarity by explicitly defining the types of variables, function parameters, and function outputs. This allows you to tell at a glance exactly what the your code should be taking and returning, and the compiler will catch it if you accidentally pass something to a function that you shouldn't be. The TypeScript compiler also allows you to customize what version of JavaScript your TS files compile to. This allows the developers to utilize many newer features of JavaScript without worrying about browser compatibility. This also allows TypeScript to offer features such as generics,enums, and interfaces which are not available in JS. Additionally, TypeScript offers fantastic tooling in modern IDE's such as VS Code which can catch errors while the code as being written, saving even more time debugging.
+
+## Getting Started
+
+```TypeScript
+const name = 'Shane'
+let age = 24
+
+function printNameAndAge(person: string, age: number): void {
+    console.log(`${person} is ${age} years old.`)
+}
+
+printNameAndAge(shane)
+```
+
+Below is some of the first code I wrote in TypeScript. As you can see, you can add type annotations after variable declarations or within function parameters using a colon `:` followed by the type. The void
+
+```TypeScript
+const name: string = 'Shane'
+let age: number = 24
+
+function printNameAndAge(person: string, age: number): void {
+    console.log(`${person} is ${age} years old.`)
+}
+
+printNameAndAge(shane)
+```
 
 ## References
 
