@@ -119,6 +119,39 @@ nameAgeArr = [24, 'Shane'] // ❌
 
 ### Enum
 
+An enum is a way of giving  more friendly names to sets of numeric values. For example, you can give objects property values for different categories, but instead of having to label the category names as strings, you can label them as numbers. That saves confusion over spelling, capitalization, and other string semantics.
+
+```ts
+enum Genre {
+    Rock,
+    Jazz,
+    Hip-Hop,
+}
+
+let giantSteps = {
+    artist: "John Coltrain",
+    genre: Genre.Jazz
+}
+
+let genreName: string = Genre[0] // will be "Rock"
+```
+
+Numeric values for enums automatically start at 0. However you can change the first value to be any number, and the remainder will increment from there. You can also set the values for each manually.
+
+```ts
+enum Genre {
+    Rock = 3,
+    Jazz, // => 4
+    Hip-Hop, // => 5
+}
+
+enum Genre {
+    Rock = 5,
+    Jazz = 30,
+    Hip-Hop = 13,
+}
+```
+
 ### Any
 
 The type of any can be used for variables whose values we do not yet know, or if we want to opt out of type-checking. This allows TS to be very flexible, but use sparingly, as it eliminates the value added by TS.
