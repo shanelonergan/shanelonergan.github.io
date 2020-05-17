@@ -23,11 +23,12 @@ I am in the midst of searching for my first job as a developer. Recently, I had 
   - [Boolean](#boolean)
   - [Array](#array)
   - [Tuple](#tuple)
-  - [Object](#object)
   - [Enum](#enum)
   - [Any](#any)
   - [Null and Undefined](#null-and-undefined)
   - [Never](#never)
+  - [Object](#object)
+- [Union Types and Aliases](#union-types-and-aliases)
 - [References](#references)
 
 ## What is TypeScript
@@ -115,8 +116,6 @@ nameAgeArr = ['Shane', 24] // ✅
 nameAgeArr = [24, 'Shane'] // ❌
 ```
 
-### Object
-
 ### Enum
 
 An enum is a way of giving  more friendly names to sets of numeric values. For example, you can give objects property values for different categories, but instead of having to label the category names as strings, you can label them as numbers. That saves confusion over spelling, capitalization, and other string semantics.
@@ -173,6 +172,28 @@ Never type represent the type of values that never occur. For example, a functio
 function throwError(msg: string): never {
     throw new Error(msg)
 }
+```
+
+### Object
+
+The object type represents any non-primitive, or anything that isn't a number, string, boolean, symbol, null, or undefined.
+
+## Union Types and Aliases
+
+You can allow variables to have multiple type options using union types.
+
+```ts
+let numberOrString: number | string
+numberOrSting = 13 // ✅
+numberOrSting = 'thirteen' // ✅
+```
+
+You can also define your own types, known as aliases, which can be used as type definitions later.
+
+```ts
+type FlexibleNumber = number | string
+let luckyNumber: flexibleNumber = 13
+luckyNumber = 'thirteen' // ✅
 ```
 
 ## References
