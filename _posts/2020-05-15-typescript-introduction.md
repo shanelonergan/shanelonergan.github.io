@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'TypeScript Cheat Sheet'
+title: 'TypeScript in a Weekend'
 date: 2020-5-15
 description: 'A crash course in the basics of the hottest development language'
-img: git.png
+img: TypeScriptImage.jpeg
 tags: [programming, terminal, bash] # add tag
 ---
 
