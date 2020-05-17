@@ -29,6 +29,8 @@ I am in the midst of searching for my first job as a developer. Recently, I had 
   - [Never](#never)
   - [Object](#object)
 - [Union Types and Aliases](#union-types-and-aliases)
+- [Interfaces](#interfaces)
+- [Congrats](#congrats)
 - [References](#references)
 
 ## What is TypeScript
@@ -128,7 +130,7 @@ enum Genre {
 }
 
 let giantSteps = {
-    artist: "John Coltrain",
+    artist: "John Coltrane",
     genre: Genre.Jazz
 }
 
@@ -196,8 +198,35 @@ let luckyNumber: flexibleNumber = 13
 luckyNumber = 'thirteen' // ✅
 ```
 
+## Interfaces
+
+Typescript allows us to define specific object shapes as a type, called an interface, which allows us to ensure the objects we are using always have the proper keys and value types.
+
+```ts
+interface Album {
+    name: string;
+    artist: string;
+    sumSongs: number;
+}
+
+const sgtPepper: Album = {
+    name: "Sgt. Pepper's Lonely Hearts Club Band",
+    artist: "John Coltrane",
+    numSongs: 13
+    isGood: true // Allowed to have additional properties
+}
+
+const help: Album = {
+    isGood: true // ❌, must contain all properties from interface
+}
+```
+
+## Congrats
+
+You now have an understanding of the fundamentals of TypeScript. Thank you so much for reading, and best of luck on your TS journey!
+
 ## References
 
-- [Git](https://git-scm.com/)
-- [What is Git and Github? - Core DNA](https://www.coredna.com/blogs/what-is-git-and-github-part-two)
-- [Git Core Repo](https://git.kernel.org/pub/scm/git/git.git/about/)
+- [TypeScript Docs](https://www.typescriptlang.org/docs/home)
+- [Lear TypeScript from Scratch - Academind](https://www.youtube.com/watch?v=BwuLxPH8IDs&t=8649s)
+
