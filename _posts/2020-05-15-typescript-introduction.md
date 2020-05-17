@@ -9,7 +9,7 @@ tags: [programming, terminal, bash] # add tag
 
 ---
 
-I am in the midst of searching for my first job as a developer. Recently, I had the the opportunity to interview for a company I thought I would be a great fit for. It was a junior position with a stack that I was mostly familiar with, and in a sector that I had prior work experience in. However, the job description said that most of the code is written in TypeScript. Now, I have heard a lot about TypeScript from other developers, but I hadn't had the chance to start learning it yet. I figured this was the perfect chance to take the plunge! I had an open weekend before the interview, so I decided to see how much I could learn. In this post I will walk what I found out: the basics of TypeScript, as well as some of the benefits it offers over JavaScript. The goal of this guide is to provide enough knowledge to be conversational, as well as to give a strong jumping off point if you were to start learning TypeScript on the job.
+I am in the midst of searching for my first job as a developer, and I recently interviewed at a company for which I thought I would be a great fit. However, the job description said that most of the code is written in TypeScript! Now, I have heard a lot about TypeScript from other developers, but I had yet to have the chance to start learning it. I figured this was the perfect chance to take the plunge! I had an open weekend before the interview, so I decided to see how much I could learn. In this post I will walk what I found out: the basics of TypeScript, as well as some of the benefits it offers over JavaScript. The goal of this guide is to provide enough knowledge to be conversational, as well as to give a strong jumping off point if you were to start learning TypeScript on the job.
 
 ## Table of Contents
 
@@ -49,27 +49,27 @@ Lets go ahead and dive right in by analyzing our first piece of TypeScript code:
 const name = 'Shane'
 let age = 24
 
-function printNameAndAge(person: string, age: number): void {
-    console.log(`${person} is ${age} years old.`)
+function printNameAndAge(person: string, ageInYears: number): void {
+    console.log(`${person} is ${ageInYears} years old.`)
 }
 
-printNameAndAge(shane)
+printNameAndAge(name, age)
 ```
 
-Now, you might be thinking to yourself, "That looks a lot like JavaScript...". Well, thats because it is! Vanilla JavaScript is totally valid in TS. All of the features are optional to use, and exactly how they are utilized is up the the developer. Of course, you aren't getting any of the benefits of TS by doing this, so lets add a little bit to it:
+Now, you might be thinking to yourself, "That looks a lot like JavaScript...". Well, thats because it is! Vanilla JavaScript is totally valid in TypeScript. All of the features are optional to use, and exactly how they are utilized is up the the developer. Of course, you aren't getting any of the benefits of TypeScript by doing this, so lets add a little bit to it:
 
 ```TypeScript
 const name: string = 'Shane'
 let age: number = 24
 
-function printNameAndAge(person: string, age: number): void {
-    console.log(`${person} is ${age} years old.`)
+function printNameAndAge(person: string, ageInYears: number): void {
+    console.log(`${person} is ${ageInYears} years old.`)
 }
 
-printNameAndAge(shane)
+printNameAndAge(name, age)
 ```
 
-As you can see, you can add type annotations after variable declarations or within function parameters using a colon `:` followed by the type. The `void` following the function parameters is the type annotation for the return value of the function. In this case, the function doesn't return anything, so the type will be `void`. If it returned a string, then we would set it to `string` instead. This allows us to ensure our function is always returning exactly what we want it to.
+As you can see, you can add type annotations after variable declarations or within function parameters using a colon (`:`) followed by the type. The `void` following the function parameters is the type annotation for the return value of the function. In this case, the function doesn't return anything, so the type will be `void`. If it returned a string, then we would set it to `string` instead. This allows us to ensure our function is always returning exactly what we want it to.
 
 Now that we know how to annotate a type, lets dive into the core types offered by TypeScript.
 
@@ -85,7 +85,7 @@ let luckyNum: number = 13
 
 ### String
 
-Strings, a series of characters, can be represented using '' or "". You can also use template literals with ``.
+Strings, a series of characters, can be represented using `' '` or `" "`. You can also use template literals with `` ``.
 
 ```ts
 let name: string = 'Shane'
@@ -120,7 +120,7 @@ nameAgeArr = [24, 'Shane'] // ❌
 
 ### Enum
 
-An enum is a way of giving  more friendly names to sets of numeric values. For example, you can give objects property values for different categories, but instead of having to label the category names as strings, you can label them as numbers. That saves confusion over spelling, capitalization, and other string semantics.
+An enum is a way of giving  more friendly names to sets of numeric values. For example, if you have an object property that can only be set to a set number of options, you can label them as numbers instead of strings. That saves confusion over spelling, capitalization, and other string semantics, while increasing code readability.
 
 ```ts
 enum Genre {
@@ -155,7 +155,7 @@ enum Genre {
 
 ### Any
 
-The type of any can be used for variables whose values we do not yet know, or if we want to opt out of type-checking. This allows TS to be very flexible, but use sparingly, as it eliminates the value added by TS.
+The type of any can be used for variables whose values we do not yet know, or if we want to opt out of type-checking. This allows TypeScript to be very flexible, but use sparingly, as it eliminates the value added by TypeScript.
 
 ### Null and Undefined
 
@@ -178,11 +178,20 @@ function throwError(msg: string): never {
 
 ### Object
 
-The object type represents any non-primitive, or anything that isn't a number, string, boolean, symbol, null, or undefined.
+In Javascript, everything that isn't a primitive is an object. Thus, the object type represents any non-primitive, or anything that isn't a number, string, boolean, symbol, null, or undefined.
+
+```ts
+let shane: object
+shane = { name: "Shane", age: 24 } // ✅
+
+shane = () => console.log("Hi, my name is Shane") // ✅
+
+shane = "Shane" // ❌
+```
 
 ## Union Types and Aliases
 
-You can allow variables to have multiple type options using union types.
+If you variable or parameter needs to have more flexibility, you can specify multiple type options using union types.
 
 ```ts
 let numberOrString: number | string
@@ -200,7 +209,7 @@ luckyNumber = 'thirteen' // ✅
 
 ## Interfaces
 
-Typescript allows us to define specific object shapes as a type, called an interface, which allows us to ensure the objects we are using always have the proper keys and value types.
+Typescript allows us to define specific object shapes as a type, called an `interface`, which allows us to ensure the objects we are using always have the proper keys and value types.
 
 ```ts
 interface Album {
