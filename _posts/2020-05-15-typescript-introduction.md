@@ -14,8 +14,8 @@ I am in the midst of searching for my first job as a developer. Recently, I had 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [What is TypeScript](#what-is-typescript)
-- [Why TypeScript](#why-typescript)
+- [What is TypeScript?](#what-is-typescript)
+- [Why TypeScript?](#why-typescript)
 - [Getting Started](#getting-started)
 - [Core Types](#core-types)
   - [Number](#number)
@@ -33,13 +33,13 @@ I am in the midst of searching for my first job as a developer. Recently, I had 
 - [Congrats](#congrats)
 - [References](#references)
 
-## What is TypeScript
+## What is TypeScript?
 
-TypeScript is a superset of JavaScript that horizontally compiles back to JavaScript. It provides the ability, among other things, to strongly type your JS code, but it can't actually be run in the browser or Node. So, why is this useful?
+TypeScript is a superset of JavaScript that horizontally compiles back to JavaScript. It provides the ability, among other things, to strongly type your JavaScript code. However, TypeScript files can't actually be run in the browser or Node. So, why is this useful?
 
-## Why TypeScript
+## Why TypeScript?
 
-TypeScript helps you avoid unwanted runtime errors by type-checking during development. TypeScript files are compiled into JavaScript files which can then be run in the browser or node, and the compiler catches bugs in advance, saving time and frustration during debugging down the line. TypeScript improved code clarity by explicitly defining the types of variables, function parameters, and function outputs. This allows you to tell at a glance exactly what the your code should be taking and returning, and the compiler will catch it if you accidentally pass something to a function that you shouldn't be. The TypeScript compiler also allows you to customize what version of JavaScript your TS files compile to. This allows the developers to utilize many newer features of JavaScript without worrying about browser compatibility. This also allows TypeScript to offer features such as generics,enums, and interfaces which are not available in JS. Additionally, TypeScript offers fantastic tooling in modern IDE's such as VS Code which can catch errors while the code as being written, saving even more time debugging.
+TypeScript helps you avoid unwanted runtime errors by type-checking during development. TypeScript files are compiled into JavaScript files which can then be run in the browser or Node. The compiler catches bugs in advance, saving time and frustration during debugging down the line. TypeScript improves code clarity by explicitly defining the types of variables, function parameters, and function outputs. This allows you to tell at a glance exactly what your code should be taking and returning, and the compiler will throw an error if you accidentally pass something to a function that you shouldn't be. The TypeScript compiler also allows you to customize what version of JavaScript your TS files compile to. This allows the developers to utilize many newer features of JavaScript without worrying about browser compatibility. Because of this, TypeScript can also offer features such as generics, enums, and interfaces which are not available in JavaScript. Additionally, TypeScript offers fantastic tooling in modern IDE's such as VS Code which can catch errors while the code as being written, saving even more time debugging.
 
 ## Getting Started
 
@@ -77,7 +77,7 @@ Now that we know how to annotate a type, lets dive into the core types offered b
 
 ### Number
 
-Just like JS, there isn't a difference between integers and floats (decimals), as all numbers are treated as floats.
+Just like JavaScript, there isn't a difference between integers and floats (decimals), as all numbers are treated as floats.
 
 ```ts
 let luckyNum: number = 13
@@ -159,7 +159,7 @@ The type of any can be used for variables whose values we do not yet know, or if
 
 ### Null and Undefined
 
-Just as in JS, null and undefined are types in TS. By default, null and undefined are subtypes of all other types, meaning you can assign null or undefined to a variable with the number type.
+Just as in JavaScript, null and undefined are types in TS. By default, null and undefined are subtypes of all other types, meaning you can assign null or undefined to a variable with the number type.
 
 ```ts
 let luckyNumber = 13
@@ -170,7 +170,7 @@ luckyNumber = undefined // ✅
 
 Never type represent the type of values that never occur. For example, a function that always throws an error when called will never return, so we can set the return type to `never`. An infinite loop could also have the return type `never`.
 
-```js
+```JavaScript
 function throwError(msg: string): never {
     throw new Error(msg)
 }
