@@ -30,7 +30,7 @@ I am in the midst of searching for my first job as a developer, and I recently i
   - [Object](#object)
 - [Union Types and Aliases](#union-types-and-aliases)
 - [Interfaces](#interfaces)
-- [Congrats](#congrats)
+- [Congrats!](#congrats)
 - [References](#references)
 
 ## What is TypeScript?
@@ -230,7 +230,7 @@ const help: Album = {
 }
 ```
 
-## Congrats
+## Congrats!
 
 You now have an understanding of the fundamentals of TypeScript. Thank you so much for reading, and best of luck on your TS journey!
 
