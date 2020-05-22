@@ -14,25 +14,54 @@ Hooks are my personal favorite way to manage state in a React application. I pre
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [What is TypeScript?](#what-is-typescript)
-- [Why TypeScript?](#why-typescript)
-- [Getting Started](#getting-started)
-- [Core Types](#core-types)
-  - [Number](#number)
-  - [String](#string)
-  - [Boolean](#boolean)
-  - [Array](#array)
-  - [Tuple](#tuple)
-  - [Enum](#enum)
-  - [Any](#any)
-  - [Null and Undefined](#null-and-undefined)
-  - [Never](#never)
-  - [Object](#object)
-- [Union Types and Aliases](#union-types-and-aliases)
-- [Interfaces](#interfaces)
-- [Congrats!](#congrats)
-- [References](#references)
+- [What are Hooks?](#what-are-hooks)
+- [Getting started](#getting-started)
+- [Create Context](#create-context)
+- [Context Provider](#context-provider)
 
-## What is TypeScript?
+## What are Hooks?
 
-TypeScript is a superset of JavaScript that horizontally compiles back to JavaScript. It provides the ability, among other things, to strongly type your JavaScript code. However, TypeScript files can't actually be run in the browser or Node. So, why is this useful?
+Hooks are a new addition to React which let you use state and other features in functional components. If you have'nt used Hooks before, I would recommend first checking out the [docs](https://reactjs.org/docs/hooks-intro.html) to get familiar before diving in.
+
+## Getting started
+
+Lets say we have a logged-in user's information, and we want that information to available to us in any component. Below is a mock-up of a user object we received from our imaginary server:
+
+```js
+const user = {
+    id: 1,
+    name: "Shane",
+    bio: "bio",
+}
+```
+
+One important thing to note is that `useContext` is a Hook that only lets you access your context. You will need to set up that context using a few other React features.
+
+## Create Context
+
+The first step is create an instance of context for our application using `createContext`. For our purposed we will be writing all of our code in one file, but I have typically seen context declared in its own file, such as `UserContext.js`.
+
+```javascript react
+import React from 'react';
+
+const UserContext = React.createContext(null)
+```
+
+## Context Provider
+
+Next, we need to wrap all our components which will be accessing the context in a Context Provider. True to its name, this component provides the context to all of its children. Whenever the context data changes, it will pass down the changes and trigger a re-render.
+
+```javascript react
+import React from 'react';
+
+const UserContext = React.createContext(null)
+
+const App = () => (
+    <UserConext.Provider>
+        <NavBar />
+        <Main />
+    </UserConext.Provider>
+)
+```
+
+Now both the NavBar and Main, as well as any children, will have access to the User Context.
