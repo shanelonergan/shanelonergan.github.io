@@ -49,6 +49,8 @@ import React from 'react';
 const UserContext = React.createContext(user)
 ```
 
+Here, we pas in the user object as the argument for `createContext`, as it contains the information we want to be included.
+
 ## Context Provider
 
 Next, we need to wrap all our components which will be accessing the context in a Context Provider. True to its name, this component provides the context to all of its children. Whenever the context data changes, it will pass down the changes and trigger a re-render.
