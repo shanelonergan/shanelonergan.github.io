@@ -1,12 +1,11 @@
 ---
 layout: post
-title: 'React's useContext in 3 minutes'
-date: 2020-5-22
+title:  "React's useContext in 3 minutes"
+date:   2020-5-22
 description: 'Access your state anywhere with a convenient hook'
 img: hook.jpg
 tags: [programming, terminal, bash] # add tag
 ---
-
 ---
 
 Hooks are my personal favorite way to manage state in a React application. I prefer functional components over class components most of the time, and Hooks feel like a simple and effective extension of react itself. Now, if you are anything like me, you have probably found yourself endlessly passing state down as props until you feel like you are descending into madness. Luckily, there is a solution! `useContext` is a Hook which allows you to pass data throughout the competent tree without having to manually pass down props on each individual level.
