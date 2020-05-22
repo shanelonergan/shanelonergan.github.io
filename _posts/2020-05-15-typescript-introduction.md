@@ -238,4 +238,3 @@ You now have an understanding of the fundamentals of TypeScript. Thank you so mu
 
 - [TypeScript Docs](https://www.typescriptlang.org/docs/home)
 - [Lear TypeScript from Scratch - Academind](https://www.youtube.com/watch?v=BwuLxPH8IDs&t=8649s)
-
