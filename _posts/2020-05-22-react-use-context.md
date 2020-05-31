@@ -41,7 +41,7 @@ One important thing to note is that `useContext` is a Hook that only lets you ac
 
 The first step is create an instance of context for our application using `createContext`. For our purposed we will be writing all of our code in one file, but I have typically seen context declared in its own file, such as `UserContext.js`.
 
-```javascript react
+```js
 // App.js
 import React from 'react';
 
@@ -54,8 +54,7 @@ Here, we pas in the user object as the argument for `createContext`, as it conta
 
 Next, we need to wrap all our components which will be accessing the context in a Context Provider. True to its name, this component provides the context to all of its children. Whenever the context data changes, it will pass down the changes and trigger a re-render.
 
-```javascript react
-// App.js
+```js
 import React from 'react';
 
 const UserContext = React.createContext(user)
@@ -74,7 +73,7 @@ Now both the NavBar and Main, as well as any children, will have access to the U
 
 Now the final step is to use the context! For this, you might have guessed, we will use `useContext`.
 
-```javascript react
+```js
 // App.js
 import React, { useContext } from 'react'; // Don't forget to import!
 const UserContext = React.createContext(user)
