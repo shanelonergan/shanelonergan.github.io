@@ -8,7 +8,7 @@ tags: [programming, terminal, bash] # add tag
 ---
 ---
 
-Hello and welcome back to my series on React Hooks! If you missed the first post on useContext, feel free to check that out [here](). As I mentioned in that article, I love Hooks! They feel like a simple and effective extension of React itself, and I tend to prefer writing functional components over class components anyway. Now, if you are using Hooks to manage relatively simple state, the useState hook works great. In fact, I have used useState for all my state in a React application before. However, if you end up working with complex state logic with multiple sub-values, then you may want to check out useReducer! This Hook allows you to specify multiple actions for setting your state in different ways depending on the context.
+Hello and welcome back to my series on React Hooks! If you missed the first post on useContext, feel free to check that out [here](https://shanelonergan.github.io/react-use-context/). As I mentioned in that article, I love Hooks! They feel like a simple and effective extension of React itself, and I tend to prefer writing functional components over class components anyway. Now, if you are using Hooks to manage relatively simple state, the useState hook works great. In fact, I have used useState for all my state in a React application before. However, if you end up working with complex state logic with multiple sub-values, then you may want to check out useReducer! This Hook allows you to specify multiple actions for setting your state in different ways depending on the context.
 
 ## Table of Contents
 
@@ -216,4 +216,4 @@ export default function ReducerForm() {
 
 ## Congrats!
 
-You now know how to use useReducer! If you have any further questions, I would hight recommend reading the docs, as React's documentation is outstanding. Good luck with your projects!
+You now know how to use useReducer! If you have any further questions, I would hight recommend reading the [docs](https://reactjs.org/docs/getting-started.html), as React's documentation is outstanding. Good luck with your projects!
