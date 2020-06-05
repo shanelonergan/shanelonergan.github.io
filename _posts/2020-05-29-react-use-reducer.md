@@ -169,31 +169,31 @@ export default function ReducerForm() {
 
     const [state, dispatch] = useReducer(formReducer, initialState)
 
-	return (
-		<form>
-			<label>
-				First Name:
+    return (
+        <form>
+            <label>
+                First Name:
                 <input
                     type='text'
                     value={state.firstName}
                     onChange={(e) => dispatch({type: 'firstName', payload: e.target.value})}
                 />
-			</label>
+            </label>
             <label>
-				Last Name:
+                Last Name:
                 <input
                     type='text'
                     value={state.lastName}
                     onChange={(event) => dispatch({type: 'lastName', payload: event.target.value})}
                 />
-			</label>
+            </label>
             <label>
-				Bio:
+                Bio:
                 <textarea
                     value={state.bio}
                     onChange={(event) => dispatch({type: 'bio', payload: event.target.value})}
                 />
-			</label>
+            </label>
             <label>
                 Favorite Fruit
                 <select
@@ -208,9 +208,9 @@ export default function ReducerForm() {
                     <option value="grapes">Grapes 🍇</option>
                 </select>
             </label>
-			<input type='submit' value='Submit' />
-		</form>
-	)
+            <input type='submit' value='Submit' />
+        </form>
+    )
 }
 ```
 

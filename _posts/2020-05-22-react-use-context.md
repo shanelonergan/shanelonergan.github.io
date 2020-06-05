@@ -21,7 +21,7 @@ Hooks are my personal favorite way to manage state in a React application. I pre
 
 ## What are Hooks?
 
-Hooks are a new addition to React which let you use state and other features in functional components. If you have'nt used Hooks before, I would recommend first checking out the [docs](https://reactjs.org/docs/hooks-intro.html) to get familiar before diving in.
+Hooks are a new addition to React which let you use state and other features in functional components. If you haven't used Hooks before, I would recommend first checking out the [docs](https://reactjs.org/docs/hooks-intro.html) to get familiar before diving in.
 
 ## Getting started
 
