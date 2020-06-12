@@ -17,6 +17,8 @@ React is is one of the most popular JavaScript frameworks used today. When first
 - [Part 1: HTML](#part-1-html)
 - [Part 2: Add React](#part-2-add-react)
 - [Part 3: Create our React Component](#part-3-create-our-react-component)
+- [Part 4: Add Babel](#part-4-add-babel)
+- [Congrats!](#congrats)
 
 ## Overview
 
@@ -24,7 +26,7 @@ For our code examples, we will be expanding on the Like Button example used in t
 
 ## Part 1: HTML
 
-To get started, lets build out out HTML skeleton. In your directory, create a file called index.html, and fill that with an HTML skeleton. In the body, all we will need at first is a single div with the id of `like-button-container`. I am also going to add a header for display purposes.
+To get started, lets build out out HTML skeleton. In your directory, create a file called index.html, and fill that with an HTML skeleton. In the body, all we will need at first is a single div with the id of `like_button_container`. I am also going to add a header for display purposes.
 
 ```html
 <!DOCTYPE html>
@@ -97,3 +99,59 @@ const LikeButton = () => {
 	return <button onClick={() => setLiked(true)}>Like</button>
 }
 ```
+
+Finally, we need to append this component to our page! To do so, we will find our div with the id `like_button_container` using `document.querySelector`, and then append our component using `ReactDOM.render`. Our final component should look like this:
+
+```js
+const LikeButton = () => {
+	const [liked, setLiked] = React.useState(false)
+
+	if (liked) {
+		return (
+			<div>
+				<p>You liked this.</p>
+				<div>
+					<button onClick={() => setLiked(false)}>Unlike</button>
+				</div>
+			</div>
+			)
+	}
+
+	return <button onClick={() => setLiked(true)}>Like</button>
+}
+
+let domContainer = document.querySelector('#like_button_container')
+ReactDOM.render(<LikeButton />, domContainer)
+
+```
+
+Note that we are using JSX in our component. JSX is a tool which allows us to use HTML syntax in our JavaScript code. However, this isn't supported in our application yet, as the browser isn''t able to read JSX. To remedy this, we will add a JSX preprocessor which will compile our code into a file readable by the browser.
+
+## Part 4: Add Babel
+
+In order to add Babel as our JSX preprocessor, we first need to make sure we have Node installed. You can do that by following downloading it [here](https://nodejs.org/en/download/).
+
+Next, we need to initialize our project with NPM. To do so, run the following commands:
+
+```bash
+npm init -y
+npm install babel-cli@6 babel-preset-react-app@3
+```
+
+This should create `package.json` and `package-lock.json` files in your directory, and well as a `node_modules` folder.
+
+> **Tip:** If you are using git for version control, I would recommend adding `node_modules` to your `.gitignore` file.
+
+Once you have completed the above, go ahead and run the following command in your terminal:
+
+```bash
+npx babel --watch src --out-dir . --presets react-app/prod
+```
+
+This command will not finish; it is watching your files in the `src` folder for JSX, and compiling it into plain JavaScript. You should see a new file called `LikeButton.js` appear in your directory. This is different than the one in the `src` folder, as it contained the newly compiled version of our component. If you recall, this is the file that we linked to in out script tag in `index.html`.
+
+Babel also gives us access to modern JavaScript features such as classes, destructuring, arrow functions, and more, without having to worry about browser compatibility! It is a really awesome tool, and you can learn more about it in the [documentation](https://babeljs.io/docs/en/babel-cli/).
+
+## Congrats!
+
+You now know how to set up a basic React app using just React and Babel! Thank you so much for reading, I hope you found this post helpful. Good luck with your projects!
