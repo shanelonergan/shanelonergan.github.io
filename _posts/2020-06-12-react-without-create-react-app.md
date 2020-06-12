@@ -3,7 +3,7 @@ layout: post
 title:  "Getting started with React without using Create React App"
 date:   2020-6-12
 description: 'Create a basic React app with no build tooling'
-img: hook.jpg
+img: react.png
 tags: [programming, terminal, bash] # add tag
 ---
 ---
