@@ -16,6 +16,7 @@ React is is one of the most popular JavaScript frameworks used today. When first
 - [Overview](#overview)
 - [Part 1: HTML](#part-1-html)
 - [Part 2: Add React](#part-2-add-react)
+- [Part 3: Create our React Component](#part-3-create-our-react-component)
 
 ## Overview
 
@@ -59,3 +60,40 @@ We are going to add React through script tags. To do that, add the following lin
 ```
 
 **Note:** If you are deploying your  application, make sure to replace "development.js" with "production.min.js".
+
+## Part 3: Create our React Component
+
+Create a folder in your directory called `src`, and inside that folder add a file called` LikeButton.js`. In that file, we are going to define a functional component which has two outputs, depending on the `liked` state. First, lets create an empty component, and add state using `useEffect`. If you haven't used this before, it is a React Hook which allows us to utilize state in functional components.
+
+```js
+// src/LikeButton.js
+const LikeButton = () => {
+	const [liked, setLiked] = React.useState(false)
+
+	return <button onClick={() => setLiked(true)}>Like</button>
+}
+```
+
+In the above, useState gives us tow variables: `liked` and `setLiked`. `liked` is our state, ad we set the default value to false. `setLiked` is functionally equivalent to `setState`; it is a function which lets us change the value of `liked`. Our component returns a button with an onClick function which sets the state of `liked` to true.
+
+Next, we want to change what this component renders when `liked` is true! To do that, we can create a conditional which, when `liked` is true, returns a sentence letting the user know they liked it, and a button to unlike.
+
+```js
+// src/LikeButton.js
+const LikeButton = () => {
+	const [liked, setLiked] = React.useState(false)
+
+	if (liked) {
+		return (
+			<div>
+				<p>You liked this.</p>
+				<div>
+					<button onClick={() => setLiked(false)}>Unlike</button>
+				</div>
+			</div>
+			)
+	}
+
+	return <button onClick={() => setLiked(true)}>Like</button>
+}
+```
