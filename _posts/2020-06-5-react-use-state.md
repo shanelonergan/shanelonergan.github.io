@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "React's useState in 3 minutes"
+title:  "React's useState in 4 minutes"
 date:   2020-6-5
 description: 'React state made easy using Hooks'
 img: hook.jpg
