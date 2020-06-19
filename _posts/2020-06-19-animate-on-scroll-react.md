@@ -72,9 +72,42 @@ Offset changes the distance (in pixels) from the original animation trigger poin
 
 ```html
 <div
-    data-aos-delay='200'
+    data-aos-delay='50'
 >
 </div>
 ```
 
-Offset changes the distance (in pixels) from the original animation trigger point. This will essentially wait to trigger the animation until you scroll past the desired offset point. The default value is 120px.
+Delay controls the amount of time (in ms) that will elapse after scrolling past the trigger point before the animation will trigger. The default value is 0ms, and you can increase in increments of 50ms.
+
+#### Duration
+
+```html
+<div
+    data-aos-duration='100'
+>
+</div>
+```
+
+Duration controls the amount of time (in ms) that the animation will take to run. This will essentially increase or decrease the speed of the animation. The default value is 400ms, and increments in 50ms intervals.
+
+#### Mirror
+
+```html
+<div
+    data-aos-mirror='true'
+>
+</div>
+```
+
+Mirror affects whether or not the elements should animate again on their way out of the viewport. The default value is false.
+
+#### Mirror
+
+```html
+<div
+    data-aos-mirror='true'
+>
+</div>
+```
+
+Mirror affects whether or not the elements should animate again on their way out of the viewport. The default value is false.
