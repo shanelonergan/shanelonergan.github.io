@@ -34,6 +34,8 @@ Now, we just need to initialize AOS. To do so, we can simply run `AOS.init()` in
 
 ## Using AOS
 
+### Adding an animation
+
 Now we are ready to animate any pice of a component we want to! To do so, set your desired animation using the `data-aos` attribute like so:
 
 ```js
@@ -50,3 +52,29 @@ const divList = () => {
 ```
 
 The library comes with a bunch of default animations, such as `fade`, `flip-up`, `slide-down`, `zoom-in`, etc. A full list of animations can be found [here](https://github.com/michalsnik/aos#animations).
+
+### Customize the animation
+
+You can adjust the behavior of the animation by adding more `data-aos` attributes. Here are some examples:
+
+#### Offset
+
+```html
+<div
+    data-aos-offset='200'
+>
+</div>
+```
+
+Offset changes the distance (in pixels) from the original animation trigger point. This will essentially wait to trigger the animation until you scroll past the desired offset point. The default value is 120px.
+
+#### Delay
+
+```html
+<div
+    data-aos-delay='200'
+>
+</div>
+```
+
+Offset changes the distance (in pixels) from the original animation trigger point. This will essentially wait to trigger the animation until you scroll past the desired offset point. The default value is 120px.
