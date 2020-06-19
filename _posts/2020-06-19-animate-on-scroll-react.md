@@ -25,6 +25,8 @@ Scroll animations are one of my favorite style features to add to a website. The
     - [Once](#once)
     - [Anchor Placement](#anchor-placement)
     - [Easing](#easing)
+  - [Further Customizations](#further-customizations)
+- [Congrats!](#congrats)
 
 
 ## What is AOS?
@@ -149,3 +151,11 @@ Anchor placement defines which part of the element should trigger the animation.
 ```
 
 Easing determines which easing function the animation should follow. Easing functions determine the rate of change for the speed of the animation over time. This [website](https://easings.net/) helps visualize some of the more complicated easings using graphs. A full list of easing options can be found [here](https://github.com/michalsnik/aos#animations).
+
+### Further Customizations
+
+AOS also allows you to add custom animations and easings, as well as integrate external animation libraries. To learn more bout these advanced features, feel free to check out the [docs](https://github.com/michalsnik/aos#recipes).
+
+## Congrats!
+
+You can now add awesome on-scroll animations to your React applications! Thank you for reading, and best of luck with your projects!
