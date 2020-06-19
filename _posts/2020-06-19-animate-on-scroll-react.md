@@ -11,6 +11,22 @@ tags: [programming, terminal, bash] # add tag
 
 Scroll animations are one of my favorite style features to add to a website. They are a feature that, while relatively simple to add, can make your website feel much more slick and interactive. In this blog post, I am going to walk through adding scroll animations to a React application using the [AOS](https://github.com/michalsnik/aos) library.
 
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [What is AOS?](#what-is-aos)
+- [Install AOS](#install-aos)
+- [Using AOS](#using-aos)
+  - [Adding an animation](#adding-an-animation)
+  - [Customize the animation](#customize-the-animation)
+    - [Offset](#offset)
+    - [Delay](#delay)
+    - [Duration](#duration)
+    - [Mirror](#mirror)
+    - [Once](#once)
+    - [Anchor Placement](#anchor-placement)
+    - [Easing](#easing)
+
+
 ## What is AOS?
 
 AOS is an open source animate-on-scroll library made by [Michał Sajnóg](https://michalsnik.github.io/aos/). It was created to optimize performance by using all CSS for the animations themselves, and reserving JavaScript to handle the logic. It was made to be easy-to-use by providing HTML data attributes which you can add to any HTML element or React component, and is highly customizable. You can learn more by checking out the [website](https://michalsnik.github.io/aos/), [GitHub](https://github.com/michalsnik/aos), and codesandbox demos.
@@ -101,13 +117,35 @@ Duration controls the amount of time (in ms) that the animation will take to run
 
 Mirror affects whether or not the elements should animate again on their way out of the viewport. The default value is false.
 
-#### Mirror
+#### Once
 
 ```html
 <div
-    data-aos-mirror='true'
+    data-aos-once='true'
 >
 </div>
 ```
 
-Mirror affects whether or not the elements should animate again on their way out of the viewport. The default value is false.
+Once decides whether an animation should happen only one time, or every time an element is scrolled past. The default value is false.
+
+#### Anchor Placement
+
+```html
+<div
+    data-aos-anchor-placement='top-center'
+>
+</div>
+```
+
+Anchor placement defines which part of the element should trigger the animation. The default is `top-bottom`, and a full list of options can be found [here](https://github.com/michalsnik/aos#animations).
+
+#### Easing
+
+```html
+<div
+    data-aos-anchor-easing='ease-in-out'
+>
+</div>
+```
+
+Easing determines which easing function the animation should follow. Easing functions determine the rate of change for the speed of the animation over time. This [website](https://easings.net/) helps visualize some of the more complicated easings using graphs. A full list of easing options can be found [here](https://github.com/michalsnik/aos#animations).
