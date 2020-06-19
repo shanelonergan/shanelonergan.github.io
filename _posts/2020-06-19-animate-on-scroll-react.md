@@ -3,7 +3,7 @@ layout: post
 title: 'How to add animations on scroll in React'
 date: 2020-4-24
 description: 'Add a little flair to your React app using AOS'
-img: grommet.png
+img: aos.png
 tags: [programming, terminal, bash] # add tag
 ---
 
@@ -31,7 +31,7 @@ Scroll animations are one of my favorite style features to add to a website. The
 
 ## What is AOS?
 
-AOS is an open source animate-on-scroll library made by [Michał Sajnóg](https://michalsnik.github.io/aos/). It was created to optimize performance by using all CSS for the animations themselves, and reserving JavaScript to handle the logic. It was made to be easy-to-use by providing HTML data attributes which you can add to any HTML element or React component, and is highly customizable. You can learn more by checking out the [website](https://michalsnik.github.io/aos/), [GitHub](https://github.com/michalsnik/aos), and codesandbox demos.
+AOS is an open source animate-on-scroll library made by [Michał Sajnóg](https://michalsnik.github.io/aos/). It was created to optimize performance by using all CSS for the animations themselves, and reserving JavaScript to handle the logic. It was made to be easy-to-use by providing HTML data attributes which you can add to any HTML element or React component, and is highly customizable. You can learn more by checking out the [website](https://michalsnik.github.io/aos/), [GitHub](https://github.com/michalsnik/aos), and CodePen [demos](https://codepen.io/michalsnik/pen/WxNdvq).
 
 ## Install AOS
 
