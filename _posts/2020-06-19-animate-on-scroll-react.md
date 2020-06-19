@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'How to add animations on scroll in React'
-date: 2020-4-24
+date: 2020-6-19
 description: 'Add a little flair to your React app using AOS'
 img: aos.png
 tags: [programming, terminal, bash] # add tag
