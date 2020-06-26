@@ -14,12 +14,24 @@ Pair programming is an essential skill for any developer who works on a team. It
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Tip #1: Set up the parameters of the session before beginning](#tip-1-set-up-the-parameters-of-the-session-before-beginning)
+- [Tip #2: Set Goals](#tip-2-set-goals)
+- [Tip #3: Communicate during the session](#tip-3-communicate-during-the-session)
 
 ## Tip #1: Set up the parameters of the session before beginning
 
 In order to start off your pairing session on the right food, it is essential to first set some ground rules. Have a conversation with your partner about your previous pairing experience, and just get to know each other a little bit. Here are some great topics to go over:
 
-- Time
-  - How long will the session be going for?
-  - How long of intervals do you want to work before swapping roles?
-  - Do you want to take breaks? How long? How often?
+- How long will the session be going for?
+- How long of intervals do you want to work before swapping roles?
+- Do you want to take breaks? How long? How often?
+- Who will be the first driver?
+- What is something that bothers you in a pairing session?
+- What is something you really enjoy in a pairings session?
+- How do you like to give and receive feedback?
+
+## Tip #2: Set Goals
+
+It is helpful to set some concrete goals of what you want to accomplish during the session. Write down your goals somewhere you both can see them, and asses your progress each time you switch roles.
+
+## Tip #3: Communicate during the session
+
