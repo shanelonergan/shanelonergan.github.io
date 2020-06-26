@@ -16,7 +16,7 @@ Pair programming is an essential skill for any developer who works on a team. It
 - [Tip #1: Set up the parameters of the session before beginning](#tip-1-set-up-the-parameters-of-the-session-before-beginning)
 - [Tip #2: Set Goals](#tip-2-set-goals)
 - [Tip #3: Be an empathetic navigator, but don't be an island](#tip-3-be-an-empathetic-navigator-but-dont-be-an-island)
-- [Tip #4: Be a dutiful navigator, but make sure you understand](#tip-4-be-a-dutiful-navigator-but-make-sure-you-understand)
+- [Tip #4: Be a dutiful driver, but make sure you understand](#tip-4-be-a-dutiful-driver-but-make-sure-you-understand)
 - [Tip #5: Ask for feedback](#tip-5-ask-for-feedback)
 
 ## Tip #1: Set up the parameters of the session before beginning
@@ -37,9 +37,11 @@ It is helpful to set some concrete goals of what you want to accomplish during t
 
 ## Tip #3: Be an empathetic navigator, but don't be an island
 
-As the navigator, it is your job to explicitly instruct the driver what to do. However, make sure your partner is following you!
+As the navigator, it is your job to explicitly instruct the driver what to do. However, make sure your partner is following you! Check in with them every to often to make sure they understand the code that is being written. This is a great opportunity for growth, so if you are navigating and are more experienced, help the driver understand the decisions you are making. If you are the navigation but are less experienced than the driver, don't be afraid to ask for help. Just because you are in control, doesn't mean you can't ask for suggestions. Ultimately, pair programming is meant to be collaborative, so keep an open mind and don't be afraid to make mistakes.
 
-## Tip #4: Be a dutiful navigator, but make sure you understand
+## Tip #4: Be a dutiful driver, but make sure you understand
+
+As the driver, it is your job to follow the navigators instructions. If you are the more experienced programmer, make sure you give the driver space to work out their thoughts. If you think that they are making a mistake, or that you know a better way, perhaps wait a moment before immediately giving your thoughts. Let the driver make a mistake and correct it themselves! Or, perhaps wait until you reach a pause or an end of a block of code, and then offer your suggestion. There is a fine line to walk between being helpful and bulldozing over the navigator's ideas. If you are the less experienced programmer, make sure you understand what you are typing! Don't be afraid to speak up and ask questions. It is a good idea to check in at the end of each code block and go through each line together if needed. Driving for an experienced navigator is a great way to learn!
 
 ## Tip #5: Ask for feedback
 
