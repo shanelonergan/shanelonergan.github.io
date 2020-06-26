@@ -15,7 +15,9 @@ Pair programming is an essential skill for any developer who works on a team. It
 - [Table of Contents](#table-of-contents)
 - [Tip #1: Set up the parameters of the session before beginning](#tip-1-set-up-the-parameters-of-the-session-before-beginning)
 - [Tip #2: Set Goals](#tip-2-set-goals)
-- [Tip #3: Communicate during the session](#tip-3-communicate-during-the-session)
+- [Tip #3: Be an empathetic navigator, but don't be an island](#tip-3-be-an-empathetic-navigator-but-dont-be-an-island)
+- [Tip #4: Be a dutiful navigator, but make sure you understand](#tip-4-be-a-dutiful-navigator-but-make-sure-you-understand)
+- [Tip #5: Ask for feedback](#tip-5-ask-for-feedback)
 
 ## Tip #1: Set up the parameters of the session before beginning
 
@@ -33,5 +35,11 @@ In order to start off your pairing session on the right food, it is essential to
 
 It is helpful to set some concrete goals of what you want to accomplish during the session. Write down your goals somewhere you both can see them, and asses your progress each time you switch roles.
 
-## Tip #3: Communicate during the session
+## Tip #3: Be an empathetic navigator, but don't be an island
+
+As the navigator, it is your job to explicitly instruct the driver what to do. However, make sure your partner is following you!
+
+## Tip #4: Be a dutiful navigator, but make sure you understand
+
+## Tip #5: Ask for feedback
 
