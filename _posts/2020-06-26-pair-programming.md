@@ -9,21 +9,17 @@ tags: [programming, terminal, bash] # add tag
 
 ---
 
-Pair programming is an essential skill for any developer who works on a team. It is a great way to improve your code quality, learn from each other, and build your understanding of complex code. If you have never paired before, it usually consists of two developers working together on one task. Typically there are two roles, a driver and a navigator. The driver sits at the keyboard and physically types the code, while the navigator provides the instructions for what the driver should be doing. Each person takes turns fulfilling each role. In this post, i will walk you through some tips I have discovered that lead to more productive, happier pairing sessions. Lets dive in!
+Pair programming is an essential skill for any developer who works on a team. It is a great way to improve your code quality, learn from each other, and get started in more complex projects and codebases. If you have never paired before, it usually consists of two developers working together on one task. Typically there are two roles, a driver and a navigator. The driver sits at the keyboard and physically types the code, while the navigator provides the instructions for what the driver should be doing. Each person takes turns fulfilling each role. In this post, i will walk you through some tips I have discovered that lead to more productive, happier pairing sessions. Lets dive in!
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
-- [What is AOS?](#what-is-aos)
-- [Install AOS](#install-aos)
-- [Using AOS](#using-aos)
-  - [Adding an animation](#adding-an-animation)
-  - [Customize the animation](#customize-the-animation)
-    - [Offset](#offset)
-    - [Delay](#delay)
-    - [Duration](#duration)
-    - [Mirror](#mirror)
-    - [Once](#once)
-    - [Anchor Placement](#anchor-placement)
-    - [Easing](#easing)
-  - [Further Customizations](#further-customizations)
-- [Congrats!](#congrats)
+- [Tip #1: Set up the parameters of the session before beginning](#tip-1-set-up-the-parameters-of-the-session-before-beginning)
+
+## Tip #1: Set up the parameters of the session before beginning
+
+In order to start off your pairing session on the right food, it is essential to first set some ground rules. Have a conversation with your partner about your previous pairing experience, and just get to know each other a little bit. Here are some great topics to go over:
+
+- Time
+  - How long will the session be going for?
+  - How long of intervals do you want to work before swapping roles?
+  - Do you want to take breaks? How long? How often?
