@@ -1,9 +1,9 @@
 ---
 layout: post
 title: '5 Tips for Better Pair Programming'
-date: 2020-6-19
-description: 'Increase your code quality and understanding with better pair programming'
-img: aos.png
+date: 2020-6-26
+description: 'Using good communication to have more production, open, and fun pair programming sessions'
+img: pair.png
 tags: [programming, terminal, bash] # add tag
 ---
 
