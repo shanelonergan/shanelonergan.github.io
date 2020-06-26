@@ -45,3 +45,10 @@ As the driver, it is your job to follow the navigators instructions. If you are 
 
 ## Tip #5: Ask for feedback
 
+Once you have reached the end of your session, talk about how it went! What were the big wins, and what could have gone better? Ask your partner for feedback, and be open to hearing what they have to say. Ask them if they are open to receiving feedback, and if they are, go ahead! Always make sure to include positive feedback as well as any constructive feedback. If you discussed how you each prefer to give and receive feedback before the session, make sure you respect your partner's wishes. Feedback can be hard to give and receive sometimes, but it is essential to becoming a better pair programmer. Finally, thank your partner! Gratitude will make the experience more positive, and help in building a healthy pairing relationship.
+
+---
+
+As you can see, communication is essential in all aspects of pair programming. Learning how to talk about both your code and your preferences will ultimately make you a better programmer. And of course, the best way to become a better pair programmer is to practice, practice, practice! If you don't know anyone in person (or happen to be living in the time of a global pandemic), pair over the internet.Many open source communities have members who are more than happy to pair with a newer developer to help them get started in open source. This is a great way to build your network and learn how to contribute to open source projects, and is great experience for working on large codebases.
+
+Thank you so much for reading, and best of luck with your pairing sessions!
